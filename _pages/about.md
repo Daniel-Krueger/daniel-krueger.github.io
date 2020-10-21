@@ -2,13 +2,14 @@
 permalink: /about/
 title: "About me"
 ---
+
 I'm Daniel Krüger living in Germany and my job title is that of a 'developer'. Even so this is my professional title I describe myself as a guy who solves (business) problems with means of IT. If I understand the problem I will find a way to solve it.
 
 My professional carrier can be divided into three parts each focusing on a 'major' technology I used for creating solutions:
 
-NAV (3.6 – 2009 RC1)
-SharePoint 2003+
-Webcon BPS  2018+
+- NAV (3.6 – 2009 RC1)
+- SharePoint 2003 - 2016
+- Webcon BPS  2018+
  
 
 While working with these major technologies my “end-to-end” mindset forced me to use a lot of other “technologies” to solve my needs. Of course, I used some of these technologies in more __depth__ than others while I _haven’t used_ others in years.
@@ -24,3 +25,4 @@ Another reason for this broad usage of different technologies is that I had to i
 
 Whenever I do something, I will try to avoid doing something twice. at least if it can be automated in a feasible time frame. This can be something as simple as copying updated files from a dev server to a test server or creating a script for deploying a solution in different environments using a config file with settings for the specific environment. There’s just nothing more annoying and error prone than repeating oneself. :)
 
+If I find the time I'm always up for playing a complex board games like Eclipse, Gloomhaven and Terra Mystica. Which is far less since my children have been born. 
