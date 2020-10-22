@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Daniel Krüger"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio_pixelate.png"
   bio    : ""
   links:
     #- label: "Website"
