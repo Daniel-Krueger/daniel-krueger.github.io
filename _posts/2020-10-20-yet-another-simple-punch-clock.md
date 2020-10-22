@@ -1,10 +1,13 @@
 ---
 title: "Yet another simple punch clock"
 categories:
-  - GitHub_Project
+  - GitHub Project
+  - Private
 tags:
-  - Notification Area
+  - Notification area
   - Time tracking
+excerpt:
+    A punch clock which is triggered by a simple click in the notification area.
 ---
 
 - [Short description](#short-description)

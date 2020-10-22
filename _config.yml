@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Outsourced memory
+title: Daniels Outsourced Memory
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -68,9 +68,12 @@ author:
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
     #  url: "https://twitter.com/"
-    - label: "GitHub"
+    - label: "Private GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Daniel-Krueger"
+    - label: "Professional GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cosmoconsult"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/daniel-kr%C3%BCger-1a6083135"
@@ -103,6 +106,7 @@ defaults:
       comments: true
       share: true
       related: true
+      permalink: /posts/:year/:month/:day/:slug
   # _pages
   - scope:
       path: "_pages"

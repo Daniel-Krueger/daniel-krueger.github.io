@@ -1,8 +1,13 @@
 ---
 permalink: /about/
-title: "About me"
+title: "About"
 ---
+# About this site
+The intention of this site is to have place to 'outsource' my memory whenever possible. It will contain snippets/documentation of thinks I created in my private and professional time. In the later case these have been approved by my employer and will be tagged accordingly.
 
+This is just a plain static site. There are no cookies, affiliate links or any kind of analytics, as far as I'm aware of.
+
+# About me
 I'm Daniel Krüger living in Germany and my job title is that of a 'developer'. Even so this is my professional title I describe myself as a guy who solves (business) problems with means of IT. If I understand the problem I will find a way to solve it.
 
 My professional carrier can be divided into three parts each focusing on a 'major' technology I used for creating solutions:
