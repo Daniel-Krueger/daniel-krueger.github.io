@@ -7,3 +7,26 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+docs:
+  - title: COSMO Consult 
+    children:
+      - title: "Company Page"
+        url: "https://www.cosmoconsult.com/"
+      - title: "GitHub"
+        url: "https://github.com/cosmoconsult"
+  - title: WEBCON
+    children:
+      - title: "Community"
+        url: "https://community.webcon.com/"
+      - title: "Developer Portal"
+        url: "https://developer.webcon.com/"
+      - title: "GitHub"
+        url: "https://github.com/WEBCON-BPS"
+      
+  - title: Blogs
+    children:
+      - title: "Tobias Fenster's Tech Blog"
+        url: "https://tobiasfenster.io/"      
+      - title: "AlterPaths"
+        #icon: "fab fa-fw fa-linkedin"
+        url: "https://alterpaths.com/"
