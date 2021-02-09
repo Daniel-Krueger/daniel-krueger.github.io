@@ -1,0 +1,143 @@
+---
+title: "Xml Invoice to item list"
+categories:
+  - WEBCON BPS  
+tags:
+  - Custom Action
+  - SDK
+excerpt:
+    This post describes an SDK Custom Action which populates an item list with data read from an XML attachment.
+---
+
+# Overview
+
+This post describes an SDK Custom Action which populates an item list with data
+read from an XML attachment. If you are interested in one of the following
+topics read on:
+
+-   Creating a plugin configuration with a grid
+-   Reading an attachment
+-   Populating an item list
+-   Logging to admin view in history
+-   Tips for Debugging and VS build events
+
+# Initial Situation
+
+Even today you will find yourself in a situation where you receive a plain xml
+file which needs to be processed. Let’s assume that it contains invoice
+information. The xml file will be part of a mail along with other attachments.
+Someone from purchase receives this “invoice” and starts the invoice workflow
+from Outlook add-in by dragging the mail on the start tile (1). In the new
+workflow he drags the attachments from the mail on the attachment control in the
+browser (2). The result will be a new invoice instance with prepopulated fields
+(3), the attachments (4) and the e-mail (5).
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/bcdb9e2ed0e91c248be3e5b79c2da33e.png)
+
+In the next step he selects the Xml file (1) with the invoice data and send the
+workflow to the next person. During the transition to the next person the Xml
+data should be read into an item list (2).
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/dc3a1a4c79d4291e1b88ffd2972738cd.png)
+Source xml:
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/2636ad5715b11a613a4033340c7730b0.png)
+
+# Workflow artifacts
+
+## Attachment picker
+
+The attachment picker uses a simple sql query fetching all xml attachments of
+the current workflow instance (1) and defines an “Empty element display name” to
+prevent automatic population of the field with the first available value.
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/757b20f2485e4eec6d9fcf5c396bc046.png)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SELECT [ATT_ID] as Id, ATT_Name as Label
+FROM [dbo].[WFDataAttachmets]
+where ATT_WFDID = {WFD_ID}
+and [ATT_IsDeleted] = 0
+and [ATT_FileType] = '.xml'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##Xml to item list action
+
+The action used for populating the item list is called “XmltoItemList”.
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/ca6aae89b374927885b201d8ca0b7667.png)
+
+It expects a picker which identifies the XML file which should be used (1). The
+structure of each xml will be different. Therefore, the custom action uses an
+XPath to select the rows which should be processed (2). This allows a high
+flexibility. The nodes of each matched row will be processed to create new rows
+in the selected item list (3). The values are retrieved from the inner text of
+the xml node and note from attributes, which don’t exist in the used sample.xml.
+For each node a type must be defined, so that the custom action transforms the
+xml text to a corresponding WEBCON BPS value. All values in the configuration
+taken from the Objects register and **not** from the Values register.
+
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/cc053df6ca1fec241c5e4e8d73bc158c.png)
+
+
+## Workflow history
+
+In the workflow history the normal user view does not contain any additional
+information. Every created row is visible to the user anyway. But if you are
+switching to the admin view, you will get additional details.
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/18ed01a30688e0c234c45c2910bc26e1.png)
+
+# VS Solution information
+
+## Logging
+
+The logging is done using a simple StringWriter class which uses manual
+indentation.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+logger.Indent();
+logger.Log($"Populating item list");
+logger.Indent();
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The log messages are displayed in admin view only because the log string is
+assigned to the LogMessage property
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+args.LogMessage = logger.ToString();
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+## Build event usage
+
+The solution makes use of the pre-build and post-build event. The pre-build
+event uses a PS script to increase the revision number of the solution. The post
+build event creates a .zip package and copies it to the development BPS server.
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/63a14cec193c40054cd36d30f2563926.png)
+
+The reason for this is, that no development takes place on the BPS server.
+Therefore, the combination of the pre- and post-build events will allow me to
+“immediately” upload a new version of the plugin package in BPS. Yes, I still
+use the server side BPS Studio.
+
+## Debugging
+
+Debugging a solution requires to attach Visual Studio to the BPS Portal process.
+If you upload you plugin multiple times without recycling the process you will
+notice that you assembly has been loaded multiple times. If Visual Studio tells
+you that no module information have been loaded and you are sure that you
+uploaded the latest build version, a good option is to recycle the process.
+
+![](/assets/images/posts/2021-02-09-custom-action-xml-to-item-list/f32f99b0dcb0264322f7b713de8ecbb5.png)
+
+**Remark:**
+Be sure that you inform all your colleagues if you debug the process on the dev
+server. Otherwise, you may find yourself in an unwanted situation. :)
+{: .notice--warning}
+
+## Download
+
+The custom action can be download from:
+
+<https://github.com/cosmoconsult/webconbps/tree/main/SDK_Actions/CC_XmlToItemList>
