@@ -16,6 +16,8 @@ docs:
         url: "https://github.com/cosmoconsult"
   - title: WEBCON
     children:
+      - title: "BPS Translator"
+        url: "https://bpstranslator.webcon.com/"
       - title: "Community"
         url: "https://community.webcon.com/"
       - title: "Developer Portal"
@@ -24,9 +26,9 @@ docs:
         url: "https://github.com/WEBCON-BPS"
       
   - title: Blogs
-    children:
-      - title: "Tobias Fenster's Tech Blog"
-        url: "https://tobiasfenster.io/"      
+    children:    
       - title: "AlterPaths"
         #icon: "fab fa-fw fa-linkedin"
         url: "https://alterpaths.com/"
+      - title: "Tobias Fenster's Tech Blog"
+        url: "https://tobiasfenster.io/"      
