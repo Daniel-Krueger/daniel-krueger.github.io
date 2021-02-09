@@ -1,5 +1,5 @@
 ---
-title: "Tips & tricks while designing a process 2 - Designer Desk"
+title: "Tips & tricks while designing a process 2 - Prototype implementation via Designer Desk"
 categories:
   - WEBCON BPS
 tags:
@@ -11,7 +11,7 @@ excerpt:
 
 # Part overview
 1. [Introduction and Use Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
-2. [Designer Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
+2. [Parent Workflow- Prototype implementation using the Designer Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
 3. Parent Workflow - Preperations and task retrieval
 4. Parent Workflow - Testing of task retrieval
 5. Parent Workflow - Identifying workflows with user assignments
