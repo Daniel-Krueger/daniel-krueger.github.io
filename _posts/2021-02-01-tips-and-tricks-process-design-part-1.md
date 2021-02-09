@@ -1,5 +1,5 @@
 ---
-title: "Tips & tricks while designing a process Part 1 - Introduction"
+title: "Tips & tricks while designing a process part 1 - Introduction and Use Case"
 categories:
   - WEBCON BPS
 tags:

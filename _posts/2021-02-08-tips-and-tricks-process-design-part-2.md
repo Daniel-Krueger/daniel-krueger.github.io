@@ -1,5 +1,5 @@
 ---
-title: "Tips & tricks while designing a process 2 - Prototype implementation via Designer Desk"
+title: "Tips & tricks while designing a process part 2 - Prototype implementation via Designer Desk"
 categories:
   - WEBCON BPS
 tags:
