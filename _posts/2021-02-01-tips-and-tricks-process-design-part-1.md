@@ -38,9 +38,7 @@ would need a better way for this.
 We needed an option to get the following information for a given person.
 
 -   Get all workflows with active tasks.
-
 -   Get all workflows in which he is involved, read is assigned to a user field.
-
 -   Get all workflows in which he may be indirectly involved. This means, that
     he is a member of a group which was assigned to a user field.
 
@@ -72,11 +70,8 @@ What are the requirements:
 
 1.   We need to fetch the workflows where a person is involved based on the above
     requirements.
-
 2.   We need to get the application of these workflows to get the supervisor.
-
 3.   We need to inform all supervisor about the identified workflows.
-
 4.   The supervisors need an option to track which workflows they already
     changed.
 
