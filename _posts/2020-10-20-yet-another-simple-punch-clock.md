@@ -9,15 +9,6 @@ tags:
 excerpt:
     A punch clock which is triggered by a simple click in the notification area.
 ---
-
-- [Short description](#short-description)
-- [Setting up](#setting-up)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Autostart](#autostart)
-- [Remarks](#remarks)
-  - [How entries and rows are written to the csv file](#how-entries-and-rows-are-written-to-the-csv-file)
-  - [Notification icon is missing although the program is executed](#notification-icon-is-missing-although-the-program-is-executed)
   
 # Short description
 [Punch Clock](https://github.com/Daniel-Krueger/PunchClock) is another windows time tracking solution. The focus of this solution is to see whether you are clocked in or out.

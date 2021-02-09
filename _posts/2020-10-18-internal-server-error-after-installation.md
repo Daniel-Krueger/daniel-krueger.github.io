@@ -4,7 +4,7 @@ categories:
   - GitHub Project
   - Cosmo Consult LS GmbH
 tags:
-  - BPS Portal
+  - BPS Portal Installation
   - asp.Net Core
 excerpt:
     Invalid web.config line -1 error after installation BPS Standalone 
