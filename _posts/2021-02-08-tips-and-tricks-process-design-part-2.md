@@ -7,20 +7,6 @@ tags:
 excerpt:
     A multipart blog post about providing tips & tricks while designing a WEBCON BPS process.
 ---
-
-
-# Part overview
-1. [Introduction and Use Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
-2. [Parent Workflow- Prototype implementation using the Designer Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
-3. Parent Workflow - Preperations and task retrieval
-4. Parent Workflow - Testing of task retrieval
-5. Parent Workflow - Identifying workflows with user assignments
-6. Parent Workflow - Getting translations of objects
-7. Parent Workflow - Completion
-8. Sub workflow - Creation 
-9. Parent Workflow - Starting sub workflows
-10. Parent Workflow - Adding monitoring column
-11. Download
     
 # User Assignments: Designing a prototype
 
@@ -159,3 +145,16 @@ If you don't know what InstantChange™ is, here is a five minute video:
 
 [The WEBCON Way \| What is InstantChange & why is it a game-changer in business application delivery?](https://www.youtube.com/watch?v=wAwxyiHI1yw)
 
+
+# Part overview
+1. [Introduction and Use Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
+2. [Parent Workflow- Prototype implementation using the Designer Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
+3. Parent Workflow - Preperations and task retrieval
+4. Parent Workflow - Testing of task retrieval
+5. Parent Workflow - Identifying workflows with user assignments
+6. Parent Workflow - Getting translations of objects
+7. Parent Workflow - Completion
+8. Sub workflow - Creation 
+9. Parent Workflow - Starting sub workflows
+10. Parent Workflow - Adding monitoring column
+11. Download
