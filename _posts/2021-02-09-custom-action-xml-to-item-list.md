@@ -1,6 +1,8 @@
 ---
 title: "Xml Invoice to item list"
 categories:
+  - GitHub Project
+  - Private
   - WEBCON BPS  
 tags:
   - Custom Action

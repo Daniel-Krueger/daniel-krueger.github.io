@@ -1,6 +1,7 @@
 ---
 title: "Tips & tricks while designing a process part 1 - Introduction and Use Case"
 categories:
+  - Private
   - WEBCON BPS
 tags:
   -   

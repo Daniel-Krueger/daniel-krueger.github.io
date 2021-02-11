@@ -1,11 +1,10 @@
 ---
 title: "Internal server error after installation"
 categories:
-  - GitHub Project
-  - Cosmo Consult LS GmbH
+  - WEBCON BPS
+  - Cosmo Consult
 tags:
   - BPS Portal Installation
-  - asp.Net Core
 excerpt:
     Invalid web.config line -1 error after installation BPS Standalone 
 ---
