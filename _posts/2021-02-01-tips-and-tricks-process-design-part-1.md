@@ -49,8 +49,7 @@ What should we do, once we know which workflows may cause an error? We need to
 verify which role he has in each process and who can replace him. Who could do
 this, who knows the process well enough to decide on this? This should be the
 supervisor of a application.
-
-![](/assets/images/posts/tips-and-tricks-process-design/f70d8b427fc50f0034c225c80e699b75.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/f70d8b427fc50f0034c225c80e699b75.png" alt="Supervisor of an application" caption="Supervisor of an application" %}
 
 If all supervisors report that the same person can replace him, this is fine. In
 this case we can use the
@@ -58,9 +57,7 @@ this case we can use the
 Administration Tools\\Permission migration tool to change all tasks, so we only
 need to manually clean up the fields. Otherwise, the tasks need to be delegated
 manually too.
-
-![](/assets/images/posts/tips-and-tricks-process-design/efeef154dbc76c261946ce2d23246de8.png)
-
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/efeef154dbc76c261946ce2d23246de8.png" alt="Changing permissions for a user" caption="Changing permissions for a user" %}
 If you are wondering why this should be done manually instead of a search &
 replace on database level than there’s a simple reason for this. One big benefit
 of WEBCON BPS is that every change to a workflow gets logged. Doing a search &

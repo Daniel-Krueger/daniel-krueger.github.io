@@ -25,43 +25,43 @@ it’s self explaining and there’s an upcoming webinar for this.
 
 Lets start with the initial workflow to get all assignments of a user. We can
 define a step name and provide a description what should happen in this step.
-![](/assets/images/posts/tips-and-tricks-process-design/9092de44ddde237ad18da9ecc2aa413d.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/9092de44ddde237ad18da9ecc2aa413d.png" alt="Describing a path" caption="Describing a path" %}
 
 The workflow for identifying all workflows in which a user is involved could
 look like this.
 
-![](/assets/images/posts/tips-and-tricks-process-design/2aa80e53cb00ebfce08b0a344cadb2de.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/2aa80e53cb00ebfce08b0a344cadb2de.png" alt="Design of user assignments workflow" caption="Design of user assignments workflow" %}
 
 ## Creating the form
 
 Once done we will move to the form, define fields, and provide information for
 the field. Why do we need it and what should happen with it.
 
-![](/assets/images/posts/tips-and-tricks-process-design/6b89fda0613ebb419a3c4cbe1af528d1.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/d6c37b764a739f716dfcfffb8a81f425.png" alt="Providing a label and description for a field" caption="Providing a label and description for a field" %}
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/6b89fda0613ebb419a3c4cbe1af528d1.png" alt="How the label and description are displayed" caption="How the label and description are displayed" %}
 
-![](/assets/images/posts/tips-and-tricks-process-design/d6c37b764a739f716dfcfffb8a81f425.png)
 
 Besides the user we need a table (item list), adding fields is done by drag&
 drop the fields from the left navigation onto the plus sign.
 
-![](/assets/images/posts/tips-and-tricks-process-design/3089a8fd71e09e70589780b5d0cf8958.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/3089a8fd71e09e70589780b5d0cf8958.png" alt="Added item list and columns" caption="Added item list and columns" %}
 
 In the field matrix we are defining when each field will be visible, whether
 it’s read only or required.
 
-![](/assets/images/posts/tips-and-tricks-process-design/6a909a1d1429d65a226eefb2838938ab.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/6a909a1d1429d65a226eefb2838938ab.png" alt="Defining in which steps which field is visible" caption="Defining in which steps which field is visible" %}
 
 ## Going for a dry run
 
 With these settings we can use the prototype for a dry run. We can select the
 user and see the description of the first step.
 
-![](/assets/images/posts/tips-and-tricks-process-design/f7c5adc0abff5aaa40777274ac588e43.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/f7c5adc0abff5aaa40777274ac588e43.png" alt="User selected and starting new instance" caption="User selected and starting new instance" %}
 
 While going through the workflow we can provide other values and notice any
 shortcomings.
 
-![](/assets/images/posts/tips-and-tricks-process-design/fe1435a674aba314bca4c0d3f82c1e3a.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/fe1435a674aba314bca4c0d3f82c1e3a.png" alt="Entering data in item list" caption="Entering data in item list" %}
 
 For example it would be good to have an Id in addition for the Workflow name.
 Also we noticed, when we looked through the application that not all
@@ -74,19 +74,19 @@ We need to add an option to display the additional information and provide a way
 to define a responsible in this case. Let’s add some fields to reflect the new
 requirements.
 
-![](/assets/images/posts/tips-and-tricks-process-design/4e3483580dbf3b8efad13afb1ed6079e.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/4e3483580dbf3b8efad13afb1ed6079e.png" alt="Adding additional fields after the dry run" caption="Adding additional fields after the dry run" %}
 
 And add a description to the responsible field so that we know why this is
 special
 
-![](/assets/images/posts/tips-and-tricks-process-design/649098c7fdb4f1e24f6cb4204b696b26.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/649098c7fdb4f1e24f6cb4204b696b26.png" alt="Providing details for an item list column" caption="Providing details for an item list column" %}
 
 In addition, we change the name of the paths from “Sample path” to something
 else and add an action to it.
 
-![](/assets/images/posts/tips-and-tricks-process-design/c83aec0a3bac5d6a75ad8f3df2e09ff7.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/c83aec0a3bac5d6a75ad8f3df2e09ff7.png" alt="Defining the path" caption="Defining the path" %}
 
-![](/assets/images/posts/tips-and-tricks-process-design/480a347c752f8c50f4a7cb853308b8a4.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/480a347c752f8c50f4a7cb853308b8a4.png" alt="Defining what actions should be executed on a path" caption="Defining what actions should be executed on a path" %}
 
 ## Adding a report
 
@@ -94,30 +94,30 @@ After doing this, I noticed that I don’t have an option to view the dry run
 data. But this is only because I haven’t yet added a report, which can easily be
 fixed
 
-![](/assets/images/posts/tips-and-tricks-process-design/13d510b21a6cb57954a768fd352d35a6.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/13d510b21a6cb57954a768fd352d35a6.png" alt="Option to add a report" caption="Option to add a report" %}
 
-![](/assets/images/posts/tips-and-tricks-process-design/df34cb6365a81f0ca739a4dff8046f33.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/df34cb6365a81f0ca739a4dff8046f33.png" alt="Dry run data is displayed in the report" caption="Dry run data is displayed in the report" %}
 
 Now we can enter the additional information and start the imaginary sub
 workflows.
 
-![](/assets/images/posts/tips-and-tricks-process-design/b1cd6e530e57dbffb08e880ab5755738.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/b1cd6e530e57dbffb08e880ab5755738.png" alt="Opened dry run workflow from report" caption="Opened dry run workflow from report" %}
 
 ## Sending the prototype to IT for finalization
 
 Once everything is ok it can be published. This is a one-way action for sending
 the prototype over to the IT where it can be finalized.
 
-![](/assets/images/posts/tips-and-tricks-process-design/24dbf27b4a521abe1ed2cb606e6d34f4.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/24dbf27b4a521abe1ed2cb606e6d34f4.png" alt="Publishing the prototype" caption="Publishing the prototype" %}
 
 The IT can continue working on the prototype, no information was lost. Every
 field, step, report description, documentation and so on was transferred.
 
-![](/assets/images/posts/tips-and-tricks-process-design/8fe1f72ed5ab3e59aaa3b12c7b91be30.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/8fe1f72ed5ab3e59aaa3b12c7b91be30.png" alt="Verification which elements are published" caption="Verification which elements are published" %}
 
 The IT can even take a look at the dry-run data.
 
-![](/assets/images/posts/tips-and-tricks-process-design/ed75a9cbd9e0d0cb6680588367b376b2.png)
+{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/ed75a9cbd9e0d0cb6680588367b376b2.png" alt="Dry run workflow instance are available even after publishing" caption="Dry run workflow instance are available even after publishing" %}
 
 ## Impressions
 

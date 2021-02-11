@@ -1,12 +1,11 @@
 ---
-title: "Tips & tricks for designing a process in WEBCON BPS"
+title: "Tips & tricks while designing a process part 1 - Introduction and Use Case"
 categories:
-  - GitHub Project
-  - Private
+  - WEBCON BPS
 tags:
-  -  A 
+  -   
 excerpt:
-    A punch clock which is triggered by a simple click in the notification area.
+    A multipart blog post about providing tips & tricks while designing a WEBCON BPS process. 
 ---
 
 
