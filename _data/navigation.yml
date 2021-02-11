@@ -14,8 +14,15 @@ docs:
         url: "https://www.cosmoconsult.com/"
       - title: "GitHub"
         url: "https://github.com/cosmoconsult"
+      - title: "Tobias Fenster's Tech Blog"
+        url: "https://tobiasfenster.io/"      
   - title: WEBCON
     children:
+      - title: "Company Page"
+        url: "https://www.webcon.com/"
+      - title: "Blog AlterPaths"
+        #icon: "fab fa-fw fa-linkedin"
+        url: "https://alterpaths.com/"   
       - title: "BPS Translator"
         url: "https://bpstranslator.webcon.com/"
       - title: "Community"
@@ -24,11 +31,4 @@ docs:
         url: "https://developer.webcon.com/"
       - title: "GitHub"
         url: "https://github.com/WEBCON-BPS"
-      
-  - title: Blogs
-    children:    
-      - title: "AlterPaths"
-        #icon: "fab fa-fw fa-linkedin"
-        url: "https://alterpaths.com/"
-      - title: "Tobias Fenster's Tech Blog"
-        url: "https://tobiasfenster.io/"      
+   

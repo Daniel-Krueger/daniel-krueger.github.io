@@ -138,6 +138,15 @@ server. Otherwise, you may find yourself in an unwanted situation. :)
 
 ## Download
 
-The custom action can be download from:
+The custom action solution can be download from:
 
 <https://github.com/cosmoconsult/webconbps/tree/main/SDK_Actions/CC_XmlToItemList>
+
+## Fun facts
+The post has been born from these two community questions:
+
+[SDK configuration with a dynamic grid](https://community.webcon.com/forum/thread/111)
+
+[Attachment file handle with SDK](https://community.webcon.com/forum/thread/231)
+
+All in all it took three hours to build the custom action, create the sample workflow and write the blog post.  

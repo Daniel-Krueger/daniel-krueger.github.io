@@ -32,6 +32,3 @@ Whenever I do something, I will try to avoid doing something twice. at least if 
 
 The intention of this site is to have place to 'outsource' my memory whenever possible. It will contain snippets, documentation and the like of things I created in my private and professional time. In the later case these have been approved by my employer and will be tagged accordingly. 
 {: .text-justify}
-
-This is just a plain static site. There are no cookies, affiliate links or any kind of analytics, as far as I'm aware of.
-{: .text-justify}
