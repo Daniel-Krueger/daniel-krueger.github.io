@@ -1,5 +1,5 @@
 ---
-title: "Xml Invoice to item list"
+title: "How to populate an item list from an XML file"
 categories:
   - GitHub Project
   - Private
