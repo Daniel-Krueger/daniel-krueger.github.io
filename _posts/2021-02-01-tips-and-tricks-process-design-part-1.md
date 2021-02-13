@@ -9,21 +9,36 @@ excerpt:
     A multipart blog post about providing tips & tricks while designing a WEBCON BPS process. 
 ---
 
+# Disclaimer
+
+This series won’t be a tutorial for how things are done in WEBCON BPS but how
+these are done right. If you are unfamiliar with WEBCON BPS, you shouldn’t
+continue after part 2, instead you should do the folowwing:
+
+-   Watch some of the tutorial videos, LINK CHANNEL for example:  
+    [DEMO \| Business Application in 7 Minutes with WEBCON
+    BPS](https://www.youtube.com/watch?v=U7fYjI71XtM&list=PL5F22BFB60089115D&index=28)
+-   Create one workflow on your own. If you need help just contact me either via
+    the comments or LinkedIn
+
+If you are wondering how you could create a workflow on your own:
+
+-   There’s an online trial version which is free for 60 days: LINK
+-   Alternatively you could install SQL Express and WEBCON BPS Express. This is
+    a free version: LINK TO BPS Express, Link to DIFFERENCES between BPS EXPRESS
+    and other versions
+
+Once you have a little experience, you are welcome to come back and read on. :)
+
 # Introduction
 
-There are sufficient posts and videos out there if you are only looking for an
-introduction into WEBCON BPS and how you can design processes. For example:
-[DEMO \| Business Application in 7 Minutes with WEBCON BPS](https://www.youtube.com/watch?v=U7fYjI71XtM&list=PL5F22BFB60089115D&index=28)
-
-
-
-So, what could be in it for you reading through this? I’m providing tips &
-tricks by creating a process from scratch and explaining why I did it in a
-particular way. The main reason I’m doing things in a particular way is, that my
-professional background is that of a developer, who likes transparency,
-traceability above all. Before I started with WEBCBON BPS in 2018 and left
-behind my time as a SharePoint application developer, which succeeded my career
-as a NAV developer.
+If you are familiar whit WEBCON BPS, what could be in it for you reading through
+this? I’m providing tips & tricks by creating a process from scratch and
+explaining why I did it in a particular way. The main reason I’m doing things in
+a particular way is influenced by the fact that I have a professional developer
+background. I’m looking out for maintainability, transparency and traceability.
+The only sure thing is, that everything changes. This applies even more to
+processes.
 
 # Use case
 
@@ -50,7 +65,10 @@ What should we do, once we know which workflows may cause an error? We need to
 verify which role he has in each process and who can replace him. Who could do
 this, who knows the process well enough to decide on this? This should be the
 supervisor of a application.
-{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/f70d8b427fc50f0034c225c80e699b75.png" alt="Supervisor of an application" caption="Supervisor of an application" %}
+
+{% include figure
+image_path="/assets/images/posts/tips-and-tricks-process-design/f70d8b427fc50f0034c225c80e699b75.png"
+alt="Supervisor of an application" caption="Supervisor of an application" %}
 
 If all supervisors report that the same person can replace him, this is fine. In
 this case we can use the
@@ -58,7 +76,12 @@ this case we can use the
 Administration Tools\\Permission migration tool to change all tasks, so we only
 need to manually clean up the fields. Otherwise, the tasks need to be delegated
 manually too.
-{% include figure image_path="/assets/images/posts/tips-and-tricks-process-design/efeef154dbc76c261946ce2d23246de8.png" alt="Changing permissions for a user" caption="Changing permissions for a user" %}
+
+{% include figure
+image_path="/assets/images/posts/tips-and-tricks-process-design/efeef154dbc76c261946ce2d23246de8.png"
+alt="Changing permissions for a user" caption="Changing permissions for a user"
+%}
+
 If you are wondering why this should be done manually instead of a search &
 replace on database level than there’s a simple reason for this. One big benefit
 of WEBCON BPS is that every change to a workflow gets logged. Doing a search &
@@ -66,24 +89,28 @@ replace on database level would circumvent this and this is a no go.
 
 What are the requirements:
 
-1.   We need to fetch the workflows where a person is involved based on the above
+1.  We need to fetch the workflows where a person is involved based on the above
     requirements.
-2.   We need to get the application of these workflows to get the supervisor.
-3.   We need to inform all supervisor about the identified workflows.
-4.   The supervisors need an option to track which workflows they already
+2.  We need to get the application of these workflows to get the supervisor.
+3.  We need to inform all supervisor about the identified workflows.
+4.  The supervisors need an option to track which workflows they already
     changed.
 
-The requirements one and two will be handled by a parent process while three and four will be fulfilled with a subworkflow.
+The requirements one and two will be handled by a parent process while three and
+four will be fulfilled with a subworkflow.
 
 # Part overview
-1. [Introduction and Use Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
-2. [Parent Workflow- Prototype implementation using the Designer Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
-3. Parent Workflow - Preperations and task retrieval
-4. Parent Workflow - Testing of task retrieval
-5. Parent Workflow - Identifying workflows with user assignments
-6. Parent Workflow - Getting translations of objects
-7. Parent Workflow - Completion
-8. Sub workflow - Creation 
-9. Parent Workflow - Starting sub workflows
+
+1.  [Introduction and Use
+    Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
+2.  [Parent Workflow- Prototype implementation using the Designer
+    Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
+3.  Parent Workflow - Preperations and task retrieval
+4.  Parent Workflow - Testing of task retrieval
+5.  Parent Workflow - Identifying workflows with user assignments
+6.  Parent Workflow - Getting translations of objects
+7.  Parent Workflow - Completion
+8.  Sub workflow - Creation
+9.  Parent Workflow - Starting sub workflows
 10. Parent Workflow - Adding monitoring column
 11. Download
