@@ -14,6 +14,10 @@ docs:
         url: "https://www.cosmoconsult.com/"
       - title: "GitHub"
         url: "https://github.com/cosmoconsult"
+      - title: "Products EN"
+        url: "https://www.cosmoconsult.com/products/"
+      - title: "Solution Catalog DE"
+        url: "https://discover.cosmoconsult.com/de/solution-catalog"
   - title: WEBCON
     children:
       - title: "Company Page"
@@ -26,6 +30,8 @@ docs:
         url: "https://developer.webcon.com/"
       - title: "GitHub"
         url: "https://github.com/WEBCON-BPS"
+      - title: "How to test WEBCON BPS"
+        url: "/how_to_test_webcon_bps"
   - title: Other blogs
     url: "/blogs/"
   
