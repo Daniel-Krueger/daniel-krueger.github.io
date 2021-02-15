@@ -12,12 +12,12 @@ toc_sticky: true
 You can experience what it’s like to start processes, respond to tasks, track
 work, and analyze reports from these 20 sample solutions:
 
-| Advances                 | Employee onboarding  | Invoice processing  | Marketing orders |
-| Car fleet administration | Expense report       | IT Asset Management | Press releases   |
-| Change requests          | Helpdesk & ticketing | IT system registry  | Sales activities |
-| Consultations            | HR requests          | Leave of absence    | Training courses |
-| Employee onboarding      | Investments          | Mailroom            | Travel request   |
-
+\| Advances \| Employee onboarding \| Invoice processing \| Marketing orders \|
+\| Car fleet administration \| Expense report \| IT Asset Management \| Press
+releases \| \| Change requests \| Helpdesk & ticketing \| IT system registry \|
+Sales activities \| \| Consultations \| HR requests \| Leave of absence \|
+Training courses \| \| Employee onboarding \| Investments \| Mailroom \| Travel
+request \|
 
 There’s nothing to install; just register and browse to the portal to try it
 out. The solutions are ready-made, and you get to try them from the end-user
@@ -34,14 +34,16 @@ you can sign up for a 60 day online trial. These run in a multitenant
 software-as-a-service offering. They are ready in moments and involve zero
 installation.
 
-[Register for trial](https://portal.webconbps.com/Account/Demo)
+[Register for trial](https://webconapps.com/identity/account/register?pi=40069)
 
-# WEBCON BPS Express freemium
+{% include video id="Fs0itP9WSIk" provider="youtube" %}
+
+# WEBCON BPS Express (freemium)
 
 If you have any local or online infrastructure available, you can download and
 install the WEBCON BPS Express edition. What’s the meaning of freemium though?
 
-| Benefits                           | Limitations                                                |
+| Benefits                               | Limitations                                                    |
 |----------------------------------------|----------------------------------------------------------------|
 | It’s free.                             | **10 GB database limit**                                       |
 | It **never expires**.                  | **Single Environment** (no dev-to-test-to-production scenario) |
@@ -50,24 +52,29 @@ install the WEBCON BPS Express edition. What’s the meaning of freemium though?
 The main limitation is the 10 GB database limit, there aren’t any features
 missing in the Express version.
 
-[Register for download](https://portal.webconbps.com/Account/Demo)
+[Register to download the installation
+package](https://starter.webcon.com/sign-up/?pi=40069&comp=Cosmo%20Consult&addr=Sch%C3%B6neberger%20Str.%2015,%2010963%20Berlin,%20Germany&policy=https://se.cosmoconsult.com/footernavigation/data-protection/)
 
 The minimum requirements for any WEBCON BPS installation are:
 
 -   Windows Server 2012 R2 or newer with IIS
 -   SQL Server 2012 Express or newer with Advanced Services
 
-In case you want to know more about the architecture or how a **setup for over ten
-thousand** users looks, take a look at the infrastructure guide and scroll down:
+In case you want to know more about the architecture or how a **setup for over
+ten thousand** users looks, take a look at the infrastructure guide and scroll
+down:
 
 [Infrastructure guide - 2. Prerequisites (no SharePoint
 platform)](https://community.webcon.com/posts/post/infrastructure-guide/126/10#_Toc43813868)
 
-# Application templates
+The downloaded package contains a detailed installation manual in English.
 
-There are 26 freely available application templates. You can import these in
-Designer Studio and give them a try. If they don’t quite fit, make them your
-own. In case of question just drop me a message.
+# Start with application templates
+
+There are 26 freely available application templates. You can import these via
+Designer Studio and give them a try. This applies to the online trial or WEBCON
+BPS Express. If they don’t quite fit, make them your own. In case of question
+just drop me a message.
 
 [Application templates overview](https://community.webcon.com/online-store)
 
@@ -76,5 +83,5 @@ own. In case of question just drop me a message.
 Yes, you are understand this correctly, if you started with an online trial you
 can export your applications and import them in your own WEBCON BPS environment.
 Of course, this applies vice versa if you started with an own environment and
-you want to move to the cloud. Perhaps I shouldn’t have used “Of course”, but
-that’s the WEBCON way.
+you want to move to the cloud. Perhaps I shouldn’t have used “Of course”,
+because it’s not often so easy with other products, but that’s the WEBCON way.

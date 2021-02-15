@@ -30,6 +30,8 @@ docs:
         url: "https://developer.webcon.com/"
       - title: "GitHub"
         url: "https://github.com/WEBCON-BPS"
+      - title: "Tutorial videos"
+        url: "/webcon_tutorial_videos"        
       - title: "How to test WEBCON BPS"
         url: "/how_to_test_webcon_bps"
   - title: Other blogs
