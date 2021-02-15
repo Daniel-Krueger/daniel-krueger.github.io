@@ -39,6 +39,8 @@ installation.
 
 # WEBCON BPS Express (freemium)
 
+## What’s WEBCON BPS Express?
+
 If you have any local or online infrastructure available, you can download and
 install the WEBCON BPS Express edition. What’s the meaning of freemium though?
 
@@ -53,6 +55,8 @@ missing in the Express version.
 
 [Register to download the installation
 package](https://starter.webcon.com/sign-up/?pi=40069&comp=Cosmo%20Consult&addr=Sch%C3%B6neberger%20Str.%2015,%2010963%20Berlin,%20Germany&policy=https://se.cosmoconsult.com/footernavigation/data-protection/)
+
+## Requirements
 
 The minimum requirements for any WEBCON BPS installation are:
 
