@@ -12,21 +12,15 @@ excerpt:
 # Disclaimer
 
 This series won’t be a tutorial for how things are done in WEBCON BPS but how
-these are done right. If you are unfamiliar with WEBCON BPS, you shouldn’t
-continue after part 2, instead you should do the folowwing:
+these are done right. If you are unfamiliar with WEBCON BPS, you should do the
+following, before continuing with part 3:
 
--   Watch some of the tutorial videos, LINK CHANNEL for example:  
-    [DEMO \| Business Application in 7 Minutes with WEBCON
-    BPS](https://www.youtube.com/watch?v=U7fYjI71XtM&list=PL5F22BFB60089115D&index=28)
+-   Watch some of the [tutorial videos](/webcon_tutorial_videos/)
 -   Create one workflow on your own. If you need help just contact me either via
     the comments or LinkedIn
 
-If you are wondering how you could create a workflow on your own:
-
--   There’s an online trial version which is free for 60 days: LINK
--   Alternatively you could install SQL Express and WEBCON BPS Express. This is
-    a free version: LINK TO BPS Express, Link to DIFFERENCES between BPS EXPRESS
-    and other versions
+If you are wondering how you could create a workflow on your own,
+[here’s](/how_to_test_webcon_bps/) an overview of the options you have.
 
 Once you have a little experience, you are welcome to come back and read on. :)
 
@@ -35,10 +29,11 @@ Once you have a little experience, you are welcome to come back and read on. :)
 If you are familiar whit WEBCON BPS, what could be in it for you reading through
 this? I’m providing tips & tricks by creating a process from scratch and
 explaining why I did it in a particular way. The main reason I’m doing things in
-a particular way is influenced by the fact that I have a professional developer
+a certain way is influenced by the fact that I have a professional developer
 background. I’m looking out for maintainability, transparency and traceability.
 The only sure thing is, that everything changes. This applies even more to
-processes.
+processes, so slight changes in the beginning will help to prevent mistakes in
+the future.
 
 # Use case
 
@@ -46,10 +41,10 @@ We recently had the situation that an employee’s user account had been
 deactivated overnight. Of course, the user was involved in processes and had
 some open tasks. This provided us some headache because WEBCON BPS doesn’t allow
 to assign new tasks to deactivated users. Which is correct in itself, but
-unfortunate for us. We had to clean up, which means that we had to delegate the
-tasks, and check in which processes he was involved and may receive a task
-because of this. We were lucky, there weren’t many, but we realized that we
-would need a better way for this.
+unfortunate for us. We had to do some housekeeping, which means that we had to
+delegate the tasks, and verify in which processes he was involved and may
+receive a task because of this. We were lucky, there weren’t many, but we
+realized that we would need a better way for this.
 
 We needed an option to get the following information for a given person.
 
@@ -97,7 +92,7 @@ What are the requirements:
     changed.
 
 The requirements one and two will be handled by a parent process while three and
-four will be fulfilled with a subworkflow.
+four will be fulfilled with a sub workflow.
 
 # Part overview
 
