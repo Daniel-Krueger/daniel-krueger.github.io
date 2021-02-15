@@ -12,12 +12,11 @@ toc_sticky: true
 You can experience what it’s like to start processes, respond to tasks, track
 work, and analyze reports from these 20 sample solutions:
 
-\| Advances \| Employee onboarding \| Invoice processing \| Marketing orders \|
-\| Car fleet administration \| Expense report \| IT Asset Management \| Press
-releases \| \| Change requests \| Helpdesk & ticketing \| IT system registry \|
-Sales activities \| \| Consultations \| HR requests \| Leave of absence \|
-Training courses \| \| Employee onboarding \| Investments \| Mailroom \| Travel
-request \|
+| Advances                 | Employee onboarding  | Invoice processing  | Marketing orders |
+| Car fleet administration | Expense report       | IT Asset Management | Press releases   |
+| Change requests          | Helpdesk & ticketing | IT system registry  | Sales activities |
+| Consultations            | HR requests          | Leave of absence    | Training courses |
+| Employee onboarding      | Investments          | Mailroom            | Travel request   |
 
 There’s nothing to install; just register and browse to the portal to try it
 out. The solutions are ready-made, and you get to try them from the end-user
