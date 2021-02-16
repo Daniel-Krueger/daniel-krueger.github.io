@@ -1,12 +1,12 @@
 ---
-title: "Tips & tricks while designing a process part 1 - Introduction and Use Case"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Part 1 - Introduction and Use Case"
 categories:
   - Private
   - WEBCON BPS
 tags:
   -   
 excerpt:
-    A multipart blog post about providing tips & tricks while designing a WEBCON BPS process. 
+    A multi-part blog post to share expert information based on the creation of a business process.
 ---
 
 # Disclaimer

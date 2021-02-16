@@ -1,11 +1,12 @@
 ---
-title: "Tips & tricks while designing a process part 3 - Parent Workflow - Preperations and task retrieval"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Part 3 - Parent Workflow - Preparations and task retrieval"
 categories:
+  - Private
   - WEBCON BPS
 tags:
   -   
-excerpt:
-    A multipart blog post about providing tips & tricks while designing a WEBCON BPS process. 
+excerpt:    
+    A multi-part blog post to share expert information based on the creation of a business process.
 ---
 
 # Disclaimer
@@ -14,7 +15,7 @@ I hope you read the
 [Disclaimer](/posts/2021/02/01/tips-and-tricks-process-design-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow here is
 not a normal workflow. We need to create this workflow in a way that we fetch
-all possible user assignments for `existing workflows` as well as for those
+all possible user assignments for **existing workflows** as well as for those
 which will be created in the **future[^1]**. So, don’t be scared from a few
 complex looking SQL statements.
 
@@ -22,7 +23,7 @@ complex looking SQL statements.
 
 # User Assignments: Creating the parent workflow
 
-This is the part 3 of my “Tips and tricks while designing a process” in WEBCON
+This is the part 3 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
 BPS.
 
 In the first [part 1](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
@@ -32,6 +33,12 @@ Desk can help us. The Designer Desk can be used by everyone but going onward
 from a trained WEBCON BPS user is necessary with a license for using the
 Designer Studio. In this part we will populate the item list with workflows
 which have open tasks.
+
+
+{: .notice--info}
+
+**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look 
+out for boxes like this one. 
 
 # Adding additional fields to the item list
 

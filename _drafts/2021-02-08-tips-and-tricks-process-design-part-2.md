@@ -1,12 +1,12 @@
 ---
-title: "Tips & tricks while designing a process part 2 - Prototype implementation via Designer Desk"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Part 2 - Prototype implementation via Designer Desk"
 categories:
   - Private
   - WEBCON BPS
 tags:
   - Designer Desk 
 excerpt:
-    A multipart blog post about providing tips & tricks while designing a WEBCON BPS process.
+    A multi-part blog post to share expert information based on the creation of a business process.
 ---
 
 # User Assignments: Designing a prototype

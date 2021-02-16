@@ -1,11 +1,12 @@
 ---
 title: "Tips & tricks while designing a process part 3 - Parent Workflow - Preperations and task retrieval"
 categories:
+  - Private
   - WEBCON BPS
 tags:
   -   
 excerpt:
-    A multipart blog post about providing tips & tricks while designing a WEBCON BPS process. 
+    A multi-part blog post to share expert information based on the creation of a business process.
 ---
 
 ## Disclaimer
@@ -14,13 +15,11 @@ I hope you read the
 [Disclaimer](/posts/2021/02/01/tips-and-tricks-process-design-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow here is
 not a normal workflow. We need to create this workflow in a way that we fetch
-all possible user assignments for `existing workflows` as well as for those
-which will be created in the **future[^1]**. So, don’t be scared from a few
+all possible user assignments for **existing workflows** as well as for those
+which will be created in the **future**. So, don’t be scared from a few
 complex looking SQL statements.
 
-[^1]: If you know a SharePoint guy, ask him how he would identify every
-    item/document where a user is assigned by a (multi) person field. Afterwards
-    compare the results.
+
 
 ## User Assignments: Creating the parent workflow
 
