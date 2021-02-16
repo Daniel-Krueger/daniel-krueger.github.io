@@ -1,5 +1,5 @@
 ---
-title: "Tips & tricks while designing a process part 3 - Parent Workflow - Preperations and task retrieval"
+title: "Tips & tricks while designing a process part 4 - Parent Workflow - Testing of task retrieval"
 categories:
   - Private
   - WEBCON BPS
@@ -9,90 +9,24 @@ excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
 ---
 
-## Disclaimer
-
-I hope you read the
-[Disclaimer](/posts/2021/02/01/expert-guide-post-series-part-1#disclaimer)
-because this is not a simple tutorial. In addition, the parent workflow here is
-not a normal workflow. We need to create this workflow in a way that we fetch
-all possible user assignments for **existing workflows** as well as for those
-which will be created in the **future**. So, don’t be scared from a few
-complex looking SQL statements.
-
-
-
-## User Assignments: Creating the parent workflow
+# Part introduction
 
 This is part 4 of my “Tips and tricks while designing a process” in WEBCON BPS.
 
-In the previous part we prepared the [part
-1](/posts/2021/02/01/expert-guide-post-series-part-1) defined the use case
-and showed in the [part
-2](/posts/2021/02/08/expert-guide-post-series-part-2) how the Designer
-Desk can help us. The Designer Desk can be used by everyone but going onward
-from a trained WEBCON BPS user is necessary with a license for using the
-Designer Studio.
+In the [previous part](/posts/2021/02/15/expert-guide-post-series-part-3) we took the prototype created in [part
+2](/posts/2021/02/08/expert-guide-post-series-part-2) enhanced it. Now it's time to test if our changes worked.
 
-### Testing retrieval of all open tasks
+{: .notice--info}
+**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look out for boxes like this one. 
 
-We can start a new instance either from the BPS Portal or simply use the context
-menu:
 
-![](media/f5b678c78d6b68942246c723a44b52d6.png)
-
-The result looks quite fine.
-
-![](media/9ad5b655ec3a38ecbe7ba98a3f39d1ef.png)
-
-Except that I see some fields we don’t need yet, that I forgot to set “Has Task”
-and that we should sort the entries. Worst of all, can I really be sure that I
-retrieved only that the variables have been replaced correctly? How can I make
-sure of this? For this we have two options.
-
-#### Prior WEBCON BPS 2021
-
-If you are running a development environment, you have the required permission
-to run the SQL Server Profiler, and there are no production databases on it. You
-can start a new trace and add a filter for the database
-
-![](media/eb7812f599f5226a717a2f51f08e6975.png)
-
-Afterwards start the trace (1), click on the path in the browser (2) , wait for
-execution, and stop the trace (3).
-
-![](media/dcce63a4386de8fff394c93eda2caffe.png)
-
-Afterwards scroll to the top and search for something unique in the query (1).
-You should find your query with the replaced values. Which you can copy into
-Management studio and execute again to verify the results. In this specific
-case, we have also another benefit, below this statement there are a bunch of
-insert statements which represents our item list update.
-
-![](media/c1a4fc14c35ce55ce2a324a82fd11cfa.png)
-
-#### With WEBCON BPS 2021
-
-WEBCON BPS 2021 added a diagnostic mode. This is not only a simple replacement
-of the “debug=1” query parameter setting. It enhances the logging information
-and brings it to an even friendly more detailed level. There’s an official post
-about this tool:
-
-<https://community.webcon.com/posts/post/diagnostics-and-form-behavior-registration-mechanism/215/3>
-
-So I will just demonstrate how this replaces the SQL Server Profile approach.
-Just copy the search string into the logger and expand the nodes. Ok, it’s not
-formatted, there’s no syntax highlighting but you can still copy & paste it into
-Management Studio to execute it.
-
-![](media/a381a0d33a980b3bc6ae8dcc116b1a05.png)
-
-### Retrieving all assignments
+# Retrieving all assignments
 
 The retrieval of all workflow in which the user was assigned to a field is
 similar to the previous one. Before copying it I will create a template from the
 action.
 
-![](media/0ae9ef4bd59995cd1fd3f575167113e1.png)
+![](/assets/images/posts/expert-guide-post-series/0ae9ef4bd59995cd1fd3f575167113e1.png)
 
 {: .notice--info}
 
@@ -106,7 +40,7 @@ information. These are all WFD_AttChoose\* columns, and there a quite a lot of
 them. Each field is mapped to one of the predefined columns. So we only need to
 check each field.
 
-![](media/2020524a79feda05e12b485dc7ff741c.png)
+![](/assets/images/posts/expert-guide-post-series/2020524a79feda05e12b485dc7ff741c.png)
 
 {: .notice--info}
 
@@ -134,7 +68,7 @@ The question is how do we get the display name. If you use the Objects tab from
 the expression editor, you will notice a few options. Each will be replaced by a
 different statement.
 
-![](media/c9d9985c626e1978d810d0b28a2d3bf3.png)
+![](/assets/images/posts/expert-guide-post-series/c9d9985c626e1978d810d0b28a2d3bf3.png)
 
 If the function is applied to a field with multi value content it returns a
 string of ids which a separated by a comma. Example
@@ -145,7 +79,7 @@ user@example.com,user2@example.com,user3@example.com
 
 **Tip:** There are a few more functions which can help you:
 
-![](media/78325b0dc48d2f28ef3fb7ba502dd218.png)
+![](/assets/images/posts/expert-guide-post-series/78325b0dc48d2f28ef3fb7ba502dd218.png)
 
 The second tricky bit is, that the user can be used in a single value or multi
 value field. We need to check each case. Since the SQL server doesn’t know a
@@ -153,7 +87,7 @@ real regular expression, we have to check every possible option, single value,
 multi-value in the beginning, multi-value in the middle and multi-value in the
 end:
 
-![](media/585d51e6ce2cfcb7b7124ee95d01265e.png)
+![](/assets/images/posts/expert-guide-post-series/585d51e6ce2cfcb7b7124ee95d01265e.png)
 
 Without checking for the comma we would may have false positives. Looking only
 for [user@example.com](mailto:user@example.com) would be also true for
@@ -165,7 +99,7 @@ muser@example.com.
 and copy the text over into the management studio. This speeds up the time
 finding the error.
 
-![](media/340d53f636ade760a3f74216c0efdab5.png)
+![](/assets/images/posts/expert-guide-post-series/340d53f636ade760a3f74216c0efdab5.png)
 
 We also need to make sure that we only add these workflows which are not already
 part of the item list. In addition, we should update the “Assigned in Field”
@@ -179,11 +113,11 @@ updating the field.
 cases you will get really useful information. They helped me tremendously
 learning WEBCON BPS.
 
-![](media/df2908ab435910fc77454a25e81c64cd.png)
+![](/assets/images/posts/expert-guide-post-series/df2908ab435910fc77454a25e81c64cd.png)
 
 After executing all three actions our item list will look like this:
 
-![](media/369373bd5190c077860ce78c7743d729.png)
+![](/assets/images/posts/expert-guide-post-series/369373bd5190c077860ce78c7743d729.png)
 
 ### One big or multiple smaller steps
 
@@ -205,7 +139,7 @@ AlterPaths](https://alterpaths.com/how-configure-form-field-with-advenced-sql-qu
 As shown above I prefer multiple smaller steps. There’s a simple reason. If
 there’s a problem I will have a hard time looking into it with one single
 action. I need to understand it again and check which part is the problem. If I
-have multiple small steps instead, I immediately know which part failed and I
+have multiple small steps instead, I im/assets/images/posts/expert-guide-post-seriestely know which part failed and I
 may have some data to work with. At least if not all actions are executed during
 the same path transition.
 
@@ -221,7 +155,7 @@ look at the data and how it was transformed.
 **Tip:** You can quickly open the step configuration of a specific workflow by
 pressing ctrl+g and either enter the ID or paste the URL.
 
-![](media/e7b53216a88b039993b3e119189b688c.png) [More keyboard
+![](/assets/images/posts/expert-guide-post-series/e7b53216a88b039993b3e119189b688c.png) [More keyboard
 shortcuts](https://community.webcon.com/posts/post/keyboard-shortcuts-in-designer-studio/38)
 
 ### Retrieving translations of WEBCON BPS elements
@@ -237,7 +171,7 @@ our workflow.
 The translations are stored in the table Translates, but you won’t get very far
 with this table alone:
 
-![](media/46f39da72fc8947273c7be4cc49a3a7e.png)
+![](/assets/images/posts/expert-guide-post-series/46f39da72fc8947273c7be4cc49a3a7e.png)
 
 Every table has an \_ID column which is the key of the table, but what are these
 other columns:
@@ -245,7 +179,7 @@ other columns:
 \_LANID points to the table TranslateLanguages where we have a mapping of
 languages to an id
 
->   ![](media/d9e881b2e9fab1b039e54debf046c04a.png)
+>   ![](/assets/images/posts/expert-guide-post-series/d9e881b2e9fab1b039e54debf046c04a.png)
 
 \_OBJID is the id of the object which translation we want to retrieve. But since
 each id of each object starts with 1 there should be duplicates. This is where
@@ -253,7 +187,7 @@ column \_ELEMID comes to our rescue. It defines the type of the object. But how
 do we know which id represents our application name? This information can be
 retrieved from the table DicTranslationsObjects.
 
-![](media/a662b21703bc7cd7d1cc557c9b90592a.png)
+![](/assets/images/posts/expert-guide-post-series/a662b21703bc7cd7d1cc557c9b90592a.png)
 
 {: .notice--info}
 
@@ -277,35 +211,35 @@ can use again and again. Business Rules can be defined on process level or
 global, which allows to use the rule everywhere. Overtime there will be a lot of
 rules and to keep an overview you can add groups.
 
-![](media/32990c0f24406e63d058682817e8643d.png)
+![](/assets/images/posts/expert-guide-post-series/32990c0f24406e63d058682817e8643d.png)
 
 Since a Business Rule is there to be reused, parameters can be provided.
 
-![](media/4199e7f0401ccc519cb94681dad582b9.png)
+![](/assets/images/posts/expert-guide-post-series/4199e7f0401ccc519cb94681dad582b9.png)
 
 Which can than be used inside the expression.
 
-![](media/fffdbf07a995a2e692b64949f9c18b30.png)
+![](/assets/images/posts/expert-guide-post-series/fffdbf07a995a2e692b64949f9c18b30.png)
 
 The “ObjectType” parameter expects only two value 51 and 51, but this is only an
 description and not a restriction. Even so these are fixed values I tend to
 create constants for those, which I will group, too. These constants can be used
 in the expression editor as well as in the parameter mapping window.
 
-![](media/6a07a570de7bd5bb902e753f10e44778.png)
+![](/assets/images/posts/expert-guide-post-series/6a07a570de7bd5bb902e753f10e44778.png)
 
 {: .notice--info}
 
 **Tip:** Grouping objects has one other benefit. If you right click on the group
 name, you can select one of the group members.
 
-![](media/854ac295c6b72760d3d3d21f15b35b0a.png)
+![](/assets/images/posts/expert-guide-post-series/854ac295c6b72760d3d3d21f15b35b0a.png)
 
 All that’s left is to add a new column to the item list of type data row, write
 a simple sql query “select ‘’ as Label” and put the business rule inside the
 single quotes.
 
-![](media/913788b656d893ff49c81ab5a36e9f7f.png)
+![](/assets/images/posts/expert-guide-post-series/913788b656d893ff49c81ab5a36e9f7f.png)
 
 The parameter mapping of the Business Rule can be opened with a right click.
 What’s important to note here is the following, we need to fetch the correct
@@ -313,22 +247,22 @@ translation for the current row. WEBCON BPS makes it easy for us, if we expand
 the workflows item list field, than we see all the defined fields and if we use
 one field it will automatically refer to the value of this row.
 
-![](media/cc4b74914a69ffd6a0f1036e150a5f68.png)
+![](/assets/images/posts/expert-guide-post-series/cc4b74914a69ffd6a0f1036e150a5f68.png)
 
 The result looks like this:
 
-![](media/29b671395747727f43395ef747637bdd.png)
+![](/assets/images/posts/expert-guide-post-series/29b671395747727f43395ef747637bdd.png)
 
 We no longer need our ids so we can hide them, but we shouldn’t do this via the
 field matrix. Instead we make use of the “Technical column” attribute.
 
-![](media/10eb06abef43ca78eed4f0fee9d5140a.png)
+![](/assets/images/posts/expert-guide-post-series/10eb06abef43ca78eed4f0fee9d5140a.png)
 
 This allows to hide unnecessary information for the normal user (1) and display
 it when necessary via the admin view (2) which is toggled via the admin button
 (3) in the menu bar.
 
-![](media/2db2fb2b6ec84692f3f27b35ffaa55ea.png)
+![](/assets/images/posts/expert-guide-post-series/2db2fb2b6ec84692f3f27b35ffaa55ea.png)
 
 {: .notice--info}
 
@@ -347,7 +281,7 @@ There’s not much to tell here. We need to update two fields of the item list. 
 we prepare the statement (1) and will add the retrieval of the wanted
 information in a second step (2).
 
-![](media/75d48a691f81e93d24eba54f4c5e5a04.png)
+![](/assets/images/posts/expert-guide-post-series/75d48a691f81e93d24eba54f4c5e5a04.png)
 
 {: .notice--info}
 
@@ -356,7 +290,7 @@ Because select ‘1’+null+’2’ will return null.
 
 This action is executed on the transition to the next path.
 
-![](media/6bc9250957ba86c394798251cd207068.png)
+![](/assets/images/posts/expert-guide-post-series/6bc9250957ba86c394798251cd207068.png)
 
 ### The (temporary) end
 
@@ -410,14 +344,14 @@ There’s not much to tell about this feature. In the expression editor you have
 the option to execute the expression and see the result or to show how it looks
 like.
 
-![](media/a06e31a18d1b2bc3d9a0e3679fff60d0.png)
+![](/assets/images/posts/expert-guide-post-series/a06e31a18d1b2bc3d9a0e3679fff60d0.png)
 
 The later one is more useful if you are resorting to writing a t-sql query which
 uses values from BPS. Clicking on “show” will replace the red bordered
 placeholders with actual values. If you are wondering where these values come
 from, you can set the workflow instance whose values should be used. If
 
-![](media/63666512114d7138de7f2d744435d5d2.png)
+![](/assets/images/posts/expert-guide-post-series/63666512114d7138de7f2d744435d5d2.png)
 
 ## Debugging the form behaviour
 
@@ -434,7 +368,7 @@ Since there are already an official topic about this, I want to highlight
 something. Once in while you will add some calculated field to a report, or on
 the form.
 
-![](media/6bb03a2a6e1584ebb9993569b668599d.png)
+![](/assets/images/posts/expert-guide-post-series/6bb03a2a6e1584ebb9993569b668599d.png)
 
 During the creation of t-sql you will probably make mistakes and you are
 wondering why it doesn’t work. To get down to the problem it would be great to
@@ -443,7 +377,7 @@ possible. Just activate the diagnostic session, find the operation with
 operation with “Get data from swe provider” for a report and copy the statement
 over to management studio and execute it yourself.
 
-![](media/53420a3a0db3d77b6b7a5e9cc64121da.png)
+![](/assets/images/posts/expert-guide-post-series/53420a3a0db3d77b6b7a5e9cc64121da.png)
 
 In case of a field /data grid on the form look for a operation title
 ExecuteParametrizedQuery.
@@ -454,9 +388,9 @@ Just start the diagnostic session, click on the path, search and search for the
 action name. You may have to expand the nodes list, but hey, this is far more
 convenient than the previous approach and saves us a lot of times.
 
-![](media/3d53058b71274b79a06d4b1273608087.png)
+![](/assets/images/posts/expert-guide-post-series/3d53058b71274b79a06d4b1273608087.png)
 
-![](media/b5faaf321045f6a5abd7d9f42152c6d7.png)
+![](/assets/images/posts/expert-guide-post-series/b5faaf321045f6a5abd7d9f42152c6d7.png)
 
 ## Debugging communication with external systems
 
@@ -467,14 +401,14 @@ with SharePoint. Most of the time they happened in production and I wouldn’t
 have enough logging information. So how has this changed with WEBCON BPS? WEBCON
 BPS stores every executed action and you can check what happened in the history.
 
-![](media/953706f10ab312ddb587ae11470e78aa.png)
+![](/assets/images/posts/expert-guide-post-series/953706f10ab312ddb587ae11470e78aa.png)
 
 If you have the impression, that this information won’t help much, you are
 right. But this is only because this is what a normal user can see. If you
 switch to admin mode, you will get all information necessary to replicate the
 call.
 
-![](media/4aa6365af7521255dc80dd8a3fbc1d23.png)
+![](/assets/images/posts/expert-guide-post-series/4aa6365af7521255dc80dd8a3fbc1d23.png)
 
 This information is stored in the database alongside the workflow. It will only
 get deleted if the workflow itself is deleted. So you can track down the problem

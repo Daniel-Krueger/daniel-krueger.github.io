@@ -13,8 +13,7 @@ excerpt:
 
 I hope you read the
 [Disclaimer](/posts/2021/02/01/expert-guide-post-series-part-1#disclaimer)
-because this is not a simple tutorial. In addition, the parent workflow here is
-not a normal workflow. We need to create this workflow in a way that we fetch
+because this is not a simple tutorial. In addition, the parent workflow we need to fulfil the requirements is special. We need to create this workflow in a way that we fetch
 all possible user assignments for **existing workflows** as well as for those
 which will be created in the **future[^1]**. So, don’t be scared from a few
 complex looking SQL statements.
@@ -28,15 +27,13 @@ BPS. In this part we will take the prototype and and enhance it to get all workf
 for which a active tasks exists.
 
 In [part 1](/posts/2021/02/01/expert-guide-post-series-part-1)
-we defined the use case and showed in [part
-2](/posts/2021/02/08/expert-guide-post-series-part-2) how the Designer
+we defined the use case and showed in [part 2](/posts/2021/02/08/expert-guide-post-series-part-2) how the Designer
 Desk can help us. The Designer Desk can be used by everyone to create a prototype. Turning the prototype
 into a real application we need a trained WEBCON BPS user with a license for using the
 Designer Studio. 
 
 {: .notice--info}
-**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look 
-out for boxes like this one. 
+**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look out for boxes like this one. 
 
 # Adding additional fields to the item list
 
@@ -195,6 +192,72 @@ show you where it is used.
 {% include figure
 image_path="/assets/images/posts/expert-guide-post-series/399c2f7220590ccca5d61274c7a15df4.png"
 alt="" caption="" %}
+
+# Testing retrieval of all open tasks
+
+We can start a new instance either from the BPS Portal or simply use the context
+menu:
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/f5b678c78d6b68942246c723a44b52d6.png" alt="Starting a workflow from the context menu" caption="Starting a workflow from the context menu" %}
+
+After moving the workflow to step two, we see the result which look Ok. Except:
+- Some fields are not required yet like responsible.
+- “Has Task" has not been set.
+- The entries aren't sorted 
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/9ad5b655ec3a38ecbe7ba98a3f39d1ef.png" alt="Populated item list with workflow information who have an open task for the selected user" caption="Populated item list with workflow information who have an open task for the selected user" %}
+
+Worst of all, can I really be sure that I
+retrieved only that the variables in our [SQL statement](#using-variables-in-expressions) have been replaced correctly? How can I make
+sure of this? For this we have two options.
+
+## Prior WEBCON BPS 2021
+
+Prior the new WEBCON BPS 2021 version I would have used SQL Server Profiler, which requires a few prerequisites:
+- A development environment,
+- Sufficient SQL Server privileges to execute SQL Server Profiler, - There are no production databases on it. 
+
+
+{: .notice--info}
+**Warning:** This will have an impact on the performance of the server you shouldn't activate the trace longer than absolutely necessary. 
+
+If this is the case, you can can start a new trace and add a filter for the database, by selecting "Show all columns"
+and set the name of your BPS Content database
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/eb7812f599f5226a717a2f51f08e6975.png" alt="Filter settings of a SQL Profiler trace" caption="Filter settings of a SQL Profiler trace" %}
+
+Once the filter is set, the trace can be started (1) immediately before you click on the path in the browser (2). Once the execution is complete stop the trace (3).
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/dcce63a4386de8fff394c93eda2caffe.png" alt="How to steps to log WEBCON BPS SQL statements" caption="How to steps to log WEBCON BPS SQL statements" %}
+
+Afterwards scroll to the top and search for something unique in the query (1).
+You should find your query with the replaced values. If everything looks fine and but you still got the wrong data, you can copy the statement into
+Management studio and execute again to verify the results. 
+
+In this specific case, we have also another benefit. Below the searched SQL statement (2) there are a bunch of
+insert statements which represents our item list update.
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/c1a4fc14c35ce55ce2a324a82fd11cfa.png" alt="SQL Profiler trace log with executed SQL statement" caption="SQL Profiler trace log with executed SQL statement" %}
+
+## With WEBCON BPS 2021
+
+WEBCON BPS 2021 added a diagnostic mode. This is not only a simple replacement
+of the _debug=1_ query parameter setting. It enhances the logging information
+and brings it to an even friendly more detailed level. There’s an official post
+about this tool:
+
+<https://community.webcon.com/posts/post/diagnostics-and-form-behavior-registration-mechanism/215/3>
+
+So, I will just demonstrate how this replaces the SQL Server Profile approach.
+Just copy the search string into the logger and expand the nodes. That's all. :)
+Ok, it’s not formatted, there’s no syntax highlighting but you can still copy & paste it into
+Management Studio to execute it.
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/a381a0d33a980b3bc6ae8dcc116b1a05.png" alt="Located string in the logs of the diagnostic mode" caption="Located string in the logs of the diagnostic mode" %}
+
+{: .notice--info}
+
+**Tip:** The best of the new Diagnostic mode is, that any user can do this and even save the log files so that an administrator can look over them at a later time.
 
 # Continuation
 
