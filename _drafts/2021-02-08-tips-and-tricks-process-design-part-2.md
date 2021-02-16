@@ -14,13 +14,13 @@ excerpt:
 ## Designer Desk
 
 Prior to WEBCON BPS 2021 I would have used the Designer Studio to create a
-prototype together with the process owner, the guy who’s requesting this. With
-the new version I would choose the Designer Desk. The Designer Desk allows every
-user to create a prototype of there process which they have in mind. There is
-only the information, which is needed for the prototype creation, which can be
+prototype together with the process owner, the person who’s requesting this. With
+the new version I would definitely choose the Designer Desk as a tool. The Designer Desk allows every
+user to create a prototype of their process which they have in mind. It contains
+only as much  information as needed for the prototype creation, which can be
 tested, and upon completion it can be send to the IT department to create a
-process from it. I won’t take a screenshot of every step since it’s quite self
-explaining, and it’s shown in the official release demo starting
+process from it. I won’t take a screenshot of every step since it’s quite self-explaining, 
+and it’s shown in the official release demo starting
 [here](https://youtu.be/K9zX5YCqE_M?t=198).
 
 ## Creating the workflow
@@ -80,20 +80,20 @@ image_path="/assets/images/posts/tips-and-tricks-process-design/f7c5adc0abff5aaa
 alt="User selected and starting new instance" caption="User selected and
 starting new instance" %}
 
-While going through the workflow we can provide other values and notice any
+While going through the workflow step by step we can provide other values and identify any
 shortcomings.
 
 {% include figure
 image_path="/assets/images/posts/tips-and-tricks-process-design/fe1435a674aba314bca4c0d3f82c1e3a.png"
 alt="Entering data in item list" caption="Entering data in item list" %}
 
-For example, it would be good to have an Id in addition for the Workflow name.
-Also, we noticed, when we looked through our existing applications, that not all
-have a person as a supervisor but use custom information like “Backoffice”.
+For example, we might decide, that it would be good to have an Id in addition to the Workflow name.
+When we looked through our existing applications for example data, we noticed that not all
+of them have a person as a supervisor. Some use custom information like “Backoffice”.
 
 ## Updating the form and workflow
 
-We need to add an option to display the additional information and provide a way
+We therefore need to add an option to display this additional information and provide a way
 to define a responsible in this case. Let’s add some fields to reflect the new
 requirements.
 
@@ -103,7 +103,7 @@ alt="Adding additional fields after the test run" caption="Adding additional
 fields after the test run" %}
 
 And add a description to the responsible field so that we know why this is
-special
+special.
 
 {% include figure
 image_path="/assets/images/posts/tips-and-tricks-process-design/649098c7fdb4f1e24f6cb4204b696b26.png"
@@ -126,7 +126,7 @@ actions should be executed on a path" %}
 
 After doing this, I noticed that I don’t have an option to view the test run
 data. But this is only because I haven’t yet added a report, which can easily be
-fixed, by adding one
+fixed, by adding one.
 
 {% include figure
 image_path="/assets/images/posts/tips-and-tricks-process-design/13d510b21a6cb57954a768fd352d35a6.png"
@@ -171,15 +171,15 @@ caption="Test run workflow instance are available even after publishing" %}
 
 ## Impressions
 
-The Designer Desk allows any end user to create a prototype for their ideas.
-They can design the workflow and form, test their idea, verify it, change it
-until they are satisfied. In addition, they can add a description what should
+The Designer Desk allows any end user to create a prototype based on their ideas.
+They can design the workflow and form, test the created application, verify it, change it
+until they are satisfied with the result. In addition, they can add a description what should
 happen, without bothering to make it actually work or fear to break anything.
 They can just describe something like “send attachment with name X via mail to
 the supervisor of A and attachment with name Y to supervisor of supervisor of B”
 and let the IT see how to implement this. This is great for both sides. The end
-user can test/change to their hearts content and the IT gets finally useful
-requirements. What’s even better is that all information and test-run data is
+user can test and adapt to their hearts content and the IT finally gets precisely described
+requirements. What’s even better all information and test-run data is
 accessible to the IT. This is clearly a win-win situation and I like it a lot.
 To summarize the benefits:
 

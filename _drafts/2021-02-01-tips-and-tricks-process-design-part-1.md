@@ -27,7 +27,7 @@ Once you have a little experience, you are welcome to come back and read on. :)
 # Introduction
 
 If you are familiar whit WEBCON BPS, what could be in it for you reading through
-this? I’m providing tips & tricks by creating a process from scratch and
+this? Because here you find more than just a “how-to” instruction. In this blog I am sharing deep insights into the process of building business applications with WEBCON BPS: I’m providing tips & tricks by creating a process from scratch and
 explaining why I did it in a particular way. The main reason I’m doing things in
 a certain way is influenced by the fact that I have a professional developer
 background. I’m looking out for maintainability, transparency and traceability.
@@ -39,9 +39,10 @@ the future.
 
 We recently had the situation that an employee’s user account had been
 deactivated overnight. Of course, the user was involved in processes and had
-some open tasks. This provided us some headache because WEBCON BPS doesn’t allow
-to assign new tasks to deactivated users. Which is correct in itself, but
-unfortunate for us. We had to do some housekeeping, which means that we had to
+some open tasks. This gave us some headache because WEBCON BPS doesn’t allow
+to assign new tasks to deactivated users. Which how you want a solution to work,
+but in this situation was unfortunate for us. We had to do some housekeeping, 
+which means that we had to
 delegate the tasks, and verify in which processes he was involved and may
 receive a task because of this. We were lucky, there weren’t many, but we
 realized that we would need a better way for this.
@@ -83,9 +84,7 @@ of WEBCON BPS is that every change to a workflow gets logged. Doing a search &
 replace on database level would circumvent this and this is a no go.
 
 What are the requirements:
-
-1.  We need to fetch the workflows where a person is involved based on the above
-    requirements.
+1.  We need to fetch those workflows where a certain person is involved in, based on the requirements named above.
 2.  We need to get the application of these workflows to get the supervisor.
 3.  We need to inform all supervisor about the identified workflows.
 4.  The supervisors need an option to track which workflows they already
