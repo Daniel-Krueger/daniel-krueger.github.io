@@ -12,7 +12,7 @@ excerpt:
 ## Disclaimer
 
 I hope you read the
-[Disclaimer](/posts/2021/02/01/tips-and-tricks-process-design-part-1#disclaimer)
+[Disclaimer](/posts/2021/02/01/expert-guide-post-series-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow here is
 not a normal workflow. We need to create this workflow in a way that we fetch
 all possible user assignments for **existing workflows** as well as for those
@@ -26,9 +26,9 @@ complex looking SQL statements.
 This is part 4 of my “Tips and tricks while designing a process” in WEBCON BPS.
 
 In the previous part we prepared the [part
-1](/posts/2021/02/01/tips-and-tricks-process-design-part-1) defined the use case
+1](/posts/2021/02/01/expert-guide-post-series-part-1) defined the use case
 and showed in the [part
-2](/posts/2021/02/08/tips-and-tricks-process-design-part-2) how the Designer
+2](/posts/2021/02/08/expert-guide-post-series-part-2) how the Designer
 Desk can help us. The Designer Desk can be used by everyone but going onward
 from a trained WEBCON BPS user is necessary with a license for using the
 Designer Studio.

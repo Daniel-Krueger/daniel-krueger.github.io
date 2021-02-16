@@ -12,7 +12,7 @@ excerpt:
 # Disclaimer
 
 I hope you read the
-[Disclaimer](/posts/2021/02/01/tips-and-tricks-process-design-part-1#disclaimer)
+[Disclaimer](/posts/2021/02/01/expert-guide-post-series-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow here is
 not a normal workflow. We need to create this workflow in a way that we fetch
 all possible user assignments for `existing workflows` as well as for those

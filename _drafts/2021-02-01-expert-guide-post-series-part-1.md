@@ -63,7 +63,7 @@ this, who knows the process well enough to decide on this? This should be the
 supervisor of a application.
 
 {% include figure
-image_path="/assets/images/posts/tips-and-tricks-process-design/f70d8b427fc50f0034c225c80e699b75.png"
+image_path="/assets/images/posts/expert-guide-post-series/f70d8b427fc50f0034c225c80e699b75.png"
 alt="Supervisor of an application" caption="Supervisor of an application" %}
 
 If all supervisors report that the same person can replace him, this is fine. In
@@ -74,7 +74,7 @@ need to manually clean up the fields. Otherwise, the tasks need to be delegated
 manually too.
 
 {% include figure
-image_path="/assets/images/posts/tips-and-tricks-process-design/efeef154dbc76c261946ce2d23246de8.png"
+image_path="/assets/images/posts/expert-guide-post-series/efeef154dbc76c261946ce2d23246de8.png"
 alt="Changing permissions for a user" caption="Changing permissions for a user"
 %}
 
@@ -93,18 +93,4 @@ What are the requirements:
 The requirements one and two will be handled by a parent process while three and
 four will be fulfilled with a sub workflow.
 
-# Part overview
-
-1.  [Introduction and Use
-    Case](/posts/2021/02/01/tips-and-tricks-process-design-part-1)
-2.  [Parent Workflow- Prototype implementation using the Designer
-    Desk](/posts/2021/02/08/tips-and-tricks-process-design-part-2)
-3.  Parent Workflow - Preperations and task retrieval
-4.  Parent Workflow - Testing of task retrieval
-5.  Parent Workflow - Identifying workflows with user assignments
-6.  Parent Workflow - Getting translations of objects
-7.  Parent Workflow - Completion
-8.  Sub workflow - Creation
-9.  Parent Workflow - Starting sub workflows
-10. Parent Workflow - Adding monitoring column
-11. Download
+{% include expert-guide-parts %}
