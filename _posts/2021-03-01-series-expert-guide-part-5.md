@@ -4,9 +4,9 @@ categories:
   - Private
   - WEBCON BPS
 tags:
-  - Item list
-  - Translations
   - Business Rules
+  - Item list
+  - Translations  
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
 ---
