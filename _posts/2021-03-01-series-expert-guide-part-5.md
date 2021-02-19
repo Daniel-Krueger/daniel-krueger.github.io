@@ -1,5 +1,5 @@
 ---
-title: "Building Business Processes with WEBCON BPS – an expert guide: Getting translations & supervisor"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Part 5 - Parent Workflow - Getting translations & supervisor"
 categories:
   - Private
   - WEBCON BPS
