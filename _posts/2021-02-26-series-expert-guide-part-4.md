@@ -1,5 +1,5 @@
 ---
-title: "Tips & tricks while designing a process part 4 - Parent Workflow - Identify workflows by involved user"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Identify workflows by selected user"
 categories:
   - Private
   - WEBCON BPS
@@ -14,8 +14,8 @@ bpsVersion: 2021.1.1.46
 # Part introduction
 
 This is the part 4 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
-BPS. In the [previous part](/posts/2021/expert-guide-post-series-part-3) we took the prototype created in [part
-2](/posts/2021/expert-guide-post-series-part-2) enhanced it gather all workflows where the selected user has an open task.
+BPS. In the [previous part](/posts/2021/series-expert-guide-part-3) we took the prototype created in [part
+2](/posts/2021/series-expert-guide-part-2) enhanced it gather all workflows where the selected user has an open task.
 In this part we will identify all workflows which store the selected user in a person field. This can be a single or multi-value field
 
 {: .notice--info}
@@ -30,7 +30,7 @@ checking the tasks we need to check the column which could contain user
 information. These are all `WFD_AttChoose##` columns, and there a quite a lot of
 them. Each field is mapped to one of the predefined columns. 
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/2020524a79feda05e12b485dc7ff741c.png" alt="The field 'User' is mapped to the Column WFD_AttChoose1" caption="The field 'User' is mapped to the Column WFD_AttChoose1" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/2020524a79feda05e12b485dc7ff741c.png" alt="The field 'User' is mapped to the Column WFD_AttChoose1" caption="The field 'User' is mapped to the Column WFD_AttChoose1" %}
 
 {: .notice--info}
 
@@ -48,7 +48,7 @@ This makes our job a little tricky. First of all, we have to compare the Id
 of the choice field against the BPS id, which is the name of the internal user id. This should only change in a few
 rare cases while the display name may change due to marriage or similar.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-17-22-37-23.png" alt="The id of a user can be retrieved from the BPS users list" caption="The id of a user can be retrieved from the BPS users list" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/2021-02-17-22-37-23.png" alt="The id of a user can be retrieved from the BPS users list" caption="The id of a user can be retrieved from the BPS users list" %}
 
 {: .notice--info}
 
@@ -60,7 +60,7 @@ The question is how do we extract the id from the value. If you use the Objects 
 the expression editor, you will notice a few options. Each will be replaced by a
 different statement.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/c9d9985c626e1978d810d0b28a2d3bf3.png" alt="Four different variables can be used to get the correct value from a person/choose field" caption="Four different variables can be used to get the correct value from a person/choose field" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/c9d9985c626e1978d810d0b28a2d3bf3.png" alt="Four different variables can be used to get the correct value from a person/choose field" caption="Four different variables can be used to get the correct value from a person/choose field" %}
 
 While a single value field will simply return the id, there's a different behaviour for a multi-value field. In this case it returns string of ids which a separated by a comma. 
 
@@ -70,7 +70,7 @@ While a single value field will simply return the id, there's a different behavi
 
 **Tip:** There are a few more functions which can help you:
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/78325b0dc48d2f28ef3fb7ba502dd218.png" alt="Functions for extracting specific values from a choose/person field value" caption="Functions for extracting specific values from a choose/person field value" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/78325b0dc48d2f28ef3fb7ba502dd218.png" alt="Functions for extracting specific values from a choose/person field value" caption="Functions for extracting specific values from a choose/person field value" %}
 
 ## Where condition for a single and multi-value field 
 
@@ -82,7 +82,7 @@ real regular expression, we have to check every possible option. These are:
 3. multi-value in the middle of the string
 4. multi-value in the end of the string
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/585d51e6ce2cfcb7b7124ee95d01265e.png" alt="Checking a value for all possible combinations which may contain the user id" caption="Checking a value for all possible combinations which may contain the user id" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/585d51e6ce2cfcb7b7124ee95d01265e.png" alt="Checking a value for all possible combinations which may contain the user id" caption="Checking a value for all possible combinations which may contain the user id" %}
 
 Without checking for the comma we may have false positives. Searching 
 for `user@example.com` would be also return true for ids like `muser@example.com`.
@@ -93,14 +93,14 @@ for `user@example.com` would be also return true for ids like `muser@example.com
 and copy the text over into SQL Server Management Studio. This reduces the time spend
 for identifying the error .
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/340d53f636ade760a3f74216c0efdab5.png" alt="Syntax highlighting in Management Studio makes it easier to see the error" caption="Syntax highlighting in Management Studio makes it easier to see the error" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/340d53f636ade760a3f74216c0efdab5.png" alt="Syntax highlighting in Management Studio makes it easier to see the error" caption="Syntax highlighting in Management Studio makes it easier to see the error" %}
 
 # Updating an item list with additional information
 The retrieval of all workflow in which the user was assigned to a field is
 similar to the for retrieving the tasks. Before copying it I will create a template from the
 action.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/0ae9ef4bd59995cd1fd3f575167113e1.png" alt="The created template is available under Configuration\Action templates" caption="The created template is available under Configuration\Action templates" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/0ae9ef4bd59995cd1fd3f575167113e1.png" alt="The created template is available under Configuration\Action templates" caption="The created template is available under Configuration\Action templates" %}
 
 {: .notice--info}
 
@@ -113,21 +113,21 @@ part of the item list. The second copy will update the “Assigned in Field”
 column for those workflow ids which were because they have an open task.
 
 The action for adding only workflows which don't exist yet simply checks whether the workflow instance id is already part of the item list (1). The complete statement is omitted simply because of the "is user in field check" for 90 fields.
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-17-22-04-41.png" alt="SQL statement for adding only those workflows which don't exist yet." caption="SQL statement for adding only those workflows which don't exist yet." %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/2021-02-17-22-04-41.png" alt="SQL statement for adding only those workflows which don't exist yet." caption="SQL statement for adding only those workflows which don't exist yet." %}
 
 The action for updating the "Assigned in Field" field uses a case statement which checks if the current workflow also has choose field with the BPS id of the selected user (1). If this is the case, than the field is set to true otherwise to false. It is executed for each row in the item list where "Has task" is true. Selecting the DET_ID as a unique value and retrieving it in the SQL query will ensure that the same row is updated and not some other row.
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-17-22-02-23.png" alt="" caption="" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/2021-02-17-22-02-23.png" alt="" caption="" %}
 {: .notice--info}
 
 **Tip:** If you are in doubt how something works click on the blue `i`. In most
 cases you will get really useful information. They helped me tremendously
 learning WEBCON BPS.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/df2908ab435910fc77454a25e81c64cd.png" alt="Info icons often provide useful information and examples" caption="Info icons often provide useful information and examples" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/df2908ab435910fc77454a25e81c64cd.png" alt="Info icons often provide useful information and examples" caption="Info icons often provide useful information and examples" %}
 
 After executing all three actions our item list will look like this:
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/369373bd5190c077860ce78c7743d729.png" alt="Item list is populated with all workflows and the checkbox defines why the workflow was added" caption="Item list is populated with all workflows and the checkbox defines why the workflow was added" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/369373bd5190c077860ce78c7743d729.png" alt="Item list is populated with all workflows and the checkbox defines why the workflow was added" caption="Item list is populated with all workflows and the checkbox defines why the workflow was added" %}
 
 # One big or multiple smaller steps
 
@@ -162,7 +162,7 @@ look at the data and how it was transformed.
 pressing ctrl+g and either enter the ID or paste the URL of the workflow. There are [more keyboard
 shortcuts.](https://community.webcon.com/posts/post/keyboard-shortcuts-in-designer-studio/38)
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/e7b53216a88b039993b3e119189b688c.png" alt="Short cut for opening the configuration of the current step of a workflow" caption="Short cut for opening the configuration of the current step of a workflow" %} 
+{% include figure image_path="/assets/images/posts/series-expert-guide/e7b53216a88b039993b3e119189b688c.png" alt="Short cut for opening the configuration of the current step of a workflow" caption="Short cut for opening the configuration of the current step of a workflow" %} 
 
 
 
@@ -170,4 +170,4 @@ shortcuts.](https://community.webcon.com/posts/post/keyboard-shortcuts-in-design
 
 In the next part we will see how we can retrieve the translations of the application, process, workflow and form type which ids have been stored in the item list.
 
-{% include expert-guide-parts %}
+{% include series-expert-guide %}

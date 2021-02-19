@@ -64,7 +64,7 @@ this, who knows the process well enough to decide on this? This should be the
 supervisor of a application.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/f70d8b427fc50f0034c225c80e699b75.png"
+image_path="/assets/images/posts/series-expert-guide/f70d8b427fc50f0034c225c80e699b75.png"
 alt="Supervisor of an application" caption="Supervisor of an application" %}
 
 If all supervisors report that the same person can replace him, this is fine. In
@@ -75,7 +75,7 @@ need to manually clean up the fields. Otherwise, the tasks need to be delegated
 manually too.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/efeef154dbc76c261946ce2d23246de8.png"
+image_path="/assets/images/posts/series-expert-guide/efeef154dbc76c261946ce2d23246de8.png"
 alt="Changing permissions for a user" caption="Changing permissions for a user"
 %}
 
@@ -94,4 +94,4 @@ What are the requirements:
 The requirements one and two will be handled by a parent process while three and
 four will be fulfilled with a sub workflow.
 
-{% include expert-guide-parts %}
+{% include series-expert-guide %}

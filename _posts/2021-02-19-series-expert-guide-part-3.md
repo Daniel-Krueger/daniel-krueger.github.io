@@ -13,7 +13,7 @@ bpsVersion: 2021.1.1.46
 # Disclaimer
 
 I hope you read the
-[Disclaimer](/posts/2021/expert-guide-post-series-part-1#disclaimer)
+[Disclaimer](/posts/2021/series-expert-guide-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow we need to fulfil the requirements is special. We need to create this workflow in a way that we fetch
 all possible user assignments for **existing workflows** as well as for those
 which will be created in the **future[^1]**. So, don’t be scared from a few
@@ -27,8 +27,8 @@ This is the part 3 of my “Building Business Processes with WEBCON BPS – an e
 BPS. In this part we will take the prototype and and enhance it to get all workflows
 for which a active tasks exists.
 
-In [part 1](/posts/2021/expert-guide-post-series-part-1)
-we defined the use case and showed in [part 2](/posts/2021/expert-guide-post-series-part-2) how the Designer
+In [part 1](/posts/2021/series-expert-guide-part-1)
+we defined the use case and showed in [part 2](/posts/2021/series-expert-guide-part-2) how the Designer
 Desk can help us. The Designer Desk can be used by everyone to create a prototype. Turning the prototype
 into a real application we need a trained WEBCON BPS user with a license for using the
 Designer Studio. 
@@ -39,7 +39,7 @@ Designer Studio.
 # Changing Instance number
 Due to the fact the Designer Desk hides the more complex internal workings we need to change the form type values, especially the Acronym which is used in the instance number. An instance number like `DTYPE-1/2021/02/00006/9072` isn't helpful at all.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-19-21-47-32.png" alt="Changes to form type to improve the instance number" caption="Changes to form type to improve the instance number" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/2021-02-19-21-47-32.png" alt="Changes to form type to improve the instance number" caption="Changes to form type to improve the instance number" %}
 
 {: .notice--info}
 **Tip:** Don't be confused when you read about signature or instance number. They are synonyms.
@@ -53,7 +53,7 @@ These are the fields of our Workflows Item list which we got via the Designer
 Desk from our process owner.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/924f04dbc6e261758215bbb9888041f8.png"
+image_path="/assets/images/posts/series-expert-guide/924f04dbc6e261758215bbb9888041f8.png"
 alt="Fields provided by the process owner via Designer desk." caption="Fields
 provided by the process owner via Designer desk." %}
 
@@ -77,7 +77,7 @@ The screenshot below shows the added fields and the translations of the field
 “WorkflowInstanceId”.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/9aff4a1c13cc88c252d6931c6eaa363a.png"
+image_path="/assets/images/posts/series-expert-guide/9aff4a1c13cc88c252d6931c6eaa363a.png"
 alt="Added fields and translations of WorkflowInstanceId" caption="Added fields
 and translations of WorkflowInstanceId" %}
 
@@ -96,7 +96,7 @@ Looking at the workflow diagram we see that we need to retrieve all open tasks
 for the required user:
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/f5cd21da9682acf78688b7282786c6aa.png"
+image_path="/assets/images/posts/series-expert-guide/f5cd21da9682acf78688b7282786c6aa.png"
 alt="Workflow diagram of user assignment parent workflow" caption="Workflow
 diagram of user assignment parent workflow" %}
 
@@ -105,7 +105,7 @@ familiar where the requested data is stored and which names the fields have, I
 would write the SQL statement directly into the expression editor.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/76c33217a17d4c66e770548a12b0f672.png"
+image_path="/assets/images/posts/series-expert-guide/76c33217a17d4c66e770548a12b0f672.png"
 alt="An action was added to the renamed pat to fetch all open tasks for selected
 user." caption="An action was added to the renamed pat to fetch all open tasks
 for selected user." %}
@@ -115,7 +115,7 @@ Management Studio. This will help me with identifying the fields, test the data
 and so on.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/ad9f1462960d1aba72f15bae77d3ad96.png"
+image_path="/assets/images/posts/series-expert-guide/ad9f1462960d1aba72f15bae77d3ad96.png"
 alt="Alternative creation of the expression in SQL Management Studio"
 caption="Alternative creation of the expression in SQL Management Studio" %}
 
@@ -129,7 +129,7 @@ Armed with this knowledge I could join all the necessary tables or rely simply
 on V_WFElements which already contains all the IDs I need.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/a2fc892531f673e644741862ad88de00.png"
+image_path="/assets/images/posts/series-expert-guide/a2fc892531f673e644741862ad88de00.png"
 alt="SQL Statement for getting all required data for workflows with an open
 task." caption="SQL Statement for getting all required data for workflows with
 an open task." %}
@@ -152,7 +152,7 @@ Now we have all the information we need. We can remove the hard coded values and
 map the columns to the appropriate fields of the item list.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/7e33d8ff580558adc69f29ccf3805ef2.png"
+image_path="/assets/images/posts/series-expert-guide/7e33d8ff580558adc69f29ccf3805ef2.png"
 alt="SQL statement after adding variables" caption="SQL statement after adding
 variables" %}
 
@@ -160,7 +160,7 @@ If you activate the advanced mode, you can see the internal representation of
 the variables (objects).
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/f1df2de9c135760308a531637fccdcf6.png"
+image_path="/assets/images/posts/series-expert-guide/f1df2de9c135760308a531637fccdcf6.png"
 alt="SQL statement in advanced mode. This matches a copy & paste into a text
 editor." caption="SQL statement in advanced mode. This matches a copy & paste
 into a text editor." %}
@@ -180,7 +180,7 @@ variables and are “magic” expressions. These will be replaced with a real va
 during execution.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/fc10137fac4cc38f61be79e78a39f44f.png"
+image_path="/assets/images/posts/series-expert-guide/fc10137fac4cc38f61be79e78a39f44f.png"
 alt="The advanced mode shows the variable names and their internal values."
 caption="The advanced mode shows the variable names and their internal values."
 %}
@@ -202,7 +202,7 @@ show you where it is used.
     time to look for the problem.
 
 {% include figure
-image_path="/assets/images/posts/expert-guide-post-series/399c2f7220590ccca5d61274c7a15df4.png"
+image_path="/assets/images/posts/series-expert-guide/399c2f7220590ccca5d61274c7a15df4.png"
 alt="" caption="" %}
 
 # Testing retrieval of all open tasks
@@ -210,14 +210,14 @@ alt="" caption="" %}
 We can start a new instance either from the BPS Portal or simply use the context
 menu:
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/f5b678c78d6b68942246c723a44b52d6.png" alt="Starting a workflow from the context menu" caption="Starting a workflow from the context menu" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/f5b678c78d6b68942246c723a44b52d6.png" alt="Starting a workflow from the context menu" caption="Starting a workflow from the context menu" %}
 
 After moving the workflow to step two, we see the result which look Ok. Except:
 - Some fields are not required yet like responsible.
 - “Has Task" has not been set.
 - The entries aren't sorted 
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/9ad5b655ec3a38ecbe7ba98a3f39d1ef.png" alt="Populated item list with workflow information who have an open task for the selected user" caption="Populated item list with workflow information who have an open task for the selected user" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/9ad5b655ec3a38ecbe7ba98a3f39d1ef.png" alt="Populated item list with workflow information who have an open task for the selected user" caption="Populated item list with workflow information who have an open task for the selected user" %}
 
 Worst of all, can I really be sure that I
 retrieved only that the variables in our [SQL statement](#using-variables-in-expressions) have been replaced correctly? How can I make
@@ -236,11 +236,11 @@ Prior the new WEBCON BPS 2021 version I would have used SQL Server Profiler, whi
 If this is the case, you can can start a new trace and add a filter for the database, by selecting "Show all columns"
 and set the name of your BPS Content database
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/eb7812f599f5226a717a2f51f08e6975.png" alt="Filter settings of a SQL Profiler trace" caption="Filter settings of a SQL Profiler trace" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/eb7812f599f5226a717a2f51f08e6975.png" alt="Filter settings of a SQL Profiler trace" caption="Filter settings of a SQL Profiler trace" %}
 
 Once the filter is set, the trace can be started (1) immediately before you click on the path in the browser (2). Once the execution is complete stop the trace (3).
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/dcce63a4386de8fff394c93eda2caffe.png" alt="How to steps to log WEBCON BPS SQL statements" caption="How to steps to log WEBCON BPS SQL statements" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/dcce63a4386de8fff394c93eda2caffe.png" alt="How to steps to log WEBCON BPS SQL statements" caption="How to steps to log WEBCON BPS SQL statements" %}
 
 Afterwards scroll to the top and search for something unique in the query (1).
 You should find your query with the replaced values. If everything looks fine and but you still got the wrong data, you can copy the statement into
@@ -249,7 +249,7 @@ Management studio and execute again to verify the results.
 In this specific case, we have also another benefit. Below the searched SQL statement (2) there are a bunch of
 insert statements which represents our item list update.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/c1a4fc14c35ce55ce2a324a82fd11cfa.png" alt="SQL Profiler trace log with executed SQL statement" caption="SQL Profiler trace log with executed SQL statement" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/c1a4fc14c35ce55ce2a324a82fd11cfa.png" alt="SQL Profiler trace log with executed SQL statement" caption="SQL Profiler trace log with executed SQL statement" %}
 
 ## With WEBCON BPS 2021
 
@@ -265,7 +265,7 @@ Just copy the search string into the logger and expand the nodes. That's all. :)
 Ok, it’s not formatted, there’s no syntax highlighting but you can still copy & paste it into
 Management Studio to execute it.
 
-{% include figure image_path="/assets/images/posts/expert-guide-post-series/a381a0d33a980b3bc6ae8dcc116b1a05.png" alt="Located string in the logs of the diagnostic mode" caption="Located string in the logs of the diagnostic mode" %}
+{% include figure image_path="/assets/images/posts/series-expert-guide/a381a0d33a980b3bc6ae8dcc116b1a05.png" alt="Located string in the logs of the diagnostic mode" caption="Located string in the logs of the diagnostic mode" %}
 
 {: .notice--info}
 
@@ -276,4 +276,4 @@ Management Studio to execute it.
 In the next part we will see what options we have to test our SQL statement
 during design and execution time.
 
-{% include expert-guide-parts %}
+{% include series-expert-guide %}
