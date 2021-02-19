@@ -1,19 +1,21 @@
 ---
-title: "Tips & tricks while designing a process part 4 - Parent Workflow - Testing of task retrieval"
+title: "Tips & tricks while designing a process part 4 - Parent Workflow - Identify workflows by involved user"
 categories:
   - Private
   - WEBCON BPS
 tags:
-  -   
+  - Fields
+  - Item List  
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
+bpsVersion: 2021.1.1.46
 ---
 
 # Part introduction
 
 This is the part 4 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
-BPS. In the [previous part](/posts/2021/02/15/expert-guide-post-series-part-3) we took the prototype created in [part
-2](/posts/2021/02/08/expert-guide-post-series-part-2) enhanced it gather all workflows where the selected user has an open task.
+BPS. In the [previous part](/posts/2021/expert-guide-post-series-part-3) we took the prototype created in [part
+2](/posts/2021/expert-guide-post-series-part-2) enhanced it gather all workflows where the selected user has an open task.
 In this part we will identify all workflows which store the selected user in a person field. This can be a single or multi-value field
 
 {: .notice--info}
@@ -38,9 +40,9 @@ of fields check out the [limitations](https://community.webcon.com/posts/post/li
 With this knowledge we can create a SQL statement which will **future proof**, even workflows from
  new processes will be retrieved correctly.
 
-A choice field stores a value in the format `ID\#Displayname`. If it’s a multi
+A choice field stores a value in the format `ID#Displayname`. If it’s a multi
 value field the values are separated by a semicolon:
- `Id\#DisplayName;Id\#Displayname`
+ `Id#DisplayName;Id#Displayname`
 
 This makes our job a little tricky. First of all, we have to compare the Id
 of the choice field against the BPS id, which is the name of the internal user id. This should only change in a few
@@ -88,7 +90,7 @@ for `user@example.com` would be also return true for ids like `muser@example.com
 {: .notice--info}
 
 **Tip:** Whenever I encounter a syntax error, I will open the preview using show
-and copy the text over into SQL Server Management Studio. This reduced the time spend
+and copy the text over into SQL Server Management Studio. This reduces the time spend
 for identifying the error .
 
 {% include figure image_path="/assets/images/posts/expert-guide-post-series/340d53f636ade760a3f74216c0efdab5.png" alt="Syntax highlighting in Management Studio makes it easier to see the error" caption="Syntax highlighting in Management Studio makes it easier to see the error" %}
@@ -117,7 +119,7 @@ The action for updating the "Assigned in Field" field uses a case statement whic
 {% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-17-22-02-23.png" alt="" caption="" %}
 {: .notice--info}
 
-**Tip:** If you are in doubt how something works click on the blue I. In most
+**Tip:** If you are in doubt how something works click on the blue `i`. In most
 cases you will get really useful information. They helped me tremendously
 learning WEBCON BPS.
 

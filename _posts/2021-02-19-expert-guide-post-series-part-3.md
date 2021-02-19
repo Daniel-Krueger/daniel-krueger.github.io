@@ -4,15 +4,16 @@ categories:
   - Private
   - WEBCON BPS
 tags:
-  -   
+  - Item List  
 excerpt:    
     A multi-part blog post to share expert information based on the creation of a business process.
+bpsVersion: 2021.1.1.46
 ---
 
 # Disclaimer
 
 I hope you read the
-[Disclaimer](/posts/2021/02/01/expert-guide-post-series-part-1#disclaimer)
+[Disclaimer](/posts/2021/expert-guide-post-series-part-1#disclaimer)
 because this is not a simple tutorial. In addition, the parent workflow we need to fulfil the requirements is special. We need to create this workflow in a way that we fetch
 all possible user assignments for **existing workflows** as well as for those
 which will be created in the **future[^1]**. So, don’t be scared from a few
@@ -26,14 +27,25 @@ This is the part 3 of my “Building Business Processes with WEBCON BPS – an e
 BPS. In this part we will take the prototype and and enhance it to get all workflows
 for which a active tasks exists.
 
-In [part 1](/posts/2021/02/01/expert-guide-post-series-part-1)
-we defined the use case and showed in [part 2](/posts/2021/02/08/expert-guide-post-series-part-2) how the Designer
+In [part 1](/posts/2021/expert-guide-post-series-part-1)
+we defined the use case and showed in [part 2](/posts/2021/expert-guide-post-series-part-2) how the Designer
 Desk can help us. The Designer Desk can be used by everyone to create a prototype. Turning the prototype
 into a real application we need a trained WEBCON BPS user with a license for using the
 Designer Studio. 
 
 {: .notice--info}
 **Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look out for boxes like this one. 
+
+# Changing Instance number
+Due to the fact the Designer Desk hides the more complex internal workings we need to change the form type values, especially the Acronym which is used in the instance number. An instance number like `DTYPE-1/2021/02/00006/9072` isn't helpful at all.
+
+{% include figure image_path="/assets/images/posts/expert-guide-post-series/2021-02-19-21-47-32.png" alt="Changes to form type to improve the instance number" caption="Changes to form type to improve the instance number" %}
+
+{: .notice--info}
+**Tip:** Don't be confused when you read about signature or instance number. They are synonyms.
+
+{: .notice--warning}
+**Remark:** Deciding for a instance number format is far more difficult than you might expect. You have to verify that it is understandable, that it is not to long and that it won't be repeated in your database. There can only be **one** workflow instance with an instance number. The first using this number wins. If you forget this, you won't be able to create new workflow instance for the other workflow. I will revisit this topic in another post.
 
 # Adding additional fields to the item list
 

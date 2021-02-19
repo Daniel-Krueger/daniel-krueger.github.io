@@ -4,7 +4,6 @@ categories:
   - GitHub Project
   - Private
 tags:
-  - Notification area
   - Time tracking
 excerpt:
     A punch clock which is triggered by a simple click in the notification area.

@@ -5,10 +5,10 @@ categories:
   - Private
   - WEBCON BPS  
 tags:
-  - Custom Action
   - SDK
 excerpt:
     This post describes an SDK Custom Action which populates an item list with data read from an XML attachment.
+bpsVersion: 2020.1.3.411
 ---
 
 # Overview

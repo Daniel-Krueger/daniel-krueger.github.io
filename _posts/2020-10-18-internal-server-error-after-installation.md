@@ -8,6 +8,7 @@ tags:
 excerpt:
     Invalid web.config line -1 error after installation BPS Standalone 
 toc: false
+bpsVersion: 2020.1.3.411
 ---
 I created an azure VM from a template, installed IIS, .Net Core hosting bundle and Webcon BPS in standalone mode. Even so I have done this numerous time, I was unable to browse to the portal because of the following error.
 
