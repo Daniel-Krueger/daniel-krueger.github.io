@@ -49,7 +49,6 @@ retrieved from the table DicTranslationsObjects.
 {% include figure image_path="/assets/images/posts/series-expert-guide/a662b21703bc7cd7d1cc557c9b90592a.png" alt="TRANS_ELEMID is mapped to TypeId in DicTranslationsObjects which holds explanations for the id" caption="TRANS_ELEMID is mapped to TypeId in DicTranslationsObjects which holds explanations for the id" %}
 
 {: .notice--info}
-
 **Tip:** WEBCON BPS has evolved over more than ten years to become what it is
 today. So there have been a few naming changes in the UI which couldn’t be
 reflected in the core of the system. Two obvious ones are Process, which have
@@ -220,7 +219,7 @@ At this step we achieved everything which was necessary for the parent workflow.
     requirements.
 -   We need to get the application of these workflows to get the supervisor.
 
-What’s left is to inform the supervisors. For this we will create on sub
+What’s left is to inform the supervisors. For this we will create one sub
 workflow for each supervisor and copy over all workflows which needs to be
 checked. Afterwards we can come back to the parent workflow to create them.
 
