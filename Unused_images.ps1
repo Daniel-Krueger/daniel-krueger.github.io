@@ -22,4 +22,4 @@ foreach ($file in $imageFiles | Sort Name){
 $imageFiles.Count
 $usedImages.Count
 $unusedImages.Count
-$unusedImages.Keys
+$unusedImages.Keys | Sort
