@@ -10,7 +10,7 @@ foreach ($file in $imageFiles | Sort Name){
     $file = $imageFiles[0]
     #>        
     $found = $contentFiles | Select-String "\/$($file.Name)(\)|`")"
-    Write-Host "Image file '$($file.Name) was found $($found -ne $null)"
+    #Write-Host "Image file '$($file.Name) was found $($found -ne $null)"
     if ($found -ne $null){
         $usedImages[$file.fullname] = $found -ne $null
     }

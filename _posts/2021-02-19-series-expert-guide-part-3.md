@@ -1,5 +1,5 @@
 ---
-title: "Building Business Processes with WEBCON BPS – an expert guide: Part 3 - Parent Workflow - Preparations and task retrieval"
+title: "Building Business Processes with WEBCON BPS – an expert guide: Part 3 - Parent Workflow - Prototype changes and task retrieval"
 categories:
   - Private
   - WEBCON BPS
@@ -15,7 +15,7 @@ bpsVersion: 2021.1.1.46
 
 I hope you read the
 [Disclaimer](/posts/2021/series-expert-guide-part-1#disclaimer)
-because this is not a simple tutorial. In addition, the parent workflow we need to fulfil the requirements is special. We need to create this workflow in a way that we fetch
+because this is not a simple tutorial. In addition, the parent workflow, user assignment overview, is special. We need to create this workflow in a way that we fetch
 all possible user assignments for **existing workflows** as well as for those
 which will be created in the **future[^1]**. So, don’t be scared from a few
 complex looking SQL statements.
