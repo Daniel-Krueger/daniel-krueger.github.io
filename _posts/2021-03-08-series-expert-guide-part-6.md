@@ -3,10 +3,12 @@ title: "Building Business Processes with WEBCON BPS – an expert guide: Part 6 
 categories:
   - Private
   - WEBCON BPS
-tags:
+  - Series
+- tags:
   - Fields
   - Paths
   - Business Rules
+  - Governance
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
 ---

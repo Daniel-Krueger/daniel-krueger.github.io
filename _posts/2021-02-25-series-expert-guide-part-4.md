@@ -3,9 +3,11 @@ title: "Building Business Processes with WEBCON BPS – an expert guide: Part 4 
 categories:
   - Private
   - WEBCON BPS
+  - Series
 tags:
   - Fields
   - Item List  
+  - Governance
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
 bpsVersion: 2021.1.1.46

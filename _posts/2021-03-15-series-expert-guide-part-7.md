@@ -3,8 +3,12 @@ title: "Building Business Processes with WEBCON BPS – an expert guide: Part 7 
 categories:
   - Private
   - WEBCON BPS
+  - Series
 tags:
+  - Item List
   - Sub workflow
+  - Translation
+  - Governance
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
 ---
