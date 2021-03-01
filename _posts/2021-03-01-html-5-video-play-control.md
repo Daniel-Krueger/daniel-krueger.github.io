@@ -32,16 +32,17 @@ javascript:(function(){var scr = document.createElement('script');scr.type = "te
 ## Using the bookmark
 Browse to any html 5 video platform and click on the bookmark. There are three different outcomes:
 1. If everything works fine an alert is shown with a short documentation, like the in the initial screenshot. 
-2. If the website doesn't use html 5 videos the message `No videos found; Play control not loaded` will be displayed. 
-3. If no message appears, there was something wrong with loading the script.
+2. If the website doesn't use html 5 videos the message an according messages is displayed:
+   `No videos found; Play control not loaded`  
+3. If no message appears, there was something wrong with the bookmark or the script is no longer accessible.
 
-I've tested the script with https://www.youtube.com/ and https://web.microsoftstream.com/ and with FireFox, Chrome, Edge. 
+I've tested the script with https://www.youtube.com/ and https://web.microsoftstream.com/. Here's a matrix in which browser the bookmark has been executed during my tests.
 
-{: .notice--info}
-**Info:** While Chrome and FireFox can execute the script from the bookmarks dialog this does apply to Edge. In Edge it only works if it's called from the bookmark bar. This works for Chrome and FireFox, too.
-
-{: .notice--warning}
-**Remark:** Don't use this on a page with multiple videos. 
+Browser|Bookmark dialog| Bookmark bar|
+---|:---:|:---:|
+Chrome|x|x|
+Edge|o|x|
+FireFox|x|x|
 
 ## Keyboard short cuts
 
@@ -54,4 +55,4 @@ Key | Action |
  x | Will pause the video and wind it 5 seconds backward |
 
 # Bookmark explanation
-The script pasted as a bookmark URL loads a minified version of a JavaScript [file](https://github.com/Daniel-Krueger/js_snippets/blob/main/video/html5_playcontrol.js) from my GitHub repository. Since you cannot directly reference files from GitHub it's loaded via https://www.jsdelivr.com/
+The script pasted as a bookmark URL loads a minified version of a JavaScript [file](https://github.com/Daniel-Krueger/js_snippets/blob/main/video/html5_playcontrol.js) from my GitHub repository. Since you cannot directly reference files from GitHub it's loaded via: https://www.jsdelivr.com/
