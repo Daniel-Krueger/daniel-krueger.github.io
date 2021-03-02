@@ -74,5 +74,5 @@ Key | Action |
 The script pasted as a bookmark URL loads a minified version of a JavaScript [file](https://github.com/Daniel-Krueger/js_snippets/blob/main/video/html5_playcontrol.js) from my GitHub repository. Since you cannot directly reference files from GitHub it's loaded via: https://www.jsdelivr.com/
 
 The URL of the file contains a specified version @*. This specifies the [release](https://github.com/Daniel-Krueger/js_snippets/releases/tag/0.3-beta). 
-../gh/Daniel-Krueger/js_snippets **@0.3-beta** /video/html5_playcontrol.min.js
+../gh/Daniel-Krueger/js_snippets **@0.4-beta** /video/html5_playcontrol.min.js
 Only this version of the file will be loaded. With this option you car rest without fears, that something bad will be added to the code in the future.
