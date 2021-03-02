@@ -4,7 +4,7 @@ categories:
   - Private
   - WEBCON BPS
   - Series
-- tags:
+tags:
   - Fields
   - Paths
   - Business Rules
