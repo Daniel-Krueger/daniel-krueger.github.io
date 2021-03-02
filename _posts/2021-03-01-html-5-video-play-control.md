@@ -24,7 +24,7 @@ Which led to a little video play control. Clicking on the bookmark (1) will load
 ## Creating the bookmark
 Create a bookmark with the following line. There must not be any line breaks.
 ```
-javascript:(function(){var scr = document.createElement('script');scr.type = "text/javascript";scr.src = "https://cdn.jsdelivr.net/gh/Daniel-Krueger/js_snippets@0.3-beta/video/html5_playcontrol.min.js";scr.async = true;document.getElementsByTagName('head')[0].appendChild(scr);})();
+javascript:(function(){var scr = document.createElement('script');scr.type = "text/javascript";scr.src = "https://cdn.jsdelivr.net/gh/Daniel-Krueger/js_snippets@0.4-beta/video/html5_playcontrol.min.js";scr.async = true;document.getElementsByTagName('head')[0].appendChild(scr);})();
 ```
 {% include figure image_path="/assets/images/posts/2021-03-01-html-5-video-play-control/2021-03-01-21-53-58.png" alt="Adding the load script as a bookmark/favorite" caption="Adding the load script as a bookmark/favorite" %}
 
