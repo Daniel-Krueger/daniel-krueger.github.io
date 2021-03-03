@@ -23,7 +23,7 @@ github_username: daniel-krueger
 minimal_mistakes_skin: contrast
 search: true
 locale: en
-
+search_provider: google
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes

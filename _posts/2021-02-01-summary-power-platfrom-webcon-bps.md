@@ -73,7 +73,7 @@ Even so I'm well aware of the covered topics in this session, it's good to be co
 This was the first session using my [video play control](https://daniels-notes.de/posts/2021/html-5-video-play-control). and it covers 1:06 to 2:08. :)
 
 My personal highlights:
-1. A process needs versioning. I always thought of versioning of a way how data was changed. Maybe that's due to may developer background who treats versioning as a log and not as a way to proof which data was there, when someone approved/signed something. Also, it's kind a obvious.
+1. A process needs versioning. I always thought of versioning of a way how data was changed, so that I can debug it and not as a way to proof which data was there, when someone approved/signed something. Even so it’s kind a obvious.
 2. Remembering how annoying it was to hide fields in an InfoPath form based on the state of a workflow and how easy it can be using WEBCON BPS.
 3. Don't create complex PowerApps directly from a [SharePoint list](https://youtu.be/4TSYSO1hVC0?t=7244) or you may have to recreate them after some iterations.
 4. Power Platform is for automation and [not for](https://youtu.be/4TSYSO1hVC0?t=5142) business processes. There are to many workarounds required (at this point in time) 
