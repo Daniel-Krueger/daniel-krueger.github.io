@@ -114,7 +114,7 @@ select isnull(
     -- Trans-ObjId See table DicTranslationsObjects
     where TRANS_OBJID = OBJECT_TYPE_PARAMETER
     and TRANS_ELEMID =  ELEMENT_ID_PARAMETER
-    and TRANS_LANID = (select LAN_ID from TranslateLanguages where LAN_Name = 'en-US')
+    and TRANS_LANID = (select LAN_ID from TranslateLanguages where LAN_Name = '{USERLAN}')
   ) 
   -- Fallback if no translation exists 
   , 
