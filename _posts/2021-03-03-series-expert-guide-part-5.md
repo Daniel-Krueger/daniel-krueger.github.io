@@ -16,8 +16,11 @@ excerpt:
 
 # Part introduction
 
-This is the part 5 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
+This is part 5 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
 BPS. In the [previous part](/posts/2021/series-expert-guide-part-4) we have identified all workflows which store the selected user in a person field. This completed the retrieval of the workflows and it's time to turns those object ids to text.
+
+{: .notice--info}
+**Tip:** If you are a seasoned WEBCON BPS Designer you can scroll through this text and look out for boxes like this one. These contain tips / summaries and the like. You may find some useful information without reading everything.
 
 # Retrieving translations of WEBCON BPS elements
 ## Distinction between translations types
@@ -227,3 +230,6 @@ checked. Afterwards we can come back to the parent workflow to create them.
 
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).

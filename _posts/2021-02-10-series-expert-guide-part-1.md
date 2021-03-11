@@ -96,3 +96,6 @@ The requirements one and two will be handled by a parent process while three and
 four will be fulfilled with a sub workflow.
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).

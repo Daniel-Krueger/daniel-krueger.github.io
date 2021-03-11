@@ -15,13 +15,13 @@ bpsVersion: 2021.1.1.46
 
 # Part introduction
 
-This is the part 4 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
+This is part 4 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
 BPS. In the [previous part](/posts/2021/series-expert-guide-part-3) we took the prototype created in [part
 2](/posts/2021/series-expert-guide-part-2) enhanced it gather all workflows where the selected user has an open task.
 In this part we will identify all workflows which store the selected user in a person field. This can be a single or multi-value field
 
 {: .notice--info}
-**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look out for boxes like this one. 
+**Tip:** If you are a seasoned WEBCON BPS Designer you can scroll through this text and look out for boxes like this one. These contain tips / summaries and the like. You may find some useful information without reading everything.
 
 
 # Querying choose/person fields
@@ -173,3 +173,6 @@ shortcuts.](https://community.webcon.com/posts/post/keyboard-shortcuts-in-design
 In the next part we will see how we can retrieve the translations of the application, process, workflow and form type which ids have been stored in the item list.
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).

@@ -202,3 +202,6 @@ In the next part we will take the prototype and and enhance it to get all workfl
 for which a active tasks exists.
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).

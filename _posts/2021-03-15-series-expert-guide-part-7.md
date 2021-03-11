@@ -19,6 +19,9 @@ excerpt:
 This is the part 7 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
 BPS. In the [previous part](/posts/2021/series-expert-guide-part-6) we created the sub workflow to assign tasks to the workflow responsible. Our workflow item list may contain the same responsible multiple times, so we need to create another item list with the distinct responsible persons. This will be used to start the sub workflows. At the same time this will be a small dashboard.
 
+{: .notice--info}
+**Tip:** If you are a seasoned WEBCON BPS Designer you can scroll through this text and look out for boxes like this one. These contain tips / summaries and the like. You may find some useful information without reading everything.
+
 # Responsible persons list
 The responsible persons list is simple, we only need a field for the responsible. Since we want to use this as a dashboard too, we add two other fields, one for storing the workflow and one other which will be used to show the current state and provide an option to jump into the workflow. 
 {% include figure image_path="/assets/images/posts/series-expert-guide/2021-02-23-21-20-53.png" alt="Definition of the responsible list" caption="Definition of the responsible list" %}
@@ -136,10 +139,12 @@ After importing the file using the Translation tool, the translations will be im
 
 # The end
 This was the final part for of the series and I hope that you got a few tips/confirmations here and there. In case you are interested in the process you can download it TBDDD here and make it your own. For example by adding these features:
-- Selecting a start time, so that workflows are ignored, which have been modified before. Could be useful if you need to run this process for the same user a few weeks later.
-- If a workflow was listed because there was a task it could be checked, that he's the only one. If there's another one with a task, the workflow could be omitted. At least for processes which don't require that all users completed the task. 
-- Check whether the task has been delegated. Omit the workflow if this is the case
+- If a workflow was listed because there was a task it could be checked, that the selected user is the only one. If there's another one with a task, the workflow could be omitted. At least for processes which don't require that all users completed the task. :)
+- Add an option to select which applications should be ignored
 
 
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).

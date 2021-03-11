@@ -26,7 +26,7 @@ complex looking SQL statements.
 
 # Part introduction
 
-This is the part 3 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
+This is part 3 of my “Building Business Processes with WEBCON BPS – an expert guide” in WEBCON
 BPS. In this part we will take the prototype and and enhance it to get all workflows
 for which a active tasks exists.
 
@@ -37,7 +37,7 @@ into a real application we need a trained WEBCON BPS user with a license for usi
 Designer Studio. 
 
 {: .notice--info}
-**Tip:** If you are a seasoned WEBCON BPS Designer you may scroll through this text and look out for boxes like this one. 
+**Tip:** If you are a seasoned WEBCON BPS Designer you can scroll through this text and look out for boxes like this one. These contain tips / summaries and the like. You may find some useful information without reading everything.
 
 # Changing Instance number
 Due to the fact the Designer Desk hides the more complex internal workings we need to change the form type values, especially the Acronym which is used in the instance number. An instance number like `DTYPE-1/2021/02/00006/9072` isn't helpful at all.
@@ -280,3 +280,6 @@ In the next part we will see what options we have to test our SQL statement
 during design and execution time.
 
 {% include series-expert-guide %}
+
+# Download
+You can download the application from [here](https://github.com/cosmoconsult/webconbps/tree/main/Applications/UserAssignments).
