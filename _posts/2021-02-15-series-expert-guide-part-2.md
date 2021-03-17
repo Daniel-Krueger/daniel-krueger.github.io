@@ -3,7 +3,7 @@ title: "Building Business Processes with WEBCON BPS – an expert guide: Part 2 
 categories:
   - Private
   - WEBCON BPS
-  - Series- 
+  - Series
 tags:
   - Designer Desk 
   - Governance
