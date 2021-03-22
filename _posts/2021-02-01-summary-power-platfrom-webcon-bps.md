@@ -93,14 +93,46 @@ My personal highlights:
 - [Continuation with Risk Management scenario](https://youtu.be/4TSYSO1hVC0?t=5110) Now is Christina Wheeler speaking. The scenario is based on a SharePoint farm solution. 
 - [The Power Platform prototype is only a half-baked solution ](https://youtu.be/4TSYSO1hVC0?t=5142) There were and are still missing features for the Risk Management scenario. If you are automating something Power Platform is great, if you need a state machine it's not. This requires workarounds.
 - [Approach to the Risk Management Scenario in PowerApps](https://youtu.be/4TSYSO1hVC0?t=5276) Analysis of the process and data has been done in preparation. There will be a lot of "fakes" like in a cooking show. The cooking show shows how to do something, for example a single piece is sliced and it's continued with the prepared bowl of slices. Focus is on making use on the MS 365 licenses, so SharePoint is used as a data source. The Azure SQL Connector was not an option because it required a higher license.
-- [Preparing the data sources in SharePoint](https://youtu.be/4TSYSO1hVC0?t=5732) Some tips, best practices for creating SharePoint list in modern UI. Excel is still a valid tool for preparing and populating lists, at least for a prototype. Sometimes it's better to work in classic view, for example to define a lot of choice values per copy & paste.
+- [Preparing the data sources as SharePoint list](https://youtu.be/4TSYSO1hVC0?t=5732) Some tips, best practices for creating SharePoint list in modern UI. Excel is still a valid tool for preparing and populating lists, at least for a prototype. Sometimes it's better to work in classic view, for example to define a lot of choice values per copy & paste.
 - [Data sources prepared; Don't create PowerApps from SharePoint](https://youtu.be/4TSYSO1hVC0?t=7244) It's not recommended to use a PowerApp as a custom SharePoint form. The more complex the form the more bugs happened, even so it looked every looked right. A recreation of an existing PowerApp form, which evolved over time, proofed that everything works, at least in the new form. Unfortunately it took 17 hours. Don't use multiple data sources in a PowerApp created from SharePoint. Use a standalone PowerApp and connect this to SharePoint.
 - [Creating standalone PowerApp options](https://youtu.be/4TSYSO1hVC0?t=7420)
 Model-driven app requires the highest license for Power Platform. WEBCON BPS and Model-driven apps share a similar idea on how to create forms and process. The "phone view" PowerApp is a good approach for creating a custom form, at least if you don't need a table view. Currently it can not be changed.
 
+# Session 5 - 2021-03-22
+## Summary
+This session covers the part of creating the Power App as a standalone version 2:08h to 3:00h. Since I'm new to Power App I added a lot of notes to the  different chapters. There has been a lot of information, especially for me, and a few which made it to my "What not to do" list. In my opinion this is more helpful than any "How to" list. Here are my personal highlights:
+- It's important to set the screen ratio - 16:9 / 3:2 / 16:10 - depending on your customization this may break your UI. I didn't expect to see options for defining width and height by pixels of components in today's world.
+- When you are selecting an option for a drop down value you can only display information for this value after selecting. It's not possible to do this while you are selecting it with the default options. It may be possible with model-driven apps.
+- It took 42 minutes to create a standalone canvas app which is connected to a SharePoint list for which two screens have been added. One for browsing the list and one for creating new items. The screens have been tweaked a little bit.
+
+A workflow hasn't been created yet; it will be interesting to see how this will unfold.
+
+## Video table of contents
+- [Creating a PowerApp from scratch: Screens and Components ](https://youtu.be/4TSYSO1hVC0?t=7728) Overview of screens and recommendation to start on the functionality. Once this is fixed improve the UI.
+- [Creating a PowerApp from scratch: Connecting to SP data sources](https://youtu.be/4TSYSO1hVC0?t=7961) If you see a Diamond icon it's a premium feature. These can be tested using the [community plan](https://powerapps.microsoft.com/en-us/communityplan/).
+- [Creating a PowerApp from scratch: New item screen](https://youtu.be/4TSYSO1hVC0?t=8126) Notes:
+  - If you are applying naming conventions, do it after the functionality has been achieved. If the requirements change in between, and you need to recreate stuff, it was time wasted. 
+  - Edit/New form component, allows to connect to the data source.
+  - There were some issues, that some things didn't work also they should have worked.
+  - A lot of time is spent on the UI though, there are unnecessary/not enough fields, multi line fields are represented as single lines, the renaming of the title field in the SharePoint list is ignored.
+  - What's nice is that you have to do an extra trip to change settings for component which has been automatically been added by using the data source. 
+  - The formula syntax is similar to excel.
+  - Make sure that you select the correct [screen size](https://youtu.be/4TSYSO1hVC0?t=8565) and ratio in the beginning. If you change it later, you may have to redo your UI. 
+  - There's an auto save, not sure whether I like this.
+  - A form  has a default mode, if you are creating a "New" form you need to change it to make the preview work
+  - You can do stuff when [loading the App](https://youtu.be/4TSYSO1hVC0?t=9415), initializing variables and load connection for example.  You can load list data into internal collection during OnStart to improve performance.
+  - Displaying [additional information](https://youtu.be/4TSYSO1hVC0?t=8855) when selecting g a lookup value can easily be done in model-driven apps, but not in canvas app. There's an [option](https://youtu.be/4TSYSO1hVC0?t=8984) to achieve this after selecting one though.
+    - Increase the width of the control, make sure not to hard code it, 
+    - Increase the height of the card
+    - Add connection to the source SharePoint list of the lookup field.
+    - Use an html field, and use the [internal collection](https://youtu.be/4TSYSO1hVC0?t=9579)
+  - ["Grouping" fields](https://youtu.be/4TSYSO1hVC0?t=9938) by creating additional cards. 
+- [Switching to prepared Power App](https://youtu.be/4TSYSO1hVC0?t=10332) Up to this point we had an incomplete single new form, to create items, and browse screen to select an item. It took 42 minutes to achieve this. After switching to the prepared Power App, we have browse, new, edit, success and draft form (screens). Options to navigate to the correct screen (new/edit) 
+  need to be added.
+
 # Next session
 Starting with:
-- [Creating a PowerApp from scratch](https://youtu.be/4TSYSO1hVC0?t=7728)
+- [WEBCON way to create the scenario](https://youtu.be/4TSYSO1hVC0?t=10752)
 
 
 # Video table of contents
@@ -149,7 +181,16 @@ Starting with:
 #### Create CRUD PowerApp for editing data  (ongoing)
 - [Data sources prepared; Don't create PowerApps from SharePoint](https://youtu.be/4TSYSO1hVC0?t=7244) 
 - [Creating standalone PowerApp options](https://youtu.be/4TSYSO1hVC0?t=7420)
-- [Creating a PowerApp from scratch](https://youtu.be/4TSYSO1hVC0?t=7728)
+- Creating a PowerApp from scratch
+  - [Screens and Components ](https://youtu.be/4TSYSO1hVC0?t=7728) 
+  - [Connecting to SP data sources](https://youtu.be/4TSYSO1hVC0?t=7961) 
+  - [New item screen](https://youtu.be/4TSYSO1hVC0?t=8126) 
+  - [Setting screen size](https://youtu.be/4TSYSO1hVC0?t=8565)
+  - [Improving App performance](https://youtu.be/4TSYSO1hVC0?t=9415)
+  - [Showing additional information of a drop down value](https://youtu.be/4TSYSO1hVC0?t=8984)
+  - [Internal collection](https://youtu.be/4TSYSO1hVC0?t=9579)
+  - ["Grouping" fields](https://youtu.be/4TSYSO1hVC0?t=9938)
+- [Switching to prepared Power App](https://youtu.be/4TSYSO1hVC0?t=10332)
 #### Create flow to react to data changes  (ongoing)
 ####  Possibly create utility flows to invoke with PowerApps buttons  (ongoing)
 
