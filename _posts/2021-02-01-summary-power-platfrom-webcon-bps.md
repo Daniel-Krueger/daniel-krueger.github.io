@@ -103,7 +103,7 @@ Model-driven app requires the highest license for Power Platform. WEBCON BPS and
 This session covers the part of creating the Power App as a standalone version 2:08h to 3:00h. Since I'm new to Power App I added a lot of notes to the  different chapters. There has been a lot of information, especially for me, and a few which made it to my "What not to do" list. In my opinion this is more helpful than any "How to" list. Here are my personal highlights:
 - It's important to set the screen ratio - 16:9 / 3:2 / 16:10 - depending on your customization this may break your UI. I didn't expect to see options for defining width and height by pixels of components in today's world.
 - When you are selecting an option for a drop down value you can only display information for this value after selecting. It's not possible to do this while you are selecting it with the default options. It may be possible with model-driven apps.
-- It took 42 minutes to create a standalone canvas app which is connected to a SharePoint list for which two screens have been added. One for browsing the list and one for creating new items. The screens have been tweaked a little bit.
+- It took 42 minutes to create a standalone Canvas App which is connected to a SharePoint list for which two screens have been added. One for browsing the list and one for creating new items. The screens have been tweaked a little bit.
 
 A workflow hasn't been created yet; it will be interesting to see how this will unfold.
 
@@ -121,7 +121,7 @@ A workflow hasn't been created yet; it will be interesting to see how this will 
   - There's an auto save, not sure whether I like this.
   - A form  has a default mode, if you are creating a "New" form you need to change it to make the preview work
   - You can do stuff when [loading the App](https://youtu.be/4TSYSO1hVC0?t=9415), initializing variables and load connection for example.  You can load list data into internal collection during OnStart to improve performance.
-  - Displaying [additional information](https://youtu.be/4TSYSO1hVC0?t=8855) when selecting g a lookup value can easily be done in model-driven apps, but not in canvas app. There's an [option](https://youtu.be/4TSYSO1hVC0?t=8984) to achieve this after selecting one though.
+  - Displaying [additional information](https://youtu.be/4TSYSO1hVC0?t=8855) when selecting g a lookup value can easily be done in model-driven apps, but not in Canvas App. There's an [option](https://youtu.be/4TSYSO1hVC0?t=8984) to achieve this after selecting one though.
     - Increase the width of the control, make sure not to hard code it, 
     - Increase the height of the card
     - Add connection to the source SharePoint list of the lookup field.
