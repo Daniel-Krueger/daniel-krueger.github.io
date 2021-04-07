@@ -115,7 +115,7 @@ I will stick with the four original ones plus one for administrative paths. Sinc
 
 
 # Download
-The style definitions can be found here
+The style definitions can be found [here](https://github.com/cosmoconsult/webconbps/tree/main/css/path_button_styling).
 
 # Remarks
 1. If this option is used, there may be readability problems depending on the selected theme. I have yet to find a way to identify the loaded theme so that a different style could be used. 
