@@ -7,7 +7,7 @@ tags:
   - User Experience
   - CSS
 excerpt:
-    This post describes an SDK Custom Action which populates an item list with data read from an XML attachment.
+    This post describes a way to define path button style in way that it can be reused across all applications.
 bpsVersion: 2021.1.2.101
 ---
 
