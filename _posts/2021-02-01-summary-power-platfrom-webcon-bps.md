@@ -9,6 +9,7 @@ tags:
 excerpt:
     A table of contents 
 note: https://youtu.be/4TSYSO1hVC0?t=4099
+last_modified_at: 2021-04-08
 ---
 
 
@@ -130,9 +131,33 @@ A workflow hasn't been created yet; it will be interesting to see how this will 
 - [Switching to prepared Power App](https://youtu.be/4TSYSO1hVC0?t=10332) Up to this point we had an incomplete single new form, to create items, and browse screen to select an item. It took 42 minutes to achieve this. After switching to the prepared Power App, we have browse, new, edit, success and draft form (screens). Options to navigate to the correct screen (new/edit) 
   need to be added.
 
+# Session 6 - 2021-04-08
+## Summary
+This time I watched the Risk Management scenario using WEBCON BPS which covers 3:00h to 4:09h. In this time the Risk Management scenario was completed from scratch. I'm an experience WEBCON BPS Designer so there was a only one new, but really neat idea for me:
+- Depending on the complexity of the workflow you could use notes, to add swim lanes.<br/>
+![Swim Lanes](/assets/images/posts/2021-02-01-summary-power-platfrom-webcon-bps/2021-03-07-21-00-04.png)
+
+So it took about 1:10h for building the Risk Management scenario in WEBCON BPS from scratch and 0:42h in Power Platform to create an unfinished App. I'm looking forward to see how the workflow will be implemented in Power Automate. I don't believe that the left time will be enough, if I think about the renaming from  Flow to Automate.
+
+## Video table of contents
+- [WEBCON way to create the scenario](https://youtu.be/4TSYSO1hVC0?t=10752) Short interruption after lunch to show a completely different approach. Going from Workflow over Data (model) to the User Interface instead of starting with the Data (model) continuing with the User Interface to finally work on the Workflow in Power Platform.
+  - [Creating the workflow](https://youtu.be/4TSYSO1hVC0?t=11101) Using notes to create swim lanes  
+  - [Creating data view (report)](https://youtu.be/4TSYSO1hVC0?t=12293)
+  - [Testing the workflow](https://youtu.be/4TSYSO1hVC0?t=12509)
+  - [Adding form fields](https://youtu.be/4TSYSO1hVC0?t=12742) The fields are called form fields but represent a data schema like fields in a SharePoint list. SharePoint list can contain different content types which are similar to WEBCON BPS form types.
+  - [Field visibility in different steps](https://youtu.be/4TSYSO1hVC0?t=13048) defines which fields are displayed/editable in which step, in general. Can be overwritten under specific conditions.
+  - [Assigning tasks to specific persons](https://youtu.be/4TSYSO1hVC0?t=13271)
+  - [Using data sources for risk classification](https://youtu.be/4TSYSO1hVC0?t=13555) Could be stored in external data sources like SharePoint, MSSQL, Oracle or other defined processes. There are special processes for this called dictionary processes.
+  - [Grouping form fields](https://youtu.be/4TSYSO1hVC0?t=13952)
+  - [Adding classification data](https://youtu.be/4TSYSO1hVC0?t=14115) Can be created manually or via Excel export/import to transfer data between environments.
+  - [Setting up conditional flow and test](https://youtu.be/4TSYSO1hVC0?t=14256)
+  - [Showing instant change of form/workflow](https://youtu.be/4TSYSO1hVC0?t=14502)
+  - [Showing full blows Risk Management](https://youtu.be/4TSYSO1hVC0?t=14619)
+  - [Feedback of Christina](https://youtu.be/4TSYSO1hVC0?t=14686) that a workflow can be changed so that running workflow instances are effected. Can't be done in most other platforms. 
+
 # Next session
 Starting with:
-- [WEBCON way to create the scenario](https://youtu.be/4TSYSO1hVC0?t=10752)
+- [Going back to Power Platform to show the prepared flow](https://youtu.be/4TSYSO1hVC0?t=14970) 
 
 
 # Video table of contents
@@ -194,7 +219,22 @@ Starting with:
 #### Create flow to react to data changes  (ongoing)
 ####  Possibly create utility flows to invoke with PowerApps buttons  (ongoing)
 
-### Using WEBCON BPS (ongoing)
+### Using WEBCON BPS
+- [WEBCON way to create the scenario](https://youtu.be/4TSYSO1hVC0?t=10752)
+  - [Creating the workflow](https://youtu.be/4TSYSO1hVC0?t=11101)
+  - [Creating data view (report)](https://youtu.be/4TSYSO1hVC0?t=12293)
+  - [Testing the workflow](https://youtu.be/4TSYSO1hVC0?t=12509)
+  - [Adding form fields](https://youtu.be/4TSYSO1hVC0?t=12742)
+  - [Field visibility in different steps](https://youtu.be/4TSYSO1hVC0?t=13048)
+  - [Assigning tasks to specific persons](https://youtu.be/4TSYSO1hVC0?t=13271)
+  - [Using data sources for risk classification](https://youtu.be/4TSYSO1hVC0?t=13555)
+  - [Grouping form fields](https://youtu.be/4TSYSO1hVC0?t=13952)
+  - [Adding classification data](https://youtu.be/4TSYSO1hVC0?t=14115)
+  - [Setting up conditional flow and test](https://youtu.be/4TSYSO1hVC0?t=14256)
+- Demoing
+  - [Showing instant change of form/workflow](https://youtu.be/4TSYSO1hVC0?t=14502)
+  - [Showing full blows Risk Management](https://youtu.be/4TSYSO1hVC0?t=14619)  
+
 ## Diagramming & documentation (ongoing)
 ## User assistance (ongoing)
 ## Integrating with external data (ongoing)
