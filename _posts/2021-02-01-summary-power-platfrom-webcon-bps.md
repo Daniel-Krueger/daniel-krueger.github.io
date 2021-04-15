@@ -155,9 +155,49 @@ So it took about 1:10h for building the Risk Management scenario in WEBCON BPS f
   - [Showing full blows Risk Management](https://youtu.be/4TSYSO1hVC0?t=14619)
   - [Feedback of Christina](https://youtu.be/4TSYSO1hVC0?t=14686) that a workflow can be changed so that running workflow instances are effected. Can't be done in most other platforms. 
 
-# Next session
-Starting with:
-- [Going back to Power Platform to show the prepared flow](https://youtu.be/4TSYSO1hVC0?t=14970) 
+
+# Session 7 - 2021-04-08
+## Summary
+This was the last session and it was a little disappointing regarding the Power Platform part. It started with a prepared flow, so I can't make a comparison as intended. Afterwards unique features of WEBCON BPS have been shown:
+- Workflow Diagram and automatic Documentation generation
+- Compliance & Governance
+  - Audit trails
+  - Privileges
+  - GDPR implementation
+- Monitoring of the system/workflows
+- Metrics for edit time of in workflow steps
+
+So it's best to end this summary with two quotes:
+1. Change in WEBCON BPS is instant and easy: Few people know how it should be, maybe they have an idea how it's now but won't know how it should be. Therefore do iterations and observe how it looks/behaves instead of aiming for one big solution.
+- To get the wisdom of the crows, put it in front of the crowd
+- Release them when they work, not when they`re perfect
+2. Business process is on overused term. They can be build with any set of tools, only the amount of work changes. That's where specialized tools shine.
+
+## Video table of contents
+- [Going back to Power Platform to show the prepared flow](https://youtu.be/4TSYSO1hVC0?t=14970) Fields are set read/editable based on a flow which set a statement. Error handling needs still be to be added. Variables are used to store the state the flow is in, so that you can go back. 
+- [State machine simulation in flow](https://youtu.be/4TSYSO1hVC0?t=15263) The state is stored in a SharePoint list, the flow is ended. Than the flow ends and another one starts.
+- [Feedback regarding creating processes in Power Platform](https://youtu.be/4TSYSO1hVC0?t=15335) Power Automate is powerful, it's great for automating but not for creating processes. You would even need to have a different tool for creating a workflow diagram.
+- [WEBCON way: Adding save path with wizard step.](https://youtu.be/4TSYSO1hVC0?t=15456)
+- [Diagram & Documentation](https://youtu.be/4TSYSO1hVC0?t=15558)
+  - [Communication with stakeholders](https://youtu.be/4TSYSO1hVC0?t=15588) Without diagrams and documentation one will have a hard time so you can explain the state. Diagrams are for stakeholders and the generated documentation is for IT / Architects. The documentation can be used to track changes between versions using default Microsoft Word features.
+  - [Communication with users](https://youtu.be/4TSYSO1hVC0?t=15898) In context help by providing descriptions for any object. No build in function for tooltips in [Power Platform](https://youtu.be/4TSYSO1hVC0?t=16181) but some workarounds. The hover event is used to highlight information.
+- [Integration of external data](https://youtu.be/4TSYSO1hVC0?t=16397)
+  - [Power Platform way](https://youtu.be/4TSYSO1hVC0?t=16412) Everything is external, there are a lot of connectors to get data from a lot of sources. Often these are premium or custom connectors.
+  - [WEBCON way](https://youtu.be/4TSYSO1hVC0?t=16553) There's internal data of the created processes and external data. A connection needs to be set up which can be MSSQL, Oracle, SOAP, REST, SharePoint Site Collections. There can be different connection settings for DEV, TEST, Prod. The connections can than be used to define data sources which can be consumed in any application.
+-  [Compliance & Governance](https://youtu.be/4TSYSO1hVC0?t=16943)
+   -  [Audit trails](https://youtu.be/4TSYSO1hVC0?t=16946) Every change to any fields is visible in WEBCON BPS. In Power Platform is a Compliance Manager in creation.
+   -  [Privileges/Design/ GDPR](https://youtu.be/4TSYSO1hVC0?t=17151) Who may use a process and who may design a process.
+   -  [GDPR](https://youtu.be/4TSYSO1hVC0?t=17198) settings.
+   -  [Substitutions & delegations](https://youtu.be/4TSYSO1hVC0?t=17225)
+-  [Monitoring](https://youtu.be/4TSYSO1hVC0?t=17329) System health, stuck processes, impeding timeouts (which is critical in Power Platform because of 30 day limit), is integrated in WEBCON BPS.
+-  [Metrics](https://youtu.be/4TSYSO1hVC0?t=17649) are available for edit time for steps and paths.
+
+- [Change driven solutions](https://youtu.be/4TSYSO1hVC0?t=17834)
+Summary Change in WEBCON BPS is instant and easy: Few people know how it should be, maybe they have an idea how it's now but won't know how it should be. Therefore do iterations and observe how it looks/behaves instead of aiming for one big solution.
+- To get the wisdom of the crows, put it in front of the crowd
+- Release them when they work, not when they`re perfect
+- [Final advice](https://youtu.be/4TSYSO1hVC0?t=17938)
+Business process is on overused term. They can be build with any set of tools, only the work required changes. That's where specialized tools shine.
 
 
 # Video table of contents
@@ -216,9 +256,10 @@ Starting with:
   - [Internal collection](https://youtu.be/4TSYSO1hVC0?t=9579)
   - ["Grouping" fields](https://youtu.be/4TSYSO1hVC0?t=9938)
 - [Switching to prepared Power App](https://youtu.be/4TSYSO1hVC0?t=10332)
-#### Create flow to react to data changes  (ongoing)
-####  Possibly create utility flows to invoke with PowerApps buttons  (ongoing)
-
+#### Create flow to react to data changes 
+- [Continuing with the prepared flow](https://youtu.be/4TSYSO1hVC0?t=14970)
+- [State machine simulation in flow](https://youtu.be/4TSYSO1hVC0?t=15263) 
+- [Feedback regarding creating processes in Power Platform](https://youtu.be/4TSYSO1hVC0?t=15335) 
 ### Using WEBCON BPS
 - [WEBCON way to create the scenario](https://youtu.be/4TSYSO1hVC0?t=10752)
   - [Creating the workflow](https://youtu.be/4TSYSO1hVC0?t=11101)
@@ -235,10 +276,29 @@ Starting with:
   - [Showing instant change of form/workflow](https://youtu.be/4TSYSO1hVC0?t=14502)
   - [Showing full blows Risk Management](https://youtu.be/4TSYSO1hVC0?t=14619)  
 
-## Diagramming & documentation (ongoing)
-## User assistance (ongoing)
-## Integrating with external data (ongoing)
-## Compliance & Governance (ongoing)
-## Deployment & change management (ongoing)
-## Conclusions and final advice (ongoing)
+## Diagramming & documentation
+- [Diagram & Documentation](https://youtu.be/4TSYSO1hVC0?t=15558)
+  - [Communication with stakeholders](https://youtu.be/4TSYSO1hVC0?t=15588) 
+  - [Communication with users](https://youtu.be/4TSYSO1hVC0?t=15898) 
+## User assistance  
+  - [Power Platform Workaround for tooltips](https://youtu.be/4TSYSO1hVC0?t=16181)
+  - The WEBCON Way was already shown
+## Integrating with external data
+ [Integration of external data](https://youtu.be/4TSYSO1hVC0?t=16397)
+  - [Power Platform way](https://youtu.be/4TSYSO1hVC0?t=16412)
+  - [WEBCON way](https://youtu.be/4TSYSO1hVC0?t=16553) 
 
+## Compliance & Governance
+- [Compliance & Governance](https://youtu.be/4TSYSO1hVC0?t=16943)
+  - [Audit trails](https://youtu.be/4TSYSO1hVC0?t=16946)
+  - [Privileges/Design/ GDPR](https://youtu.be/4TSYSO1hVC0?t=17151) 
+  - [GDPR](https://youtu.be/4TSYSO1hVC0?t=17198)
+  - [Substitutions & delegations](https://youtu.be/4TSYSO1hVC0?t=17225)
+- [Monitoring](https://youtu.be/4TSYSO1hVC0?t=17329)
+- [Metrics](https://youtu.be/4TSYSO1hVC0?t=17649) 
+
+## Deployment & change management
+Has already been covered
+## Conclusions and final advice
+- [Change driven solutions](https://youtu.be/4TSYSO1hVC0?t=17834)
+- [Final advice](https://youtu.be/4TSYSO1hVC0?t=17938)
