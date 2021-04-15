@@ -8,8 +8,7 @@ tags:
   - Definitions
 excerpt:
     A table of contents 
-note: https://youtu.be/4TSYSO1hVC0?t=4099
-last_modified_at: 2021-04-08
+last_modified_at: 2021-04-15
 ---
 
 
@@ -156,7 +155,7 @@ So it took about 1:10h for building the Risk Management scenario in WEBCON BPS f
   - [Feedback of Christina](https://youtu.be/4TSYSO1hVC0?t=14686) that a workflow can be changed so that running workflow instances are effected. Can't be done in most other platforms. 
 
 
-# Session 7 - 2021-04-08
+# Session 7 - 2021-04-15
 ## Summary
 This was the last session and it was a little disappointing regarding the Power Platform part. It started with a prepared flow, so I can't make a comparison as intended. Afterwards unique features of WEBCON BPS have been shown:
 - Workflow Diagram and automatic Documentation generation
