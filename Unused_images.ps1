@@ -1,4 +1,6 @@
-﻿$rootFolder = "C:\Workspace\_Privat\daniel-krueger.github.io\"
+﻿Add-Type -AssemblyName Microsoft.VisualBasic
+
+$rootFolder = "C:\Workspace\_Privat\daniel-krueger.github.io\"
 cd $rootFolder
 $imageFiles = get-childitem -Path ".\assets\images\posts" -Recurse -File
 # A dictionary of all images, with a value defining it if it's used or not
@@ -20,5 +22,7 @@ foreach ($file in $imageFiles | Sort Name){
     
 }
 $unusedImages.Keys | Sort
+Remove-items
 
-$unusedImages.Keys | % {Remove-Item  $_}
+$unusedImages.Keys | % {
+[Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile($_,'OnlyErrorDialogs','SendToRecycleBin') }
