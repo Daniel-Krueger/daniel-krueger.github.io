@@ -1,6 +1,6 @@
 ﻿$rootFolder = "C:\Workspace\_Privat\daniel-krueger.github.io\"
 cd $rootFolder
-$imageFiles = get-childitem -Path ".\assets\images" -Recurse -File
+$imageFiles = get-childitem -Path ".\assets\images\posts" -Recurse -File
 # A dictionary of all images, with a value defining it if it's used or not
 $usedImages = @{}
 $unusedImages = @{}
@@ -19,7 +19,6 @@ foreach ($file in $imageFiles | Sort Name){
     }
     
 }
-$imageFiles.Count
-$usedImages.Count
-$unusedImages.Count
 $unusedImages.Keys | Sort
+
+$unusedImages.Keys | % {Remove-Item  $_}
