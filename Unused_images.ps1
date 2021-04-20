@@ -22,7 +22,6 @@ foreach ($file in $imageFiles | Sort Name){
     
 }
 $unusedImages.Keys | Sort
-Remove-items
 
 $unusedImages.Keys | % {
 [Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile($_,'OnlyErrorDialogs','SendToRecycleBin') }
