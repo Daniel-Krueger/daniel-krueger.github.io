@@ -114,6 +114,10 @@ The reason for this is the greyed out field `Business entity` in the screenshot 
 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-19-22-21-32.png" alt="Depending on the selected business entity, different customers are available." caption="Depending on the selected business entity, different customers are available." %}
 
+
+{: .notice--info}
+**Info:** The screenshots show the configuration of different data source per business entity. Of course you can easily change the data source definition for a business entity when a source moves to the cloud, too.
+
 WEBCON BPS already implements the data source types MS SQL, Oracle, SOAP, REST and SharePoint lists. If this is not sufficient you can even write your own plugin. For example, you could create one to access the Navision native database. :)
 
 Due to this feature, it takes only minutes to reflect changes in the underlying system which are applied to **all** processes:
