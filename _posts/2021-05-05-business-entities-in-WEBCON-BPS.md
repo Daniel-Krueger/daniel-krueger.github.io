@@ -50,8 +50,9 @@ In all cases I know - Navision, SharePoint and WEBCON BPS - privileges are repre
 ](https://community.webcon.com/posts/post/webcon-bps-designer-studio-privileges/44) already describes which privileges exists. There are only two additions to make:
 1. If there's more than one Business Entity you can define different privileges on process level
    
- {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-53-46.png" alt="Business Entities can have different privileges on process level." caption="Business Entities can have different privileges on process level." %}
-2. In addition to the process level, privileges can be defined on form type level, too. This comes in handy, if you have an absence workflow, which handles vacation and sick leave requests. Granting someone read access to all workflows with form type Vacation won't allow the same person to see the ones of type sick leave.
+    {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-53-46.png" alt="Business Entities can have different privileges on process level." caption="Business Entities can have different privileges on process level." %}
+
+2. In addition to the process level, privileges can be defined on form type level, too. This comes in handy, if you have an absence workflow, which handles vacation and sick leave requests. Granting someone access to read all vacation won't allow him to see the sick leave workflows.
    
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-54-40.png" alt="Defining privileges on Form Type level." caption="Defining privileges on Form Type level." %}
 ## Starting workflows
@@ -59,7 +60,7 @@ The privilege to start a workflow is defined on process or form type level. Ther
 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-56-15.png" alt="1, 2 and 3 show different user privileges based on a business entity" caption="1, 2 and 3 show different user privileges based on a business entity" %}
 
-Besides the privileges we need `Start buttons`. There is one defined for each entity, with a fixed business entity (1) as well as one other without a fixed value (2).
+In addition to the privileges we need `Start buttons`. There is one defined for each entity (1) as well as one other without a fixed value (2).
 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-58-44.png" alt="Shows the configuration of the existing start buttons." caption="Shows the configuration of the existing start buttons." %}
 
@@ -77,11 +78,11 @@ The default one is either, the business entity with the lowest Id in the system 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-18-22-47-23.png" alt="Definition for whom a specific business entity is the default one." caption="Definition for whom a specific business entity is the default one." %}
 
 {: .notice--info}
-**Info:** As expected from WEBCON BPS, fiddling with the `COM_ID` parameter won't get you anywhere. If you don't have the privileges you get an error.
+**Info:** As expected from WEBCON BPS, fiddling with the `COM_ID` parameter won't get you anywhere. If you don't have the privileges you will get an error.
 ![Playing with the business entities won't gain you access to those you don't have access to.`](/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-19-22-37-07.png)
 
 {: .notice--info}
-**Info:** Ones the workflow has been saved, a business entity can no longer be changed.
+**Info:** Once the workflow has been saved, a business entity can no longer be changed.
 
 {: .notice--info}
 **Info:** There's also a field `Business entity is additional for`. According to the documentation it only applies to SharePoint installations.
@@ -98,13 +99,13 @@ In WEBCON BPS this is done, by creating a choice field (1). This choice field ha
 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-19-21-27-56.png" alt="Once a customer is selected (1) the values are copied (2)." caption="Once a customer is selected (1) the values are copied (2)." %}
 
-The field uses a predefined data source, which can be reused in **all** processes. There's only a single point of failure. In this case it is a MSSQL database data source (1), which selects some fields from the `Customer` table of the `CRONUS` business entity (1). The query itself doesn't contain any information about the database or credentials which should be used. These are defined in another place (3). This allows us to specify the connection once and reuse it in multiple data source definitions. 
+The field uses a predefined data source, which can be reused in **all** processes. There's only a single point of failure. In this case it is a MSSQL database data source (1), which selects some fields from the `Customer` table of the `CRONUS` business entity (2). The query itself doesn't contain any information about the database or credentials which should be used. These are defined in another place (3). This allows us to specify the connection ones and reuse it in multiple data source definitions. 
 {% include figure image_path="/assets/images/posts/2021-04-22-business-entities-in-WEBCON-BPS/2021-04-19-21-14-36.png" alt="" caption="" %}
 
 {: .notice--info}
 **Info:** If the connection details for the data source differ for Dev, Test and Prod environment you can define these in the appropriate tabs. The environment itself takes care of selecting the correct ones.
 
-I like how this has been implemented. You have only a single point of failure. If there's a change in the external system, you have only one place which needs to be modified on your site. But this is still not the reason why it's one of my favourite features of WEBCON BPS. 
+I like how this has been implemented. You have only a single point of failure. If there's a change in the external system, you have only one place which needs to be modified on your side. But this is still not the reason why it's one of my favourite features of WEBCON BPS. 
 
 
 The reason for this is the greyed out field `Business entity` in the screenshot above. `Customer_Default` defines the common data source. The fields (1) make up a contract which need to be returned by  specialized data sources. This can be something simple. For example, customer data from Navision/BC should be retrieved by accessing the respective table (2) in the database. But it can be even a completely different kind of data source. For example, two business entities may run Navision on premise while another one uses the cloud version where the data needs to be retrieved via REST instead (3).
