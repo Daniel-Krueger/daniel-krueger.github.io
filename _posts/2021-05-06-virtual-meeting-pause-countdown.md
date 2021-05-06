@@ -13,14 +13,14 @@ excerpt:
 # Description
 Virtual meetings are common in today's world and it's also known that you should take a [break](https://www.forbes.com/sites/brucerogers/2021/04/20/our-brains-need-breaks-from-virtual-meetings/) in a longer meeting. I for my part prefer to show the participants a little countdown when the break ends. Since I dislike doing repetitive tasks manually, I created a small PowerShell script to do this for me.:
 
-{% include figure image_path="/assets/images/posts/2021-05-06-virtual-meeting-pause-countdown/display_pause.gif" alt="Starting pause count down" caption="Starting pause count down" %}
+{% include figure image_path="/assets/images/posts/2021-05-06-virtual-meeting-pause-countdown/display_pause.gif" alt="Starting pause countdown" caption="Starting pause countdown" %}
 
 
 # Explanation
-## Count down display
-[Webuhr.de](https://webuhr.de) is used for displaying the count down. I didn't try to do a fancy count down on my own, since there are already existing once in the web and if the URL is not accessible you probably won't participate in a virtual meeting anyway.
+## Countdown display
+[Webuhr.de](https://webuhr.de) is used for displaying the countdown. I didn't try to do a fancy countdown on my own, since there are already existing once in the web and if the URL is not accessible you probably won't participate in a virtual meeting anyway.
 
-The script launches the URL in private mode of a browser. This should prevent that any confidential information are displayed along with the count down window. The downside of this is, that the I can't make us of the default browser for opening URLs and therefore need to explicitly define the opening command for the browsers. The script tries the following browsers in this order:
+The script launches the URL in private mode of a browser. This should prevent that any confidential information are displayed along with the countdown window. The downside of this is, that the I can't make us of the default browser for opening URLs and therefore need to explicitly define the opening command for the browsers. The script tries the following browsers in this order:
 1. Edge
 2. Chrome
 3. Firefox
