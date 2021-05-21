@@ -57,7 +57,7 @@ feature_row_3:
     - image_path: ""
       alt: ""
       title: "COSMOnaut - Simon Fischer"
-      excerpt: "Dynamics 365 Business Centra, Azure, PowerShell..."
+      excerpt: "Dynamics 365 Business Central, Azure, PowerShell..."
       url: "https://simonofhh.tech/"
       btn_label: "Read More"
       btn_class: "btn--inverse"
