@@ -68,7 +68,14 @@ feature_row_3:
       url: "https://tobiasfenster.io/"
       btn_label: "Read More"
       btn_class: "btn--inverse"
-
+feature_row_4:     
+    - image_path: ""
+      alt: ""
+      title: "COSMOnaut - Waldemar Brakowski"
+      excerpt: "Insights and experiences while developing for Microsoft Dynamics 365 Business Central."
+      url: "https://navinsights.net/"
+      btn_label: "Read More"
+      btn_class: "btn--inverse"
    
       
 ---
@@ -76,4 +83,5 @@ feature_row_3:
 {% include feature_row id="feature_row_1"%}
 {% include feature_row id="feature_row_2"%}
 {% include feature_row id="feature_row_3"%}
+{% include feature_row id="feature_row_4"%}
   
