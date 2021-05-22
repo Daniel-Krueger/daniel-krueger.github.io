@@ -96,5 +96,8 @@ If you are intending to use these scripts, you have to keep this in mind:
 3. The scripts rely on internal workings of WEBCON BPS. If these change, they may break.
 4. There's a [user voice](https://community.webcon.com/forum/thread/496/15) for a `Validate form` action improvement. This blog post was born from it and in case the user voice gets implemented you need to remove the scripts from all processes. In addition, the validation messages can be reverted and the style removed.
 
-# Download
+
+# Download & Usage
 The scripts and CSS styles can be downloaded [here](https://github.com/cosmoconsult/webconbps/tree/main/FormRules/FocusOnError).
+Create two global form rules in JavaScript mode. One for each JavaScript file. Afterwards add the necessary rule to behavior of the form.
+
