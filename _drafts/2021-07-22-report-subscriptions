@@ -1,0 +1,97 @@
+---
+title: "Report subscriptions"
+categories:
+  - Private
+  - WEBCON BPS  
+tags:
+  - Application Template
+  - Custom Action  
+excerpt:
+    Get report/views on a scheduled base in your inbox.
+bpsVersion: 2021.1.2.136
+---
+
+# Overview
+This post describes an option describes the application template `Report subscriptions`.
+The processes in the application allow anyone to define a report which should be send to his inbox.
+
+![A weekly report has been received.]/(assets/images/posts/2021-07-22-report-subscriptions/2021-07-05-21-28-30.png)
+
+The 
+
+
+# Installation & Application setup
+## Creating API application
+A new API application should be [registered](https://developer.webcon.com/docs/registration-and-authentiaction/). 
+It's important, that the flag impersonation is ticked as well as the application are defined. Without these permissions,
+ it's not possible to call the report API and send the result to an inbox. 
+[impersonation](https://developer.webcon.com/docs/registration-and-authentiaction/#impersonation-and-permissions)
+
+## Import
+After importing the package imported, privileges have to be assigned to the allowed users.
+
+## Changing API client id and secret
+The template doesn't contains an invalid client id and  secret. These must be updated with the newly created API application:
+1. The report definition is retrieved by an SDK business rule. This rule must be changed.
+2. Open the Configuration of the SDK Execution dialog
+3. Update `App Client Id` and `App Client Secret`
+![Changing API client id and secret](/assets/images/posts/2021-07-22-report-subscriptions/2021-07-05-22-16-25.png)
+
+# Features of the template
+## Supported reports/views
+## Schedules
+### Weekly/Bi-weekly
+### Monthly
+### Removing reports
+
+
+# Explanations
+# Remarks
+## Template
+The application is a template and you can make it your own. You could:
+- Add other schedules
+- Run schedules twice a display
+- Add additional checks
+- Add static mail addresses
+
+And a lot of other things.
+
+## API application permissions
+The API application impersonates the recipient which requires appropriate permissions. 
+The current permissions may not allow to receive reports for a recipient although he has access. 
+Currently the access is tested by receiving the date when a subscription is activated, which will fail if there are missing permissions.
+An improved option would be to check whether the APP application has impersonation privileges for the database and app of the provided URL.
+
+## Limitations of the report API
+Tested version: 2012.1.2.136
+The call of the report API `/api/data/beta/db/{dbid}/applications/{appid}/reports/{reportid}` may fail with a general error.
+The following list contains a few examples:
+1. The user does not have permissions for the (private) view / the view does not exist
+2. Some fields/calculated fields will cause this error, when the report data is retrieved using the API
+3. For some reason the default created columns cause an error, but a calculated field returning the value does work
+
+If the error `InternalError: Object reference not set to an instance of an object.` is throws you can verify that the error is caused by the API by using the OpenAPI interface at [Portal_address]/api
+
+[Sample](https://community.webcon.com/community.webcon.com/public/posts/post/examples-of-using-rest-api/109#a3)
+[Examples of using REST API]https://developer.webcon.com/docs/rest-api/
+
+### Fun with calendar weeks
+Unfortunately there is no single truth when it comes time. We have:
+- time zones
+- day light saving time adjustments,
+- seven different option, which is the first day of the weekly
+- different definitions, which is the first week of the year
+
+{: .notice--info}
+**More information:**[Week and weekday datepart arguments](https://docs.microsoft.com/en-us/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15#week-and-weekday-datepart-arguments)
+
+The result is that there calendar week on the server, executing the subscription, may differ from your one. Therefore the server week is displayed.
+This can be used to decide, whether the bi-weekly subscription should be send starting with this week or the next. 
+![Calendar week of the server is displayed in the subscription](/assets/images/posts/2021-07-22-report-subscriptions/2021-07-05-22-02-06.png)
+If your calendar week is `even` but the server ones is `odd` you need to change the subscription to `odd`, so that you start receiving you mails this week.
+
+
+# Download
+If you would like the application template you can download it [here](https://github.com/cosmoconsult/webconbps/tree/main/FormRules/FocusOnError).
+
+If you are only interested in the Custom Action you can find the source code [here](https://github.com/Daniel-Krueger/webcon_reportSubscriptions).
