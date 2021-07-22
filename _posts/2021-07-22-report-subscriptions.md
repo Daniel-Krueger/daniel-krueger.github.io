@@ -1,5 +1,5 @@
 ---
-title: "Report subscriptions"
+title: "Subscribing to reports"
 categories:
   - Private
   - WEBCON BPS  
@@ -7,7 +7,7 @@ tags:
   - Application Template
   - Custom Action  
 excerpt:
-    Get report/views on a scheduled base in your inbox.
+    Receive a report on a schedule by mail.
 bpsVersion: 2021.1.2.136
 ---
 
