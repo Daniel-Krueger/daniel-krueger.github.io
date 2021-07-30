@@ -46,7 +46,7 @@ install the WEBCON BPS Express edition. What’s the meaning of freemium though?
 
 | Benefits                               | Limitations                                                    |
 |----------------------------------------|----------------------------------------------------------------|
-| It’s free.                             | **10 GB database limit**                                       |
+| It’s free, with all features.          | **10 GB database limit**                                       |
 | It **never expires**.                  | **Single Environment** (no dev-to-test-to-production scenario) |
 | You can even **use it in production**. |                                                                |
 
@@ -55,6 +55,8 @@ missing in the Express version.
 
 [Register to download the installation
 package](https://starter.webcon.com/sign-up/?pi=40069&comp=Cosmo%20Consult&addr=Sch%C3%B6neberger%20Str.%2015,%2010963%20Berlin,%20Germany&policy=https://se.cosmoconsult.com/footernavigation/data-protection/)
+
+Kamil Nędza created a [video tutorial](https://alterpaths.com/create-your-own-webcon-bps-express-laboratory-from-scratch/) of setting up such an environment. He speaks polish but provided English subtitles too.
 
 ## Requirements
 
