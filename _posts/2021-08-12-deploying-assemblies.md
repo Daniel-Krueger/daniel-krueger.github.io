@@ -7,7 +7,7 @@ tags:
   - Application Template  
 excerpt:
     This post describes an approach to deploy assemblies to the GAC.
-bpsVersion: 2021.1.2.136
+bpsVersion: 2021.1.3.205
 ---
 
 # Overview  
