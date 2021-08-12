@@ -14,7 +14,7 @@ bpsVersion: 2021.1.2.136
 In most cases the application package contains everything you need to transport an application from one environment to another. It starts with the data model, workflow definition and form. Furthermore, it contains UI elements, custom extensions and optional documents, configuration values, user groups and security settings for the environments. If all of these are part of the package, in which cases do you need to deploy additional artifacts by yourself?\
 In some situation you may encounter limitations when you are writing SQL statements, even so these can be really [advanced](https://alterpaths.com/how-configure-form-field-with-advenced-sql-query/). Another one is when you need to reuse the same SQL statement  in different places. Of course, you could replicate it everywhere, but this would increase the number of places which need to be maintained. This can be solved by creating custom views, stored procedures, or functions in the database. The drawback is, that these changes will not be part of the package and need to be transferred manually. If you don't like this approach, you will find another solution, for example creating a process. 
 
-![Sample artifacts deployed to the database by a process.](/assets/images/posts/2021-08-04-deploying-database-scripts/2021-08-02-22-43-45.png)
+{% include figure image_path="/assets/images/posts/2021-08-04-deploying-database-scripts/2021-08-02-22-43-45.png" alt="Sample artifacts deployed to the database by a process." caption="Sample artifacts deployed to the database by a process." %}
 
 If you are wondering whether creating objects in the database is actually allowed:
 
@@ -31,7 +31,7 @@ If a dictionary process is transferred from one environment to another, you can 
 This allows a controlled deployment of any custom database modifications, while utilizing the audit features of WEBCON BPS, workflow history and logging of action execution.
 
 # Application Artifact deployment
-## Using the application
+## Using the process Database script
 The application `Artifact deployment` contains the dictionary process `Database script`. This process stores the scripts which should be  deploy to (activate) or remove from (deactivate) a database. I kept the activate/deactivate wording to keep in line with other dictionary processes. Once the path `Trigger update` is executed the following will happen:
 1. A one minute timeout will be triggered.
 2. The timeout will always trigger the execution of the deactivation script, and optionally the activation script. This depends on the `Active` flag is set.
@@ -148,3 +148,5 @@ Make sure that these scripts work on the target SQL servers. I had the problem, 
 
 # Download
 If you would like the application template or to take a look at the scripts, you can go over to the GitHub [repository](https://github.com/Daniel-Krueger/webcon_artifactDeployment).
+
+Applications packages starting with BPS Version 2021.1.3.205 no longer contain the database scripts.
