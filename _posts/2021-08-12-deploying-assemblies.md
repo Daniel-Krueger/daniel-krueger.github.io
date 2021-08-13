@@ -19,6 +19,7 @@ I encountered only two exceptions:
   The WebCon.Workflow.Service executed the plugin action. This caused a `Could not load file or assembly 'Newtonsoft.Json,...` exception. I was advised to deploy the assembly to the GAC by the WEBCON Support team. This was in 2020, so could be different with BPS 2021.
 2. Using Razor\
   I'm using Razor, more precisely, the [RazorEngine](https://github.com/Antaris/RazorEngine) in a plugin. I'm no expert on how Razor works but, in the end, I needed a physical file for each assembly which is used in a template. As mentioned above, plugin assemblies don't have a physical file, therefore I needed to deploy the assemblies used within a template to the GAC.
+![](/assets/images/posts/2021-08-12-deploying-assemblies/2021-08-13-08-58-04.png)
 
 
 {% include figure image_path="/assets/images/posts/2021-08-15-deploying-assemblies/2021-08-11-21-35-42.png" alt="Assemblies deployed to the GAC using a process." caption="Assemblies deployed to the GAC using a process." %}
@@ -33,9 +34,10 @@ This allows a controlled deployment of the required assemblies.
 # Interesting, but WHY?
 If you are wondering why I'm going to such length and what's the benefit of all this, here are my reasons:
 1. I have an auditable history of these deployments
-2. I'm in the consultancy business so it's likely that I need to deploy those assemblies not only to our environments but to those of our customers too.
-3. I can provide an explanation why an assembly is necessary and can act if this reason is no longer valid.
-{% include figure image_path="/assets/images/posts/2021-08-15-deploying-assemblies/2021-08-12-22-10-04.png" alt="" caption="" %}
+   {% include figure image_path="/assets/images/posts/2021-08-12-deploying-assemblies/2021-08-13-08-58-04.png" alt="Auditable deployment on two servers." caption="Auditable deployment on two servers." %}
+3. I'm in the consultancy business so it's likely that I need to deploy those assemblies not only to our environments but to those of our customers too.
+4. I can provide an explanation why an assembly is necessary and can act if this reason is no longer valid.
+   {% include figure image_path="/assets/images/posts/2021-08-15-deploying-assemblies/2021-08-12-22-10-04.png" alt="" caption="" %}
 
 # Application Artifact deployment
 ## Using the process Assembly deployment
