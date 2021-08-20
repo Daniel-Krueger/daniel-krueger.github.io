@@ -7,7 +7,7 @@ categories:
 tags:
   - Item List
   - Sub workflow
-  - Translation
+  - Translations
   - Governance
 excerpt:
     A multi-part blog post to share expert information based on the creation of a business process.
