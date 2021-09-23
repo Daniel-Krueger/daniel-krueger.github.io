@@ -30,6 +30,12 @@ While looking for ways to easily copy Microsoft To Do tasks from one account to 
 {: .notice--info}
 **Info:** If the same list name exists in multiple accounts, the account name is added after the list name.
 
+If you have signed up with a non Microsoft mail address, jd@example.com, you may need to follow Charles Longer solution:
+
+{: .notice--info}
+**Quoted comment** One extra tweak I had to make: one of my accounts was @gmail instead of @outlook, so when I added it to my local Outlook, imap didn't show any of my tasks. So I went into account.microsoft.com, added an @outlook alias, and then added the account into Outlook via the alias. Tasks showed immediately and I was able to pick up the copy/paste from there. (Technically I just highlighted all tasks and dragged them into the new account.
+
+
 # Alternatives
 ## Backing up /Restoring  Microsoft To Do Tasks
 While looking for a solution I stumbled across the following post:
