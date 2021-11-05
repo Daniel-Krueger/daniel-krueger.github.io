@@ -1,5 +1,5 @@
 ---
-title: "Advanced JavaScript form rules execution on page load"
+title: "JavaScript form rule execution on page load"
 categories:
   - CC LS
   - WEBCON BPS  
@@ -13,11 +13,11 @@ bpsVersion: 2021.1.3.205
 
 # Overview  
 In most cases the provided form rules are sufficient to achieve the required result. For the other cases you can still create a form rule with edit mode `JavaScript mode`. 
-{% include figure image_path="/assets/images/posts/2021-11-05-advanced-javascript-form-rules-onload/2021-11-05-21-38-15.png" alt="Form rules can be created in two modes." caption="Form rules can be created in two modes." %}
+{% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-11-05-21-38-15.png" alt="Form rules can be created in two modes." caption="Form rules can be created in two modes." %}
 
 The only 'issue' is caused by the 'modern' approach of generating the web page elements. In the old days everything was generated on the server and then send to the client. These days are gone for good. In todays world the elements are created on the client, once they are available and necessary. So, if we don't know when specific elements are available, how can we do something with them? One example would be to display the `All attachments` on page load. 
 
-{% include figure image_path="/assets/images/posts/2021-11-05-advanced-javascript-form-rules-onload/2021-10-14-21-30-25.png" alt="Display all attachments on page load." caption="Display all attachments on page load." %}
+{% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-10-14-21-30-25.png" alt="Display all attachments on page load." caption="Display all attachments on page load." %}
 
 Those who followed my posts in the community will already have an idea, since I posted variations of my preferred solution:
 - [Form: Changing left/right layout from 50%/50% -> 75%/25%](https://community.webcon.com/forum/thread/882/45)
@@ -115,7 +115,7 @@ ccls.functionName.execute();
 Common to each approach is the way how you can execute them.
 1. Create a form rule with edit mode `JavaScript mode`
 2. Add the form rule to the `Behavior` tab
-{% include figure image_path="/assets/images/posts/2021-11-05-advanced-javascript-form-rules-onload/2021-10-14-21-20-41.png" alt="How to execute JavaScript on page load." caption="How to execute JavaScript on page load." %}
+{% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-10-14-21-20-41.png" alt="How to execute JavaScript on page load." caption="How to execute JavaScript on page load." %}
 
 # Samples
 ## Show hide Attachments element based on a field
@@ -160,7 +160,7 @@ ccls.showHideAttachments.execute();
 
 ## Changing left/right layout from 50%/50% -> 75%/25%
 The following script changes the default form layout width distribution from 50% for each to 75% for right and 25 % for the left column. This is also described [here](https://community.webcon.com/forum/thread/882/45)
-{% include figure image_path="/assets/images/posts/2021-11-05-advanced-javascript-form-rules-onload/2021-10-14-21-25-47.png" alt="Width distribution changed form 50% to 75%/25% for right and left column." caption="Width distribution changed form 50% to 75%/25% for right and left column." %}.
+{% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-10-14-21-25-47.png" alt="Width distribution changed form 50% to 75%/25% for right and left column." caption="Width distribution changed form 50% to 75%/25% for right and left column." %}.
 
 ```javascript
 window.ccls = window.ccls || {};
@@ -189,7 +189,7 @@ ccls.changePanelWidth.execute();
 
 ## Show all attachments after page load
 If you want to display the `All Attachments` tab on page load, you can use the following script. In case you want to display the `email conversation` tab you can simply replace `all-attachments-link` with `mail-attachments-link`.
-{% include figure image_path="/assets/images/posts/2021-11-05-advanced-javascript-form-rules-onload/2021-10-14-21-30-25.png" alt="Display all attachments on page load." caption="Display all attachments on page load." %}
+{% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-10-14-21-30-25.png" alt="Display all attachments on page load." caption="Display all attachments on page load." %}
 ```javascript
 window.ccls = window.ccls || {};
 ccls.showAllAttachments = {};
