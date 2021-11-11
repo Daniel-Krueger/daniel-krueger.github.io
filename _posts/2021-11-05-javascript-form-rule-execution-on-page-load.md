@@ -9,6 +9,7 @@ tags:
 excerpt:
     This posts describe an approach to hide standard elements on page load which can not be hidden with the provided form rules.
 bpsVersion: 2021.1.3.205
+last_modified_at: 2021-11-11
 ---
 
 # Overview  
@@ -217,3 +218,8 @@ ccls.showAllAttachments.execute = function (){
 ccls.showAllAttachments.execute();
 ```
 
+## Adding a save draft button in the toolbar
+This is described [here](/posts/2021/unified-save-experience#save-draft-path-as-a-menu-button).
+
+## Duplicating the save menu button as a path button
+This is described [here](/posts/2021/unified-save-experience#save-button-as-a-path-button).
