@@ -5,6 +5,7 @@ categories:
   - WEBCON BPS  
 tags:
   - JavaScript
+  - Custom Action
 excerpt:
     An approach for creating a new choice field value, without navigating to another page. Works on a mobile, too.
 bpsVersion: 2021.1.4.84
