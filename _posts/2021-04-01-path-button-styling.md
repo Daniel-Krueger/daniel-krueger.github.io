@@ -9,9 +9,11 @@ tags:
 excerpt:
     This post describes a way to define path button style in way that it can be reused across all applications.
 bpsVersion: 2021.1.2.101
+last_modified_at: 2022-02-13
 ---
 
 # Overview
+
 
 This post describes an approach to style path buttons in a way that the style for all can easily be changed.  It's a follow up of a short version [here](https://community.webcon.com/forum/thread/41/15).
 
@@ -58,12 +60,11 @@ In addition to this the CSS file wouldn't be part of the application export pack
 I prefer to avoid any additional deployment steps therefore I choose the following alternative. 
 
 1. A global constant is added which value contains the style definition.
-{% include figure image_path="/assets/images/posts//2021-04-01-path-button-styling/2021-04-01-22-33-00.png" alt="Global constant which contains the styles common for all applications" caption="Global constant which contains the styles common for all applications" %}
-
+   {% include figure image_path="/assets/images/posts//2021-04-01-path-button-styling/2021-04-01-22-33-00.png" alt="Global constant which contains the styles common for all applications" caption="Global constant which contains the styles common for all applications" %}
 2. This constant is in turn used in an HTML field by which the constant value will be part of the DOM.
-{% include figure image_path="/assets/images/posts//2021-04-01-path-button-styling/2021-04-01-22-39-15.png" alt="The constant value is part of the DOM" caption="The constant value is part of the DOM" %}
+   {% include figure image_path="/assets/images/posts//2021-04-01-path-button-styling/2021-04-01-22-39-15.png" alt="The constant value is part of the DOM" caption="The constant value is part of the DOM" %}
 
-
+ 
 {: .notice--warning}
 **Remark:** The styling field needs to be visible for the user. Therefore it can not be a technical field and needs to be visible on each step in the field matrix.
 
@@ -71,6 +72,12 @@ I prefer to avoid any additional deployment steps therefore I choose the followi
 **Remark:** Only the first 2000 characters of a constant are copied into an HTML field, verified in version 2021.1.2.101. If you face this just create a second constant and use this one in the HTML field too.
 
    {% include figure image_path="/assets/images/posts//2021-04-01-path-button-styling/2021-04-02-23-28-33.png" alt="In case of a long style definition use multiple constants" caption="In case of a long style definition use multiple constants" %}
+
+{: .notice--info}
+**Remark:** With the release of  WEBCON BPS 2021.1.4.x an option has been added to define 'Global CSS styles'. If you make use of this feature, you don't need to add a 'Styling' field.
+
+![Making use of the 'Global CSS styles' instead of constants.](/assets/images/posts/2021-04-01-path-button-styling/2022-02-13-20-21-59.png)b
+
 
 ## CSS attribute selectors are the alternative to a CSS class
 Even so it's not possible to define classes in path button styles there's an alternative. This is called [attribute selectors](https://www.w3schools.com/css/css_attribute_selectors.asp). It allows us to identify a path button by the text value of a provided style and apply the style defined in the global constant to it.
@@ -84,6 +91,9 @@ The `[class*="pathPanelButton"]` is added in addition to reduce the likeliness o
 
 {: .notice--warning}
 **Remark:** There's one major draw back if attribute selectors are used. The selector matches *each* character. If one of the values contains an additional white space it won't be matched. 
+
+{: .notice--info}
+**Info:** With the release of 2021.1.4.x not only the 'Global CSS styles' had been added, but the path buttons are now html buttons instead of inputs of type button. So there are folders for the different options you can choose from.
 
 # Color coding paths
 All of this will only help the users, if the used colors follow a defined guideline. I will describe here my  suggestion. I will start with the four colors which are available to every WEBCON BPS installation
@@ -116,6 +126,7 @@ I will stick with the four original ones plus one for administrative paths. Sinc
 
 # Download
 The style definitions can be found [here](https://github.com/cosmoconsult/webconbps/tree/main/css/path_button_styling).
+With the release of 2021.1.4.x not only the 'Global CSS styles' had been added, but the path buttons are now html buttons instead of inputs of type button. So there are folders for the different options you can choose from.
 
 # Remarks
 1. If this option is used, there may be readability problems depending on the selected theme. I have yet to find a way to identify the loaded theme so that a different style could be used. 
