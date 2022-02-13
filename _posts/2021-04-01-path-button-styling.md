@@ -125,7 +125,8 @@ I will stick with the four original ones plus one for administrative paths. Sinc
 
 
 # Download
-The style definitions can be found [here](https://github.com/cosmoconsult/webconbps/tree/main/css/path_button_styling).
+The style definitions can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/css/path_button_styling).
+
 With the release of 2021.1.4.x not only the 'Global CSS styles' had been added, but the path buttons are now html buttons instead of inputs of type button. So there are folders for the different options you can choose from.
 
 # Remarks
