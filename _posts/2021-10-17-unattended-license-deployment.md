@@ -2,8 +2,9 @@
 title: "Unattended OnPrem license deployment to multiple server instances"
 categories:
   - CC LS
-  - BC
+  - Business Central
 tags:
+  - Business Central
   - PowerShell
 excerpt:
     If you are staying up late, to deploy a new BC license outside working hours you should read this post.

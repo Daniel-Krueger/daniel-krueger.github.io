@@ -1,5 +1,5 @@
 ---
-title: "Bring erroneous fields to the front"
+title: "OBSOLETE - Bring erroneous fields to the front"
 categories:
   - Private
   - WEBCON BPS  
@@ -8,11 +8,14 @@ tags:
   - Form rules
   - JavaScript
 excerpt:
-    Options are explained to display fields that have triggered an error to the user. Even if they are located on another tab.
+    Default behavior in later WEBCON BPS versions. Options are explained to display fields that have triggered an error to the user. Even if they are located on another tab.
 bpsVersion: 2021.1.2.136
 ---
 
 # Overview
+
+**Default behavior in later WEBCON BPS versions**
+
 This post describes an option how fields, which caused an error, can be brought to the attention of the user. With the current version of WEBCON BPS the user has to go through the following steps:
 1. He needs to close the error dialog.
 2. He may not see any problem. 

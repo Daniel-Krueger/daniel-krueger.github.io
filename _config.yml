@@ -66,11 +66,11 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Daniel Krüger"
+  name   : "Daniel Krüger"  
   avatar : "/assets/images/bio_pixelate.png" 
   linkedin: "Krueger-Daniel"
   github: "Daniel-Krueger"   
-  bio    : ""
+  bio    : "<a href='https://webcon.com/news/webcon-mvp' style='color:#db0b2d;'>WEBCON MVP 2022</a>"
   # links:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
