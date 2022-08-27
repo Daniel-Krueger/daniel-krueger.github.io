@@ -22,6 +22,8 @@ This post is intended if you need to debug web service data source in these use 
 In all other cases it would be easier to follow this post [Debug a web service data source](https://daniels-notes.de/posts/2022/debug-web-service-datasource). 
 
 
+{% include figure image_path="/assets/images/posts/2022-08-27-debug-web-service-datasource-alternative/2022-08-27-22-20-43.png" alt="Inspecting web service request with WEBCONAPPS." caption="WInspecting web service request with WEBCONAPPS." %}
+
 # Preparation
 ## Prerequisites
 For the described use cases we have the following prerequisites
