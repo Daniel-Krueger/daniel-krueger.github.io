@@ -9,7 +9,7 @@ tags:
   - REST
   - Business Central
 excerpt:
-    How to view web service communication from WEBCON BPS with other systems. Using Business Central as an example with a data source using filter mode 'web service' and solving two typical errors.
+    How to view web service communication from WEBCON BPS with other systems. Business Central is used as a data source with filter mode 'web service'.
 bpsVersion: 2022.1.2.31
 ---
 
@@ -17,6 +17,9 @@ bpsVersion: 2022.1.2.31
 Even so the usage of a REST data source is, in general, simple and well [documented](https://community.webcon.com/posts/post/rest-data-sources/173), there are cases when you have problems setting it up. This post will show you an option how to take a look at the executed requests. The use case will be that WEBCON BPS is run on a local environment which calls a Business Central REST web service. 
 
 {% include figure image_path="/assets/images/posts/2022-08-26-debug-web-service-datasource/2022-08-25-23-14-33.png" alt="Searching a BC REST data source using the popup search window." caption="Searching a BC REST data source using the popup search window." %}
+
+In case you are running WEBCON BPS on WEBCONAPPS or you don't have admin permissions you can read [Debug a web service data source WEBCONAPPS](https://daniels-notes.de/posts/2022/debug-web-service-datasource-alternative) instead of chapter `Preparation` of this post.
+
 # Preparation
 ## Prerequisites
 For the described use case we have the following prerequisites
@@ -27,18 +30,18 @@ For the described use case we have the following prerequisites
 
 ## Configuration of HTTP Toolkit
 After the download and installation of HTTP Toolkit you can click on  `Anything` from the `Intercept` screen for more information. 
-{% include figure image_path="/assets/images/posts/2022-05-25-remove-item-list-rows%20copy/2022-08-20-21-36-40.png" alt="View intercept `Anything` for more information" caption="View intercept `Anything` for more information" %}
+{% include figure image_path="/assets/images/posts/2022-08-26-debug-web-service-datasource/2022-08-20-21-36-40.png" alt="View intercept `Anything` for more information" caption="View intercept `Anything` for more information" %}
 
 
 {: .notice--info}
 **Info:** If your web service communication doesn't use https, you can skip the rest of this chapter.
 
 This will show detailed documentation from which you need to download the `Certificate Authority` via `Export CA certificate`. 
-{% include figure image_path="/assets/images/posts/2022-05-25-remove-item-list-rows%20copy/2022-08-20-21-36-24.png" alt="HTTP Toolkit `Anything` documentation" caption="HTTP Toolkit `Anything` documentation" %}
+{% include figure image_path="/assets/images/posts/2022-08-26-debug-web-service-datasource/2022-08-20-21-36-24.png" alt="HTTP Toolkit `Anything` documentation" caption="HTTP Toolkit `Anything` documentation" %}
 
 The downloaded file needs to be added as a trusted root certificate for the local machine. This can be done via the import wizard available from the context menu of the file, right click the downloaded file (1), select 'Install certificate' (2), choose 'Local machine' (3) and 'Trusted root certificate authorities' (4) via the browse dialog.
 
-{% include figure image_path="/assets/images/posts/2022-05-25-remove-item-list-rows%20copy/2022-08-20-21-45-17.png" alt="Importing the HTTP Toolkit certificate authority certificate" caption="Importing the HTTP Toolkit certificate authority certificate" %}
+{% include figure image_path="/assets/images/posts/2022-08-26-debug-web-service-datasource/2022-08-20-21-45-17.png" alt="Importing the HTTP Toolkit certificate authority certificate" caption="Importing the HTTP Toolkit certificate authority certificate" %}
 
 ## Configuration of WEBCON BPS
 When you want to view the outgoing request send by WEBCON BPS you need to configure the proxy inside the Designer Studio. It's available in the System Settings\Global Parameters\ Proxy.
@@ -103,6 +106,4 @@ If you switch to admin mode though, the log will be displayed. You will see the 
 
 
 
-# WEBCONAPPS environment
-I originally wanted to achieve the same with a WEBCONAPPS environment. Since we don't have access to the server itself and we are not in the same network, I needed another option, to forward the web service call to the proxy. I thought about using [ngrok](https://ngrok.com/docs/getting-started) but  they didn't want to play together. HTTP Toolkit didn't receive the calls. It could work out, if the web service connects to a server in your environment and you can point the ngrok tunnel to this environment. Then you could view the request in the WEB UI of ngrok and there wouldn't be a need for HTTP Toolkit or similar. You would only need to change the base URL in the connection to point to the ngrok tunnel instead of the current URL.
 
