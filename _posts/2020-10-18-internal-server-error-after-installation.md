@@ -4,7 +4,7 @@ categories:
   - WEBCON BPS
   - Cosmo Consult
 tags:
-  - BPS Portal Installation
+  - Installation
 excerpt:
     Invalid web.config line -1 error after installation BPS Standalone 
 toc: false

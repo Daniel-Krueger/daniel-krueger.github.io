@@ -6,7 +6,7 @@ categories:
   - Series
 tags:
   - Debugging
-  - Item List
+  - Item list
   - Governance    
 excerpt:    
     A multi-part blog post to share expert information based on the creation of a business process.

@@ -5,7 +5,7 @@ categories:
   - WEBCON BPS
   - Series
 tags:
-  - Item List
+  - Item list
   - Sub workflow
   - Translations
   - Governance
