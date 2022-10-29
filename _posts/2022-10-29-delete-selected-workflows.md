@@ -17,7 +17,7 @@ There are situations in which you want to delete specific workflows. It may bay 
 
 
 {: .notice--info}
-**Info:** Admin mode: In our projects the delete button is always hidden in the field matrix. Just to make sure there's also a validation in the delete trigger itself.
+**Info:** Admin mode: In our projects the delete button is always hidden in the field matrix. Just to make sure there's also a validation action in the delete trigger itself, which would prevent the deletion.
 
 {: .notice--info}
 **Info:** There have been changes to the way the delete button behaves during the versions. Maybe it's easier to use the delete button nowadays, but I'm used to using this approach. :)
@@ -63,7 +63,7 @@ Once all effected workflows are retrieved, you could use the 'ParentId' and 'Id'
 {% include figure image_path="/assets/images/posts/2022-10-29-delete-selected-workflows/2022-10-29-22-02-42.png" alt="Rule to change the threshold" caption="Rule to change the threshold" %}
 
 ## Deleting
-The deletion is done using the highest priority so it should be fast but depending on the number of levels, it will still take time. Each level is deleted for itself. This is handled again using a timeout. If you are impatient, you can again use the paths.
+The deletion is done using the highest priority so it should be fast but depending on the number of levels, it will still take time. Each level is deleted for itself. This is handled again using a timeout. If you are impatient, you can again use the paths. This will also delete workflows,  which have a validate action in the delete trigger, which would prevent the deletion otherwise.
 
 {% include figure image_path="/assets/images/posts/2022-10-29-delete-selected-workflows/2022-10-29-22-05-34.png" alt="Deletion progress is visible in the workflow" caption="Deletion progress is visible in the workflow" %}
 
