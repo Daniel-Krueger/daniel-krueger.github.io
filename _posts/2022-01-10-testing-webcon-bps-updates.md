@@ -55,7 +55,7 @@ It's quite a simple process which could be expanded.
 {% include figure image_path="/assets/images/posts/2022-01-17-testing-webcon-bps-updates/2022-01-10-21-49-32.png" alt="Typical checks, which needs to be executed after every update." caption="Typical checks, which needs to be executed after every update." %}
 
 # Download
-The process  itself is easy to create. but if you are running the same version, you could simply use download one from my [GitHub repository](https://github.com/Daniel-Krueger/webcon_processes/update_test).
+The process  itself is easy to create. but if you are running the same version, you could simply use download one from my [GitHub repository](https://github.com/Daniel-Krueger/webcon_processes/tree/main/Update_test).
 
 {: .notice--warning}
 **Remark:** I've used my [Uniform path button style](https://daniels-notes.de/posts/2021/path-button-styling) approach, so two global constants will be added. 
