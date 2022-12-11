@@ -11,6 +11,9 @@ excerpt:
 bpsVersion: 2021.1.4.84
 ---
 
+{: .notice--error}
+**Info:** This is outdated, please refer to [Modal dialog v3](/posts/2022/modal-dialog) instead.
+
 # Overview  
 Did you ever start a workflow for a new customer/prospect, fill in the data, but forgot that you need to create the customer before you can continue? Rephrased with mor WEBCON BPS specific wording: You need to add a new data source entry for a choice field before you can continue? If this is this case, this post is for you. The approach uses JavaScript to create a new window via which the new entry is generated (workflow is started). Once the user executes a path, it’s checked, whether the URL contains a specific parameter. If this is the case, the closing method of the parent window is called, and the instance id will be passed to it. This is used to populate the choice field. 
 
