@@ -14,7 +14,7 @@ bpsVersion: 2022.1.3.65
 # Overview  
 In this post I will describe how to use the provided JavaScript and Business Rules to start / display (child) workflows within a modal dialog. You can even use wizard steps or do something with the newly created workflow instance. For example, using this to add a new entry to a dictionary and automatically populating the picker field.
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11_20h58_21.gif" alt="Starting a child dialog in modal window with wizard steps." caption="Starting a child dialog in modal window with wizard steps." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11_20h58_21.gif" alt="Starting a child dialog in modal window with wizard steps." caption="Starting a child dialog in modal window with wizard steps." %}
 
 {: .notice--info}
 **Remark:** Even if you are for some reason not interested in the dialog, the way how it has been done and the JavaScript itself may help you for other use cases.
@@ -79,9 +79,9 @@ InvokeRule(#{BRUX:3687:ID}#)
 </script>
 ```
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-20-39-33.png" alt="HTML field for parent window dialog logic." caption="HTML field for parent window dialog logic." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-20-39-33.png" alt="HTML field for parent window dialog logic." caption="HTML field for parent window dialog logic." %}
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-20-40-03.png" alt="HTML field for child dialog logic." caption="HTML field for child dialog logic." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-20-40-03.png" alt="HTML field for child dialog logic." caption="HTML field for child dialog logic." %}
 
 ## Start a child workflow
 In the simplest case you can add a menu button which uses a hyperlink action. The example below will do the following:
@@ -92,10 +92,10 @@ In the simplest case you can add a menu button which uses a hyperlink action. Th
 - The dialog will be 90% of the height and 40% of the width. Parameter value <br/>
   height:90%; width:40%
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-20-51-20.png" alt="Start a child workflow and pass values." caption="Start a child workflow and pass values." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-20-51-20.png" alt="Start a child workflow and pass values." caption="Start a child workflow and pass values." %}
 
 The execution of the button will generate the URL and display it in an iFrame inside the modal dialog. Upon closing the dialog any data tables will be reloaded, so that a created instance will be displayed.
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11_20h58_21.gif" alt="Example start a child worfklow and pass data." caption="Example start a child worfklow and pass data." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11_20h58_21.gif" alt="Example start a child worfklow and pass data." caption="Example start a child worfklow and pass data." %}
 
 
 ## Display a workflow in a dialog
@@ -117,7 +117,7 @@ select {WFCONCOL:4878}, {WFCONCOL:4883},
 from WFElements
 where WFD_WFDID ={WFD_ID}
 ```
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-07-00.png" alt="Data table definitions which provides a link to display the workflow in a dialog." caption="Data table definition which provides a link to display the workflow in a dialog." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-07-00.png" alt="Data table definitions which provides a link to display the workflow in a dialog." caption="Data table definition which provides a link to display the workflow in a dialog." %}
 
 ## Add a close button 
 You can optionally add a close button in the child dialog, just in case the X in the modal is not enough. 
@@ -130,8 +130,8 @@ ccls.modal.closeButton.displayAsPath  = true;
 InvokeRule(#{BRUX:3685:ID}#)
 </script>
 ```
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-13-33.png" alt="Configuration to display a close button." caption="Configuration to display a close button." %}
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-17-11.png" alt="Optional close button of the modal dialog." caption="Optional close button of the modal dialog." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-13-33.png" alt="Configuration to display a close button." caption="Configuration to display a close button." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-17-11.png" alt="Optional close button of the modal dialog." caption="Optional close button of the modal dialog." %}
 
 {: .notice--info}
 **Info:** If you want to change the label of the close button refer to the chapters below.
@@ -158,19 +158,19 @@ ccls.modal.dialog.closeFunctions.setNewCustomer= function (parameters) {
 {: .notice--warning}
 **Remark:** The custom close function can be defined after invoking the form rule. Since the rule is already invoked, we can simply add our function and can omit the lines which were necessary to display the close button.
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-28-05.png" alt="Updated script will offer an option to create a new customer and set the picker field." caption="Updated script will offer an option to create a new customer and set the picker field." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-28-05.png" alt="Updated script will offer an option to create a new customer and set the picker field." caption="Updated script will offer an option to create a new customer and set the picker field." %}
 
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11_21h35_03.gif" alt="Example of create a new entry for a dictionary." caption="Example of create a new entry for a dictionary." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11_21h35_03.gif" alt="Example of create a new entry for a dictionary." caption="Example of create a new entry for a dictionary." %}
 
 You could also add a button below the picker like it's described in the [first version](https://daniels-notes.de/posts/2022/add-new-choice-field-value-without-leaving-the-page#html-definition-of-the-button). Instead of onClick event you could invoke the menu button and hide it with a form rule. 
 
-{% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-38-39.png" alt="You can invoke an existing menu button." caption="You can invoke an existing menu button." %}
+{% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-38-39.png" alt="You can invoke an existing menu button." caption="You can invoke an existing menu button." %}
 
 # Dialog features
 The dialog offers three options:
 1. Replacing the current page with the URL displayed in the dialog. A return URL will be added to the current page. The entered data in the dialog will be lost. If the data on the parent window has been modified, the user will need to confirm that the data will be lost.<br/>
-     {% include figure image_path="/assets/images/posts/2022-12-20-modal-dialog/2022-12-11-21-43-56.png" alt="Full window, expand and close the dialog." caption="Full window, expand and close the dialog." %}
+     {% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-21-43-56.png" alt="Full window, expand and close the dialog." caption="Full window, expand and close the dialog." %}
 2. The dialog window can be expanded to full size and reverted to the defined size.
 3. Will close the dialog.
 
