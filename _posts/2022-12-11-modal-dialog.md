@@ -222,6 +222,6 @@ In the child dialog you will find lines on how to check which theme the user has
 Visual Studio code has been used to generate the JavaScript files. If you have it to you can make use of the defined #regions, which will improve the reading a little. There's a lot of documentation in the JavaScript files, so if you are missing something here, you may find more details there.
 
 # Download
-The repository of the custom SDK action can be found [here](https://github.com/Daniel-Krueger/webcon_cclsactions).
+The repository of the custom SDK action can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/ModalDialog).
 
 
