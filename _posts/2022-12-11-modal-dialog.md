@@ -6,6 +6,7 @@ categories:
   
 tags:
   - JavaScript
+  - User Experience
 excerpt:
     Third approach to for a modal dialog to start workflows, use wizard steps and creating new picker field entries.
 bpsVersion: 2022.1.3.65
@@ -33,11 +34,10 @@ Since we can't easily transport a single business rule, I will provide the rule 
 
 Parameter | Type | Description
 ---------|----------|---------
- Title | Text | Title of the dialog<br/>"defaut":"New action", "de":"Neue Aktion"
- urlParameters | Text | JSON similar defintion but without leading and trailing {}<BR/>"workflowId": {WF:21}`optional:<BR/>, "dbId":null
- searchParameters | Text | JSON similar defintion but without leading and trailing {}<BR/>Example:<BR/> "TargetColumn":"SourceColumn"<BR/>"WFD_AttText1":"WFD_AttText10"
- searchParameters | Text | JSON similar defintion but without leading and trailing {}<BR/>Example:<BR/>"TargetColumn":"SourceColumn",<BR/>"WFD_AttText1":"WFD_AttText10"
- dimensions | Text | Dimensions of the modal dialog.<BR/> heigth:90%; width: 50%
+ Title | Text | Title of the dialog<br/>`"defaut":"New action", "de":"Neue Aktion"`
+ urlParameters | Text | JSON similar definition but without leading and trailing {}<BR/>`"workflowId": {WF:21}`<br/>optional:<BR/>`, "dbId":null`
+ searchParameters | Text | JSON similar definition but without leading and trailing {}<BR/>Example:<BR/>`"TargetColumn":"SourceColumn"`<BR/>`"WFD_AttText1":"WFD_AttText10"`
+ dimensions | Text | Dimensions of the modal dialog.<BR/> `heigth:90%; width: 50%`
  closeFunction | Text | Optional: If not provided, non will be used.
 
 SQL Command
@@ -47,13 +47,12 @@ select CONCAT('javascript:ccls.modal.dialog.displayWorkflow(','''{BRP:-2}''',','
 {% include figure image_path="/assets/images/posts/2022-09-02-modal-dialog/2022-12-11-20-19-47.png" alt="Business rule to display a workflow in modal." caption="Business rule to display a workflow in modal." %}
 
 
-Paremeter | Type | Description
+Parameter | Type | Description
 ---------|----------|---------
- Title | Text | JSON similar defintion but without leading and trailing {}<br/>If no label is provided for the current language, the defautl value will be used<br/>"defaut":"New action", "de":"Neue Aktion"
- urlParameters | Text | JSON similar defintion but without leading and trailing {}<br/>"workflowId": {WF:21},   "formTypeId": <br/>DT:27}<br/>optional:<br/>, "businessEntity":null, "dbId":null,"parentInstance": {WFD_ID}
- searchParameters | Text | JSON similar defintion but without leading and trailing {}<BR/>Example:<BR/> "TargetColumn":"SourceColumn"<BR/>"WFD_AttText1":"WFD_AttText10"
- searchParameters | Text | JSON similar defintion but without leading and trailing {}<BR/>Example:<BR/>"TargetColumn":"SourceColumn",<BR/>"WFD_AttText1":"WFD_AttText10"
- dimensions | Text | Dimensions of the modal dialog.<BR/> heigth:90%; width: 50%
+ Title | Text | JSON similar definition but without leading and trailing {}<br/>If no label is provided for the current language, the default value will be used<br/>`"defaut":"New action", "de":"Neue Aktion"`
+ urlParameters | Text | JSON similar definition but without leading and trailing {}<br/>`"workflowId": {WF:21}, "formTypeId": {DT:27}`<br/>optional:<br/>`, "businessEntity":null, "dbId":null,"parentInstance": {WFD_ID}`
+ searchParameters | Text | JSON similar definition but without leading and trailing {}<BR/>Example:<BR/> `"TargetColumn":"SourceColumn"`<BR/>`"WFD_AttText1":"WFD_AttText10"`
+ dimensions | Text | Dimensions of the modal dialog.<BR/> `heigth:90%; width: 50%`
  closeFunction | Text | Optional: If not provided, non will be used.
 
 SQL Command
@@ -85,12 +84,12 @@ InvokeRule(#{BRUX:3687:ID}#)
 
 ## Start a child workflow
 In the simplest case you can add a menu button which uses a hyperlink action. The example below will do the following:
-- Create a dialog with the title 'Default title' if any other language, then German is used. Parameter value <br/> "default":"Default title", "de":"Title de"{DT:329}
-- Defines the workflow and that it will be started in the current db using the current business entity. That the current workflow is used for the parentInstance parameter is not displayed. Parameter value <br/> "dbId": null,   "businessEntity": null,   "workflowId": {WF:276},   "formTypeId": {DT:329},   "parentInstance": {WFD_ID}
+- Create a dialog with the title 'Default title' if any other language, then German is used. Parameter value <br/> `"default":"Default title", "de":"Title de"`
+- Defines the workflow and that it will be started in the current db using the current business entity. That the current workflow is used for the parentInstance parameter is not displayed. Parameter value <br/> `"dbId": null,   "businessEntity": null,   "workflowId": {WF:276},   "formTypeId": {DT:329},   "parentInstance": {WFD_ID}`
 - Defines to which fields which values should be copied. The example may mislead you, because in this simple example both workflows share the same fields, so it looks strange, but this is not a limitation as you may have noticed in the description of the parameter. Parameter value <br/>
-  "{WFCONCOL:4883}":"{WFCONCOL:4883}", "{WFCONCOL:4882}":"{WFCONCOL:4882}", "{WFCONCOL:4881}":"{WFCONCOL:4881}","{WFCONCOL:4880}":"{WFCONCOL:4880}","{WFCONCOL:4879}":"{WFCONCOL:4879}","{WFCONCOL:4878}":{WFD_ID}
+  `"{WFCONCOL:4883}":"{WFCONCOL:4883}", "{WFCONCOL:4882}":"{WFCONCOL:4882}", "{WFCONCOL:4881}":"{WFCONCOL:4881}","{WFCONCOL:4880}":"{WFCONCOL:4880}","{WFCONCOL:4879}":"{WFCONCOL:4879}","{WFCONCOL:4878}":{WFD_ID}`
 - The dialog will be 90% of the height and 40% of the width. Parameter value <br/>
-  height:90%; width:40%
+  `height:90%; width:40%`
 
 {% include figure image_path="/assets/images/posts/2022-12-11-modal-dialog/2022-12-11-20-51-20.png" alt="Start a child workflow and pass values." caption="Start a child workflow and pass values." %}
 
@@ -103,8 +102,8 @@ You could display any workflow in a dialog. The following logic is used for work
 
 Parameter | Value
 ---------|----------
-Title | "default": "DIALOG_TITLE"
-urlParameters | "elementId" : {SYSCOL:WFD_ID}
+Title |`"default": "DIALOG_TITLE"`
+urlParameters | `"elementId" : {SYSCOL:WFD_ID}`
  
 DIALOG_TITLE will be replaced with the signature of the workflow instance, but this could be changed in the actual SQL command.
 
@@ -222,6 +221,6 @@ In the child dialog you will find lines on how to check which theme the user has
 Visual Studio code has been used to generate the JavaScript files. If you have it to you can make use of the defined #regions, which will improve the reading a little. There's a lot of documentation in the JavaScript files, so if you are missing something here, you may find more details there.
 
 # Download
-The repository of the custom SDK action can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/ModalDialog).
+The JavaScript files can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/ModalDialog).
 
 
