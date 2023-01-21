@@ -13,6 +13,8 @@ last_modified_at: 2022-02-13
 ---
 
 # Overview
+The implementation approach should no longer be used. There's a new revised version:
+[Revised uniform path button styling](https://daniels-notes.de/posts/2023/path-button-styling-revisited).
 
 
 This post describes an approach to style path buttons in a way that the style for all can easily be changed.  It's a follow up of a short version [here](https://community.webcon.com/forum/thread/41/15).
@@ -49,6 +51,8 @@ This can be applied for each button separately or on a global level.
 There's only one problem. If you define a style for each path button, what will you do if it has to be changed?
 
 # Improving path button styling
+
+
 ## Challenges
 The previously mentioned problem would easily be prevented if we could define global style which could be used for each path button. A change to this global style would apply to all buttons so we won't have to be afraid of changes. 
 If we would create our own web site we would define a CSS file with classes matching each path color which would be used for each button. As of today (2021-04-01) we can not define a class for a path button nor can we define a custom CSS file, but the later one is in [backlog](https://community.webcon.com/forum/thread/404/15). 
