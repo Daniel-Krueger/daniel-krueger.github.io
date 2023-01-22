@@ -57,7 +57,7 @@ You can simply copy the whole source code; it only makes use of system fields. A
 {% include figure image_path="/assets/images/posts/2023-01-21-path-button-styling-revisited/2023-01-21-11-08-57.png" alt="A test result of the business rule execution" caption="A test result of the business rule execution" %}
 
 ## Global form  rule
-Add a new global business rule for example with:
+Add a new global form rule for example with:
 ```
 Name: ColorizePaths 
 Description:
@@ -167,6 +167,47 @@ Remove the CSS definitions of the old approach.
 # Explanations
 ## JavaScript 
 Visual Studio code has been used to generate the JavaScript files. If you have it to you can make use of the defined #regions, which will improve the reading a little. 
+
+## Path button styling 
+The styling of the path button is applied by CSS classes. There are two classes for each color, one for the dark and one for the light theme
+
+``` html
+<style>
+
+.ccls_bluePathButtonLightTheme {
+    color: white !important;
+    background-color: rgba(7, 150, 221, 0.75) !important;
+    font-size: larger !important;
+    border-radius: 8px !important;
+}
+.ccls_bluePathButtonDarkTheme {
+    color: white !important;
+    background-color: rgba(7, 150, 221, 0.75) !important;
+    font-size: larger !important;
+    border-radius: 8px !important;
+}
+
+</style>
+```
+
+This will also allow you to define pseudo classes, for example for styling a hover effect.
+
+``` html
+<style>
+
+.ccls_bluePathButtonLightTheme:hover {
+    background-color: rgba(7, 150, 221, 1) !important;
+}
+
+.ccls_bluePathButtonDarkTheme:hover {
+    background-color: rgba(7, 150, 221, 1) !important;
+}
+
+</style>
+```
+
+{: .notice--info}
+**Remark:** The `<style>`  tag has only been added to achieve syntax highlighting in the post. Only the classes themselves must be used in the `Global CSS styles`.
 
 ## Switching between light/dark theme doesn't work
 By default, the light theme classes will be used. It's only switched to dark theme classes if the id of the current theme is part of the `ccls.colorizePaths.darkThemes` array.
