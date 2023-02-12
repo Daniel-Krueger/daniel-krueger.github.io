@@ -1,12 +1,12 @@
 ---
-title: "Searching aka looking for a needle in haystack"
+title: "Searching 317,000 files with PowerShell in 9 seconds"
 categories:
   - Private
   
 tags:
   - PowerShell
 excerpt:
-    Searching 39 folders with 317,466 files in 9 seconds.
+    "Developer hell: 101,509 folders with 797,422 files and no way to search them using a simple string..."
 ---
 
 # Overview  
