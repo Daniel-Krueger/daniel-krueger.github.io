@@ -92,7 +92,7 @@ Even so this is possible, I will use a simple table to render the comments.
 
 The important parts in the below snippet are `SQLGRIDHEADERTEMPLATE` and `SQLGRIDROWTEMPLATE`. You refer to the columns in the data source using `{NAMEOFCOLUMN}`.
 
-```html
+```
 <html dir="ltr" >
 <head >
 <style type="text/css">
@@ -159,6 +159,10 @@ body{
 </body>
 </html>
 ```
+
+{: .notice--info}
+**Info:** I had to disable the code highlighting, because some texts would not be visible otherwise.
+
 {: .notice--info}
 **Info:** You can also make use of these variables in an email template.
 
