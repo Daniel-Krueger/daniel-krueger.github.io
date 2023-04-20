@@ -25,7 +25,7 @@ Other features:
 **Remark:** Each of our workflows has a title and this is a global field. Up to now this has had the advantage to see the value in the archive. With the use of the breadcrumb we can rely on it to show the title of each workflow in the breadcrumb. If you don't have a `global title field` you can still make use of the breadcrumb by rendering the form type of the parent workflows as the main element and an empty value above it. Take a look at [Business rules chapter](/posts/2023/breadcrumb#global-business-rules) for an explanation.
 
 {: .notice--info}
-**Info:** I intend to publish a post with a sample SQL statement to migrate the value of one field to another one in the near future.
+**Info:** I post about samples how to migrate field value from one field to another can be found [here](/posts/2023/migrating-field-values).
 
 {% include figure image_path="/assets/images/posts/2023-04-18-breadcrumb/Breadcrumb.gif" alt="Breadcrumb in action" caption="Breadcrumb in action" %}
 
