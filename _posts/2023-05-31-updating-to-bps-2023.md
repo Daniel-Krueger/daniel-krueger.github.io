@@ -8,6 +8,7 @@ tags:
 excerpt:
     This post is a summary of all the changes we had to implement after updating to WEBCON BPS 2023.
 bpsVersion: 2023.1.1.56
+last_modified_at: 2023-06-07
 ---
 
 # Overview  
@@ -51,8 +52,124 @@ This may happen, if you used an integer value as the id of the choose field and 
  {WFCONCOL_ID:153} = {WFD_ID}
 This will now fail, because the left side will be the new column, which is text and the right side is integer.
 If you have always used '' for the right side, 
-{WFCONCOL_ID:153} = '{WFD_ID}'
+{WFCONCOL_ID:153} = *'*{WFD_ID}*'*
 which would have been correct, as it improves performance a little bit, this error wouldn't occur.
+
+## Checks before upgrading to BPS 2023
+I'm not sure that I'm alone with this. Since I'm not a fan of trial and error, I put together some SQL commands which can be used as an initial check, before you upgrade to 2023.
+
+Since t-sql doesn't support regular expressions, the process would be:
+1. Execute the SQL command
+   ![](/assets/images/posts/2023-05-31-updating-to-bps-2023/2023-06-07-22-22-05.png)
+2. Copy the results to notepad++ or another tool 
+   ![](/assets/images/posts/2023-05-31-updating-to-bps-2023/2023-06-07-22-22-44.png)
+3. Use find with enabled regular expression ```WFCONCOL_ID:\d*\}\s+=\s+[^']``` to locate all occurrences in the current document
+![](/assets/images/posts/2023-05-31-updating-to-bps-2023/2023-06-07-22-24-05.png)
+4. Check the results
+![](/assets/images/posts/2023-05-31-updating-to-bps-2023/2023-06-07-22-28-14.png)
+
+In the last image only the red highlighted columns would cause a problem. Constants (EPV) are text the id of an item list (DNCCOL_ID) is text too. The blue one could cause a problem, in case the column is integer, maybe. I haven't checked this case yet.
+The SQL command contains a row number, this way it's a little bit easier to scroll up to the number and then check the row in the management studio.
+
+{: .notice--warning}
+**Remark:** The regular expression above checks for the = operator. Unfortunately we could also have `in` ,`<>`, the sides could be swapped and so on. So you could use ```WFCONCOL_ID:\d*\}``` instead which will show every line where it is used.
+
+{: .notice--warning}
+**Remark:** I tried to add as much information to the SQL commands as I could find, but in some cases it may not be enough. In addition, it can be set I missed some. If you find a problem, have improvements, find another object which uses SQL commands, get in touch with me.
+### Actions
+``` sql
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) 
+	ROW_NUMBER () OVER ( order by actionDefinition.ACT_ID asc) as RowNumber
+	, actionProcess.DEF_Name as ActionProcess
+	, automationProcess.DEF_Name as AutomationProcess
+	, WF_Name
+	, STP_Name
+	, PATH_Name
+	, PLU_Name
+	, actionDefinitionAutomation.AUTM_Name
+	, actionDefinition.[ACT_ID] 
+	, DicActionKinds.EnglishName ActionKind
+	, DicActionTypes.ObjectName ActionType
+	, actionDefinition.[ACT_Name] actionName
+	, actionDefinition.ACT_Description actionDescription
+	, actionDefinition.ACT_Configuration actionConfiguration
+	, templateAction.ACT_ID templateId
+	, templateAction.[ACT_Name] templateName
+	, templateAction.ACT_Description templateDescription
+	, templateAction.ACT_Configuration templateConfiguration	
+FROM [dbo].[WFActions] as actionDefinition
+  left join WFDefinitions as actionProcess on DEF_ID = ACT_DEFID 
+  join DicActionKinds on ACT_ActionKindID = DicActionKinds.TypeID
+  join DicActionTypes on ACT_ActionTypeID = DicActionTypes.TypeID
+  left join WorkFlows on ACT_WFID = WF_ID
+  left join WFSteps on ACT_STPID = STP_ID
+  left join WFAvaiblePaths on ACT_PATHID = PATH_ID
+  left join WFPlugIns on PLU_ID = ACT_PLUID
+  left join Automations as actionDefinitionAutomation on  actionDefinition.ACT_AUTMID = actionDefinitionAutomation.AUTM_ID
+  left join [WFActions] as templateAction on templateAction.ACT_ID = actionDefinition.ACT_ACTID
+  left join WFDefinitions  as automationProcess  on actionDefinitionAutomation.AUTM_DEFID = automationProcess.DEF_ID
+where actionDefinition.ACT_Configuration like '%WFCONCOL_ID:%'
+```
+### Business rules
+``` sql
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT 
+	ROW_NUMBER () OVER ( order by command.[BRD_ID] asc) as RowNumber
+	, APP_ID as Application
+	, process.DEF_Name as Process
+	, command.[BRD_ID]  Command_BRD_ID
+	, command.[BRD_BRDID] as Command_BRD_BRDID
+	, command.[BRD_Name] as Command_BRD_Name
+	, command.[BRD_Value] as Command_BRD_Value
+	, command.[BRD_Documentation] as Command_BRD_Documentation
+	, parent.[BRD_ID]  Command_BRD_ID
+	, parent.[BRD_BRDID] as Command_BRD_BRDID
+	, parent.[BRD_Name] as Command_BRD_Name
+	, parent.[BRD_Value] as Command_BRD_Value
+	, parent.[BRD_Documentation] as Command_BRD_Documentation
+FROM [dbo].[WFBusinessRuleDefinitions] command
+  left join [dbo].[WFBusinessRuleDefinitions] parent on parent.BRD_ID = command.BRD_BRDID
+  join [dbo].WFDefinitions  process on command.BRD_DEFID = DEF_ID
+  join WFApplications on DEF_APPID = APP_ID
+where command.BRD_Value like '%WFCONCOL_ID:%'
+
+```
+### Data sources
+``` sql
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000)
+	ROW_NUMBER () OVER ( order by directSource.[WFS_ID] asc) as RowNumber
+	, directSource.[WFS_ID]
+	, directSource.WFS_Name
+	, directSource.[WFS_WFSID] as IdParentSource      
+	, parentSource.WFS_Name as ParentSource
+	, directSource.[WFS_COMID]
+	, directSource.[WFS_Type]
+	, directSource.[WFS_SelectCommand]
+FROM [dbo].[WFDataSources] directSource
+	left join [dbo].[WFDataSources] parentSource on parentSource.WFS_ID = directSource.WFS_WFSID
+where directSource.WFS_SelectCommand like '%WFCONCOL_ID:%'
+```
+### Fields
+``` sql
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000)
+	ROW_NUMBER () OVER ( order by [WFCON_ID] asc) as RowNumber
+	, APP_Name as Application
+	, DEF_Name as Process
+	, [WFCON_ID]
+    , [WFCON_Prompt]
+    , [WFCON_SelectOrCaml]
+    , [WFCON_DefaultSelect]      
+    , [WFCON_Config]
+      
+  FROM [dbo].[WFConfigurations] join WFDefinitions on WFCON_DEFID = DEF_ID
+  join WFApplications on DEF_APPID = APP_ID
+  where [WFCON_SelectOrCaml] like '%WFCONCOL_ID:%' 
+  or [WFCON_DefaultSelect] like '%WFCONCOL_ID:%' 
+  or [WFCON_Config] like '%WFCONCOL_ID:%' 
+```
 
 # Default values are set before URL parameters
 From the change log:
