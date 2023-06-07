@@ -49,10 +49,10 @@ If you have been lazy you may encounter errors like this:
 {% include figure image_path="/assets/images/posts/2023-05-31-updating-to-bps-2023/2023-05-31-23-03-03.png" alt="" caption="" %}
 
 This may happen, if you used an integer value as the id of the choose field and then used a condition like:
- {WFCONCOL_ID:153} = {WFD_ID}
+ `{WFCONCOL_ID:153} = {WFD_ID}`
 This will now fail, because the left side will be the new column, which is text and the right side is integer.
 If you have always used '' for the right side, 
-{WFCONCOL_ID:153} = *'*{WFD_ID}*'*
+`{WFCONCOL_ID:153} = '{WFD_ID}'`
 which would have been correct, as it improves performance a little bit, this error wouldn't occur.
 
 ## Checks before upgrading to BPS 2023
