@@ -10,7 +10,24 @@ tags:
 excerpt:
     Third approach to for a modal dialog to start workflows, use wizard steps and creating new picker field entries.
 bpsVersion: 2022.1.3.65
+last_modified_at: 2023-07-08
 ---
+# Update 2023-07-08
+Check the GitHub files for an updated version. The JavaScript has been made compatible to work with BPS 2022 as well as BPS 2023.
+Functional changes:
+- jQuery usage removed
+- The opened child dialog will reuse the current theme. May have been different if the embedded them is different from the user.
+- Closing the dialog will release the checkout of the element. There may be entries in the developer tools console which are like "extend checkout" failed. I couldn't pin them down but I assume that it's a timing issue. When the X is closed on the dialog, the child element releases the checkout. Afterwards the child informs the parent dialog, that it's released which in turn finally closes the dialog. Maybe the "extend checkout" is called during this timespan.
+- In addition to [Adding a new entry to a dictionary](/posts/2022/modal-dialog#adding-a-new-entry-to-a-dictionary) it's also possible to update a cell in an item list row. 
+  It uses the same approach but has a different function and the additional parameters `targetColumn, row`.
+  ```js
+  // internal function for setting the field, can be called from a custom function
+  // can be used to populate a picker which uses the instance id as id of the picker value of an item list
+  // if row is not provided or -1 the last row will be used.
+  ccls.modal.dialog.closeFunctions.setInstanceIdForItemListColumn = function (parameters, targetItemList, targetColumn, row) {
+  ccls.modal.dialog.closeFunctions.setGuidForItemListColumn = function (parameters, targetItemList, targetColumn, row) {
+  ```
+
 
 # Overview  
 In this post I will describe how to use the provided JavaScript and Business Rules to start / display (child) workflows within a modal dialog. You can even use wizard steps or do something with the newly created workflow instance. For example, using this to add a new entry to a dictionary and automatically populating the picker field.
@@ -34,10 +51,10 @@ Since we can't easily transport a single business rule, I will provide the rule 
 
 Parameter | Type | Description
 ---------|----------|---------
- Title | Text | Title of the dialog<br/>`"defaut":"New action", "de":"Neue Aktion"`
+ Title | Text | Title of the dialog<br/>`"default":"New action", "de":"Neue Aktion"`
  urlParameters | Text | JSON similar definition but without leading and trailing {}<BR/>`"workflowId": {WF:21}`<br/>optional:<BR/>`, "dbId":null`
  searchParameters | Text | JSON similar definition but without leading and trailing {}<BR/>Example:<BR/>`"TargetColumn":"SourceColumn"`<BR/>`"WFD_AttText1":"WFD_AttText10"`
- dimensions | Text | Dimensions of the modal dialog.<BR/> `heigth:90%; width: 50%`
+ dimensions | Text | Dimensions of the modal dialog.<BR/> `height:90%; width: 50%`
  closeFunction | Text | Optional: If not provided, non will be used.
 
 SQL Command
@@ -49,10 +66,10 @@ select CONCAT('javascript:ccls.modal.dialog.displayWorkflow(','''{BRP:-2}''',','
 
 Parameter | Type | Description
 ---------|----------|---------
- Title | Text | JSON similar definition but without leading and trailing {}<br/>If no label is provided for the current language, the default value will be used<br/>`"defaut":"New action", "de":"Neue Aktion"`
+ Title | Text | JSON similar definition but without leading and trailing {}<br/>If no label is provided for the current language, the default value will be used<br/>`"default":"New action", "de":"Neue Aktion"`
  urlParameters | Text | JSON similar definition but without leading and trailing {}<br/>`"workflowId": {WF:21}, "formTypeId": {DT:27}`<br/>optional:<br/>`, "businessEntity":null, "dbId":null,"parentInstance": {WFD_ID}`
  searchParameters | Text | JSON similar definition but without leading and trailing {}<BR/>Example:<BR/> `"TargetColumn":"SourceColumn"`<BR/>`"WFD_AttText1":"WFD_AttText10"`
- dimensions | Text | Dimensions of the modal dialog.<BR/> `heigth:90%; width: 50%`
+ dimensions | Text | Dimensions of the modal dialog.<BR/> `height:90%; width: 50%`
  closeFunction | Text | Optional: If not provided, non will be used.
 
 SQL Command

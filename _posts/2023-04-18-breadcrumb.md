@@ -11,8 +11,19 @@ tags:
 excerpt:
     An alternative navigation between a workflow hierarchy using a breadcrumb
 bpsVersion: 2022.1.4.155
+last_modified_at: 2023-07-08
 ---
+# Update 2023-07-08
+Check the GitHub files for an updated version. The JavaScript has been made compatible to work with BPS 2022 as well as BPS 2023.
 
+Functional changes:
+- jQuery usage removed
+- The return url no longer contains the hostname and protocol if the user uses the breadcrumb for navigation
+- Navigation using the breadcrumb will release the checkout of the current element. 
+- The title of the breadcrumb elements contain the instance id
+- The modal dialog was added to high in the DOM. It could happen, that there would be multiple dialogs stubs in the DOM including events for the buttons. Which could lead to multiple "Do you want to leave messages". At least I hope that this is fixed now.
+  
+  
 # Overview  
 In this post I will describe a custom *breadcrumb* implementation. Which will allow you to navigate up a workflow hierarchy. The breadcrumb itself also renders the form type as well as the title of a workflow instance.
 Other features:

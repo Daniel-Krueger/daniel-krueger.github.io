@@ -6,11 +6,17 @@ categories:
 tags:
   - Form rules
   - JavaScript
+  - User Experience
 excerpt:
     A how to about always displaying a save button in the top toolbar as well as a a save button in the 'Available paths' area.
-bpsVersion: 2021.1.3.205
+last_modified_at: 2023-07-08
 ---
-
+# Update 2023-07-08
+Functional changes
+- It's possible  different classes which would be valid for a WEBCON BPS version.
+- The save draft path is now hidden in the `Available paths` button group
+- The 'save' path button will check whether [Revised uniform path button styling](https://daniels-notes.de/posts/2023/path-button-styling-revisited) is available. If it is the light or dark theme class will be used. 
+  
 # Overview  
 One of the top questions of users new to WEBCON BPS is why you don't have a `Save` button for new workflow instances. Of course, you can explain the reasons to them, and some users may find this interesting but, in my experience, the major part simply doesn't care. If you are in edit mode, you should always be able to  execute the save action intuitively. This means that you don't need to think about where the save button is located. This post is not only about how to achieve the this, but also some background information why you may help yourself in the long run.
 
