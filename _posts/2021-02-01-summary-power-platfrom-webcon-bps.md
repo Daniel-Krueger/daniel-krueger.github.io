@@ -1,5 +1,5 @@
 ---
-title: "Building Business Process Solutions: with MS Power Platform & WEBCON BPS (without Cutting Corners!) (ongoing)"
+title: "Building Business Process Solutions: with MS Power Platform & WEBCON BPS (without Cutting Corners!)"
 categories:
   - Private
   - WEBCON BPS
