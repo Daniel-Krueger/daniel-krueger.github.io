@@ -41,7 +41,7 @@ feature_row_2:
       btn_class: "btn--inverse"     
     - image_path: ""
       alt: ""
-      title: " Raluca Lupu – Encorsa"
+      title: "Encorsa - Raluca Lupu"
       excerpt: "Discover the power of Webcon BPS and join me on a journey of digital transformation. Together, we can streamline processes and unlock endless possibilities."
       url: "https://raluca.encorsa.ro/"
       btn_label: "Read More"
