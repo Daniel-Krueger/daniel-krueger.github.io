@@ -8,11 +8,15 @@ tags:
 excerpt:
     This post is a summary of all the changes we had to implement after updating to WEBCON BPS 2023.
 bpsVersion: 2023.1.1.56
-last_modified_at: 2023-07-08
+last_modified_at: 2023-07-29
 ---
-# Update 2023-07-08
+# Updates
+## Update 2023-07-08
 - Added up [Do choose fields with only ID exist](/posts/2023/updating-to-bps-2023#do-choose-fields-with-only-id-exist).\
 - Added SQL queries as files to [GitHub](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/BPS2023_upgrade_checks).
+  
+## Update 2023-07-29
+- Added warning to SDK migration
 
 # Overview  
 The new WEBCON BPS 2023 is out and the [change log](https://community.webcon.com/download/changelog/188?q=07cb66b) is full of information. Unfortunately, there are breaking changes, which makes this update not so easy as the ones I experienced before. Two of these are intended and if you neither use SDK plugins nor jQuery, you aren't subject to those. But I also encountered one, which may be unintended and another breaking change, which only is a breaking change due to my laziness.
@@ -229,6 +233,10 @@ Comment |jQuery | Cash |
 It seems some major refactoring was done and this also is reflected in the SDK. A lot of functions are now asynchronous, which requires changes to the existing plugins, before they can be used.
 There's the official [SDK Migration](https://community.webcon.com/community/public/uploads/editor/Migration_Document_2023_1.pdf) but I will post here all the changes I encountered to *build* the plugin again. I didn't necessarily test the plugins in depth.
 I also only did some lazy changes, because I want to test the new version and not the plugins.
+
+{: .notice--warning}
+**Warning:** To make it clear: If you use the changes below, you will potentially nullify the performance gains which would be available due to the refactoring to use asynchronous methods. It's bad practice as snoop pointed out in a comment. As stated, my focus was on testing the new version as fast as possible.
+
 
 ## Run to RunAsync
 Before
