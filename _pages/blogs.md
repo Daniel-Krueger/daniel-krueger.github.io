@@ -6,7 +6,7 @@ feature_row_1:
     - image_path: ""
       alt: ""
       title: "AlterPaths [Dead]"
-      excerpt: "Examples about basic and advanced scenarios related to WEBCON BPS"
+      excerpt: "Examples about basic and advanced scenarios related to WEBCON BPS."
       url: "https://alterpaths.com/"
       btn_label: "Read More"
       btn_class: "btn--inverse"
