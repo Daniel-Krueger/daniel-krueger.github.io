@@ -46,7 +46,15 @@ feature_row_2:
       url: "https://raluca.encorsa.ro/"
       btn_label: "Read More"
       btn_class: "btn--inverse"     
-      
+feature_row_3:   
+    - image_path: ""
+      alt: ""
+      title: "Lumenn"
+      excerpt: "WEBCON: Low code, programming, and fluff. Maksymilian Stachowiak"
+      url: "https://blog.lumenn.pl"
+      btn_label: "Read More"
+      btn_class: "btn--inverse" 
+   
 ---
 
 {% include feature_row id="feature_row_1"%}
