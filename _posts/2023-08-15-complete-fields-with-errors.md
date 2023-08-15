@@ -7,7 +7,7 @@ tags:
   - JavaScript
 excerpt:
     You forgot to fill out two required fields in some groups/tabs? Simply tab through them.
-bpsVersion: 2023.1.1.89, 2022.1.4.155
+bpsVersion: 2023.1.1.89
 ---
 
 # Overview  
