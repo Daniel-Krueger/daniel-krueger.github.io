@@ -48,7 +48,7 @@ This is simple:
     1. Use the below text as the HTML content, where you replace the id of the form rule with yours. Or you remove the `InvokeRule`` line altogether and select the form rule in the expression editor.
     ```html
     <script>
-    InvokeRule(#{BRUX:687:ID}#)
+    InvokeRule(#{BRUX:6360:ID}#)
     </script>
     ```
     2. Deactivate `Show field name`.
@@ -62,7 +62,7 @@ That's it. :)
 # Explanations
 
 ## Regions
-Visual Studio code has been used to create the JavaScript files. If you have it to you can make use of the defined #regions, which will improve the reading a little. 
+Visual Studio Code has been used to create the JavaScript files. If you have it, you can make use of the defined #regions, which will improve the reading a little. 
 ```javascript
 //#region Labels in different languages
 // The label of the error message in the languages.
@@ -102,7 +102,7 @@ if (!errorMessage.startsWith(errorText)) return;
 ```
 
 ## Multilingual texts
-You will find a code block at the top of the script with the standard error texts and the label of the continue button. You can modify these to your liking. If you wan't to add a new language you could execute the following in the browser developer tools and use the result as the "key".
+You will find a code block at the top of the script with the standard error texts and the label of the continue button. You can modify these to your liking. If you want to add a new language you could execute the following in the browser developer tools and use the result as the "key".
 ```javascript
 G_BROWSER_LANGUAGE.substr(0, 2)
 ```
