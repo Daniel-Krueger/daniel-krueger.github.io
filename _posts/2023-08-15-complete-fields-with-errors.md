@@ -33,8 +33,8 @@ Originally, I wanted to display the fields inside the dialog, but I didn't found
 ## Overview
 It's the same as [Implementation](/posts/2023/simplification-of-missing-comment#implementation)
 1. Create a form rule.
-3. Create an html field.
-4. Make it visible in the field matrix.
+2. Create an html field.
+3. Make it visible in the field matrix.
 
 ## Global form  rule
 
