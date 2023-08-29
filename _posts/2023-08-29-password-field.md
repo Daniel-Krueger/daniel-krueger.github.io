@@ -15,7 +15,7 @@ bpsVersion: 2023.1.2.44, 2022.1.4.155
 There are a [bunch of reason](https://community.webcon.com/forum/thread/75?messageid=75) why WEBCON BPS doesn't have an 'encrypted field'.
 Nevertheless, I was forced to store a password in a dictionary. Having a plain text password isn't something I wanted to have in a productive environment. For this I created this plugin. The focus is on preventing aa accidental leaking of the password. For example, by screensharing, taking a screenshot, wrong process privileges, SQL queries and so on. 
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/Password.gif" alt="Entering, verifying, viewing the password." caption="Entering, verifying, viewing the password." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/Password.gif" alt="Entering, verifying, viewing the password." caption="Entering, verifying, viewing the password." %}
 
 
 {: .notice--warning}
@@ -45,15 +45,15 @@ Creating/updating a plugin is easy:
 2. Click on `New package`
 3. Select the appropriate .zip file.
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-29-20-16-53.png" alt="Uploading a new a plugin" caption="Uploading a new a plugin" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-29-20-16-53.png" alt="Uploading a new a plugin" caption="Uploading a new a plugin" %}
   
 ## Field configuration
 The first step is to create a new `single line of text field` and select `PasswordFormFieldExtensionJS` of the plugin as `Customization of form field control`.
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-23-13.png" alt="Selecting the form field extension" caption="Selecting the form field extension" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-23-13.png" alt="Selecting the form field extension" caption="Selecting the form field extension" %}
 
 Afterwards you have to configure the customization. The minimum configuration is the key, **which has to be 24 characters** long. In my case I stored it in a constant.
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-28-19.png" alt="Configuring the customization" caption="Configuring the customization" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-28-19.png" alt="Configuring the customization" caption="Configuring the customization" %}
 
 If you want to provide translation for the default message you have to:
 1. Select the language.
@@ -61,7 +61,7 @@ If you want to provide translation for the default message you have to:
 3. A new column for the language will be added, and you can enter the translation.
   
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-30-46.png" alt="Adding translations" caption="Adding translations" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-30-46.png" alt="Adding translations" caption="Adding translations" %}
 
 
 {: .notice--info}
@@ -75,12 +75,12 @@ The password can be decrypted using a business rule.
 3. Reuse the key used for encrypting the password.\
 You can use the usual options. In my example I use the field.
     
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-32-54.png" alt="Configure the decryption." caption="Configure the decryption." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-32-54.png" alt="Configure the decryption." caption="Configure the decryption." %}
 
 As usual the business rule can be used in a form rule, automation, action etc.
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-36-01.png" alt="Using the business rule in a form rule." caption="Using the business rule in a form rule." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-36-01.png" alt="Using the business rule in a form rule." caption="Using the business rule in a form rule." %}
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-37-35.png" alt="Business rule used in a condition." caption="Business rule used in a condition." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-37-35.png" alt="Business rule used in a condition." caption="Business rule used in a condition." %}
 
 {: .notice--info}
 **Info:**
@@ -115,7 +115,7 @@ If it doesn't work, you can take a look at the linked page. There is also Option
 
 In the end the following global modules have been installed:
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-29-20-06-58.png" alt="Global node modules" caption="Global node modules" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-29-20-06-58.png" alt="Global node modules" caption="Global node modules" %}
 
 
 Afterwards I was able to install the node modules in the FormFieldExtensionJS directory.
@@ -126,7 +126,7 @@ npm install
 ## Developing the form field extension
 ### WEBCON BPS Tools don't pick up the FormFieldExtension
 I couldn't use the `WEBCON BPS Tools`, even when there was only one project in the solution.
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-29-18-59-07.png" alt="FormFieldExtension is not selectable." caption="FormFieldExtension is not selectable." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-29-18-59-07.png" alt="FormFieldExtension is not selectable." caption="FormFieldExtension is not selectable." %}
 
 I worked around this by running the scripts manually:
 1. Open a developer shell.
@@ -147,7 +147,7 @@ You can play around with the `ReadOnlyHtml` mode by providing a part of the gene
 }
 ```
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-29-19-14-17.png" alt="Developing the form field extension" caption="Developing the form field extension" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-29-19-14-17.png" alt="Developing the form field extension" caption="Developing the form field extension" %}
 
 ### Plugin configuration
 I'm using the plugin configuration in the `FormFieldExtension` and I'm to lazy to provide the configuration in the workbench every time. Therefore I created a `DefaultSDKConfiguration`. If no configuration is provided, e.g. developing mode, this one is used. This is determined by checking whether an expected property of the configuration exists.
@@ -199,11 +199,11 @@ The created package will contain:\
 The form field extension has not really an option to provide feedback in case of errors. Therefore, I made use of the PluginLogger. If the debugging mode is configured for the extension you will get additional information.
 
 
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-29-20-39-06.png" alt="Configure logging for the plugin." caption="Configure logging for the plugin." %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-29-20-39-06.png" alt="Configure logging for the plugin." caption="Configure logging for the plugin." %}
 
 ## Unexpected error
 During the development I had some `unexpected errors`. There were no further information in the browser or trace. I got more information in the log file of BPS Portal.
-{% include figure image_path="/assets/images/posts/2023-08-30-password-field/2023-08-28-22-45-30.png" alt="Log files of BPS Portal" caption="Log files of BPS Portal" %}
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-45-30.png" alt="Log files of BPS Portal" caption="Log files of BPS Portal" %}
 
 
 # Download
