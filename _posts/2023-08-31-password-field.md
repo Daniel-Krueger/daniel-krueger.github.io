@@ -77,6 +77,14 @@ You can use the usual options. In my example I use the field.
     
 {% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-32-54.png" alt="Configure the decryption." caption="Configure the decryption." %}
 
+# Usage
+## Entering a password
+You can copy & paste the password/string you want to encrypt into the field. The entered data will be masked as *.
+
+Upon saving the 
+## Us
+
+
 As usual the business rule can be used in a form rule, automation, action etc.
 {% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-36-01.png" alt="Using the business rule in a form rule." caption="Using the business rule in a form rule." %}
 
