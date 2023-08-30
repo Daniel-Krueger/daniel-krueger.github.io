@@ -32,12 +32,6 @@ You can use it on your sandbox to check out the functionality. You should review
 
 
 # Implementation
-## Overview
-
-1. Upload the plugin.
-2. Configure the field.
-3. Create a business rule for decrypting.
-
 ## Upload the plugin
 Download the appropriate .zip from the release, which is linked in [Download](#download) chapter.
 Creating/updating a plugin is easy:
@@ -81,10 +75,11 @@ You can use the usual options. In my example I use the field.
 ## Entering a password
 You can copy & paste the password/string you want to encrypt into the field. The entered data will be masked as *.
 
-Upon saving the 
-## Us
+Upon saving the instance the provided password is encrypted and stored in a JSON.
 
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-30-21-17-15.png" alt="The entered password is encrypted and stored in a JSON." caption="The entered password is encrypted and stored in a JSON." %}
 
+## Decrypting the password vie business rule
 As usual the business rule can be used in a form rule, automation, action etc.
 {% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-28-22-36-01.png" alt="Using the business rule in a form rule." caption="Using the business rule in a form rule." %}
 
@@ -182,6 +177,18 @@ You can reduce the error to a warning level by adding ```"no-debugger": "warn"``
 ```
 
 ## SDK actions
+### Why was the Validate function used
+Despite using OnBeforeElementSave the first version stored the original value. Therefore, I moved to the Validate function.
+
+{% include figure image_path="/assets/images/posts/2023-08-29-password-field/2023-08-30-21-20-00.png" alt="Original password was stored using OnBeforeElementSave" caption="Original password was stored using OnBeforeElementSave" %}
+
+
+The functions `ConvertToDBType`, `OnDBValueSet` don't have a Context object which I could use to log debug information.
+
+```c#
+args.Context.PluginLogger.AppendDebug("Key length ok");
+```
+
 ### Plugin configuration and translations
 The business rule and form field extension have common configuration settings. These are stored in the file `PasswordEncryptionConfig`.
 
