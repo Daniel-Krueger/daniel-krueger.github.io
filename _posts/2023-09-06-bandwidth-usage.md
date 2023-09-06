@@ -95,7 +95,7 @@ This is my configuration:
 Whenever we are using the internal endpoints, we are aware of the fact, that these may change without any information.
 This fact in combination to the consumed Bandwidth, makes you wonder whether there's a better approach. As always, the answer is 'It depends'. Maybe you are just needing a single/few information? In this case your best alternative could be to create a business rule, which retrieves this information and use it in an HTML field. Here's an example:\
 [HTML field definition of a breadcrumb](https://daniels-notes.de/posts/2023/breadcrumb#html-field-definition)
-
+[Reducing the size of HTTP responses part 2 ](https://community.webcon.com/forum/thread/3548)
 
 # User voices
 I've added these user voices, which would help to reduce the Bandwidth consumption even more:\
