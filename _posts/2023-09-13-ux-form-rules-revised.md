@@ -32,6 +32,9 @@ The effect is even greater because the JavaScript is passed as string value in a
 
 Unfortunately, I neither have the time nor the possibility to test this against multiple WEBCON BPS versions. There's a great chance that they will at least work as of WEBCON BPS 2022 R4, but I only tested 2023 R2.
 
+{: .notice--info}
+**Info:**
+In case you want to apply minification to your rules to, you can take a look [here](/posts/2023/bandwidth-usage#minify-javascript).
 
 # Breaking change
 As mentioned in the previous post, I decided to implement a breaking change. In the past all form rules where independent of each other. This in turn was only possible, because I used some 'utility' functions which I duplicated in each form rule. In the past I opted for independent working form rules. Realizing how it currently works and how many form rules there are today, I changed this.
