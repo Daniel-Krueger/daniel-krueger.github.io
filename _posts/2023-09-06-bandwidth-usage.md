@@ -5,7 +5,7 @@ categories:
 tags:    
   - Form rules
 excerpt:
-    This post attempts to raise the awareness of how you can reduce the Bandwidth consumption.
+    This post attempts to raise the awareness of how you can reduce the bandwidth consumption.
 bpsVersion: 2023.1.2.44, 2022.1.4.155
 ---
 
@@ -93,13 +93,14 @@ This is my configuration:
 ```
 ### Using internal endpoints
 Whenever we are using the internal endpoints, we are aware of the fact, that these may change without any information.
-This fact in combination to the consumed Bandwidth, makes you wonder whether there's a better approach. As always, the answer is 'It depends'. Maybe you are just needing a single/few information? In this case your best alternative could be to create a business rule, which retrieves this information and use it in an HTML field. Here's an example:\
+This fact in combination to the consumed bandwidth, makes you wonder whether there's a better approach. As always, the answer is 'It depends'. Maybe you are just needing a single/few information? In this case your best alternative could be to create a business rule, which retrieves this information and use it in an HTML field. Here's an example:\
 [HTML field definition of a breadcrumb](https://daniels-notes.de/posts/2023/breadcrumb#html-field-definition)
-[Reducing the size of HTTP responses part 2 ](https://community.webcon.com/forum/thread/3548)
 
 # User voices
 I've added these user voices, which would help to reduce the Bandwidth consumption even more:\
-[Removing default values in http responses](https://community.webcon.com/forum/thread/3527/15)
+[Removing default values; Reducing HTTP response size part 1](https://community.webcon.com/forum/thread/3527/15)
+[Transfer only referenced form rules; Reducing HTTP response size part 2](https://community.webcon.com/forum/thread/3548/15)
+[Minimize form rules ; Reducing HTTP response size part 3](https://community.webcon.com/forum/thread/3552/15)
 
 # Outlook / Breaking changes
 Using this information, I will change the form rules for:\

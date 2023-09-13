@@ -10,6 +10,12 @@ excerpt:
 bpsVersion: 2023.1.1.89
 ---
 
+# Update 2023-09-13
+
+{: .notice--warning}
+**Warning:**
+With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. The basic explanations still apply and only the configuration/implementation has changed. You can find out more about how to implement it in [UX form rules revised / 2023 R2 compatible](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage). 
+
 # Overview  
 This is another approach to improve the user experience. Currently you may receive a message that you missed two required fields. Upon closing the dialog, the first one is selected automatically, but where's the next? This form rule will override the 'tabbing' behavior in such a way, that you move from one error field to the next, wherever it is.
 
@@ -187,5 +193,7 @@ In the end I gave up because even if I could make this happen it occurred (final
 
 
 # Download
-The form rule code can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/missingRequiredFieldsHandler).
+The archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/missingRequiredFieldsHandler).
 
+The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/missingRequiredFieldsHandler).
+while the usage is described [here](/posts/2023/ux-form-rules-revised).

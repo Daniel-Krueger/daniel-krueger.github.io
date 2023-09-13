@@ -9,6 +9,12 @@ excerpt:
     You forgot a comment? There's no longer a need to leave the error dialog. Enter it and continue.
 bpsVersion: 2023.1.1.89, 2022.1.4.155
 ---
+# Update 2023-09-13
+
+{: .notice--warning}
+**Warning:**
+With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. The basic explanations still apply and only the configuration/implementation has changed. You can find out more about how to implement it in [UX form rules revised / 2023 R2 compatible](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage). 
+
 
 # Overview  
 WEBCON BPS has this little flag, that will require the user to provide a comment, when a path is executed. I typically use this for negative/destructive paths - and every time I forget to enter the comment. Obviously, the error dialog pops up, I need to close it, enter the comment, and execute the path again. Those days are gone. :)
@@ -143,5 +149,7 @@ commentTextArea.dispatchEvent(eventObject);
 setTimeout(() => { MoveToNextStep(pathId) }, 100);
 ```
 # Download
-The form rule code can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/missingCommentHandler).
+The archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/missingCommentHandler).
 
+The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/missingCommentHandler).
+while the usage is described [here](/posts/2023/ux-form-rules-revised).

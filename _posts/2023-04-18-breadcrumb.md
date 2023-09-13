@@ -25,6 +25,12 @@ Functional changes:
   
   
 # Overview  
+{: .notice--warning}
+**Remark:**
+With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. 
+You can find out more about what changed for this rule in [UX form rules revised ](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage).
+
+
 In this post I will describe a custom *breadcrumb* implementation. Which will allow you to navigate up a workflow hierarchy. The breadcrumb itself also renders the form type as well as the title of a workflow instance.
 Other features:
 1. The _current_ title of a workflow will be rendered in the breadcrumb.
@@ -159,4 +165,7 @@ Alternatively, you could use the name of the navigation element `Application hom
 {% include figure image_path="/assets/images/posts/2023-04-18-breadcrumb/2023-04-18-21-13-31.png" alt="The name of the navigation element will be used as a title" caption="The name of the navigation element will be used as a title" %}
 
 # Download
-The files can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/breadcrumb).
+The archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/breadcrumb).
+
+The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/breadcrumb).
+while the usage is described [here](/posts/2023/ux-form-rules-revised).

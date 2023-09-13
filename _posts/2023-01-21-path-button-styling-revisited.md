@@ -13,6 +13,12 @@ excerpt:
 bpsVersion: 2022.1.3.65
 ---
 
+# Update 2023-09-13
+
+{: .notice--warning}
+**Warning:**
+With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. The basic explanations still apply and only the configuration/implementation has changed. You can find out more about how to implement it in [UX form rules revised / 2023 R2 compatible](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage). 
+
 # Overview  
 In two years' time things change. WEBCON BPS has evolved, one gains experience and most importantly you have new ideas. So, it's time to revisit my post 
 [Uniform path button styling](https://daniels-notes.de/posts/2021/path-button-styling) from April 2021. I just noticed that it was Fool's Day, but the topic is definitely not a joke. :)
@@ -239,6 +245,8 @@ If something changes like a class is renamed some or all of the logic may fail. 
 
 
 # Download
-The files can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/colorizePaths).
+The archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/colorizePaths).
 
+The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/colorizePaths).
+while the usage is described [here](/posts/2023/ux-form-rules-revised).
 

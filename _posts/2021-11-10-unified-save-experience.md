@@ -9,8 +9,15 @@ tags:
   - User Experience
 excerpt:
     A how to about always displaying a save button in the top toolbar as well as a a save button in the 'Available paths' area.
-last_modified_at: 2023-07-08
+last_modified_at: 2023-09-13
 ---
+
+# Update 2023-09-13
+
+{: .notice--warning}
+**Warning:**
+With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. The basic explanations still apply and only the configuration/implementation has changed. You can find out more about how to implement it in [UX form rules revised / 2023 R2 compatible](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage). 
+
 # Update 2023-07-08
 Functional changes
 - It's possible  different classes which would be valid for a WEBCON BPS version.
@@ -229,3 +236,10 @@ ccls.addSaveButtonAsPath.createPathButton = function (alternativeLabel){
 
 ccls.addSaveButtonAsPath.createPathButton(#{BRP:-4}#);
 ```
+
+
+# Download
+The above JavaScript has not been maintained and has been moved to an archive. The form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/Save and save draft).
+
+The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/Save and save draft).
+while the usage is described [here](/posts/2023/ux-form-rules-revised).
