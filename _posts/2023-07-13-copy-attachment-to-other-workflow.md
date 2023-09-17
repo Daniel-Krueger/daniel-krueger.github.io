@@ -2,6 +2,7 @@
 title: "Copy an attachment to another workflow"
 categories:
   - WEBCON BPS  
+  - Private 
 tags:
   - REST
 excerpt:

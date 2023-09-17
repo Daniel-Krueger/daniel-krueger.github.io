@@ -1,7 +1,8 @@
 ---
 title: "Password field"
 categories:
-  - WEBCON BPS    
+  - WEBCON BPS   
+  - Private  
 tags:    
   - Business rules
   - Debugging

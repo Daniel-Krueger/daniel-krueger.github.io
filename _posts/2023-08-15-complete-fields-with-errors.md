@@ -1,7 +1,8 @@
 ---
 title: "Complete fields with errors"
 categories:
-  - WEBCON BPS    
+  - WEBCON BPS
+  - Private    
 tags:  
   - User Experience
   - JavaScript

@@ -1,8 +1,7 @@
 ---
 title: "Searching 317,000 files with PowerShell in 9 seconds"
 categories:
-  - Private
-  
+  - Private  
 tags:
   - PowerShell
 excerpt:

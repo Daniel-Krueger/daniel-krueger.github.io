@@ -2,6 +2,7 @@
 title: "Bandwidth usage"
 categories:
   - WEBCON BPS    
+  - Private 
 tags:    
   - Form rules
 excerpt:

@@ -2,7 +2,7 @@
 title: "Freeze item list column"
 categories:
   - WEBCON BPS
-  
+  - Private   
 tags:
   - JavaScript
   - User Experience

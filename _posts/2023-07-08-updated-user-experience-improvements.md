@@ -1,8 +1,8 @@
 ---
 title: "Updated 'user experience improvements'"
 categories:
-  - WEBCON BPS  
-  - CC LS
+  - WEBCON BPS
+  - Private 
 tags:
   
 excerpt:

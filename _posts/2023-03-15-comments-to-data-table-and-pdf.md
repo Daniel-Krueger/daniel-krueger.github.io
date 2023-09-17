@@ -1,7 +1,8 @@
 ---
 title: "Comments to data table and PDF"
 categories:
-  - WEBCON BPS  
+  - WEBCON BPS
+  - CC LS  
 tags:
   - Snippet  
 excerpt:

@@ -2,7 +2,7 @@
 title: "Revised uniform path button styling"
 categories:
   - WEBCON BPS
-  
+  - Private   
 tags:
   - JavaScript
   - User Experience

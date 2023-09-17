@@ -1,13 +1,14 @@
 ---
 title: "UX form rules revised / 2023 R2 compatible"
 categories:
-  - WEBCON BPS    
+  - WEBCON BPS  
+  - Private   
 tags:    
   - Form rules
   - User Experience
   - JavaScript
 excerpt:
-    This post attempts is a follow up to 'Bandwidth usage'.
+    This post describes the changes necessary for BPS 2023 R2 while reflecting the gained inside in the 'Bandwidth usage' post.
 bpsVersion: 2023.1.2.44
 ---
 

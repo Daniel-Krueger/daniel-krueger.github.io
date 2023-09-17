@@ -8,6 +8,7 @@ tags:
   - Data Sources
   - REST
   - Business Central
+  - Debugging
 excerpt:
    This post shows an alternative option to inspect web service communication from WEBCON BPS with other system. It will also work with WEBCONAPPS.
 bpsVersion: 2022.1.2.31

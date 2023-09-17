@@ -1,8 +1,8 @@
 ---
 title: "Updating to BPS 2023"
 categories:
-  - WEBCON BPS  
-  - CC LS
+  - WEBCON BPS 
+  - Private 
 tags:
   
 excerpt:

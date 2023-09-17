@@ -8,6 +8,7 @@ tags:
   - Data Sources
   - REST
   - Business Central
+  - Debugging
 excerpt:
     How to view web service communication from WEBCON BPS with other systems. Business Central is used as a data source with filter mode 'web service'.
 bpsVersion: 2022.1.2.31
