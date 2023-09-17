@@ -120,10 +120,15 @@ If a user activated `Enable diagnostic` mode any stored sessions can be found he
 ## AdminWFEventLogs C*
 If an error didn't happen in the context of a path transition or you have an error guid, you will probably find it here.
 
-![](/assets/images/posts/2023-09-20-log-information/2023-09-14-22-54-24.png)
+![Error ](/assets/images/posts/2023-09-20-log-information/2023-09-14-22-54-24.png)
 
 
-There's no build in option to view this information, but we can leverage a data table in an own `Log viewer` process.
+[WFActionExecutions knowledge base post](https://community.webcon.com/posts/post/the-adminwfeventlogs-table/137)
+
+You can view the information of this table from the Administration tools in the Designer Studio by passing the error GUID.
+![Result of the error GUID.](/assets/images/posts/2023-09-20-log-information/2023-09-17-22-20-49.png)
+
+Alternatively you a data table in an own `Log viewer` process, this is way faster and you don't need to enter the whole GUID, if you are currently debugging a problem.
 ![A `Log viewer` process with a data table](/assets/images/posts/2023-09-20-log-information/2023-09-17-20-05-46.png)
 ```sql
 SELECT Top 10 WEL_CreatedBy as CreatedBy, WEL_DateAndTime as Created ,WEL_CDID as ContentDB, WEL_ErrorGuid as ErrorGuid, WEL_Details as Details,  WEL_ID
@@ -138,6 +143,7 @@ The view is WFLogs is just 'another name' for the table WFActionExecutions.
 
 ![](/assets/images/posts/2023-09-20-log-information/2023-09-14-22-38-54.png)
 
+[WFActionExecutions knowledge base post](https://community.webcon.com/posts/post/wfactionexecutions-table-description/72)
 # Log file
 Sometimes though, you won't find it anywhere except in the log file. In the following I will describe a few configuration settings.
 You may have to redo these settings after an updated of the WEBCON BPS version. I'm not sure about it.
