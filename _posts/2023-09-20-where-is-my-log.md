@@ -1,5 +1,5 @@
 ---
-title: "Log table information"
+title: "Where's my log"
 categories:
   - WEBCON BPS   
   - Private  
