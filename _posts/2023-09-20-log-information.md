@@ -1,11 +1,10 @@
 ---
-title: "Log information"
+title: "Log table information"
 categories:
   - WEBCON BPS   
   - Private  
 tags:    
   - Debugging
-  - Setup  
 excerpt:
     This post provides information where you can find which log information.
 bpsVersion: 2023.1.2.44
@@ -51,7 +50,7 @@ Process database is new name for the content database.
 
 {: .notice--info}
 **Info:**
-This is just an overview of the log tables and my *interpretation* how they are used. Feel free to correct me and/or provide more information.
+This is just an overview of the log tables and my *understanding* how they are used. Feel free to correct me and/or provide more information.
 
 
 ## AdminAPILogs C*P
@@ -98,7 +97,7 @@ The view WFLogs is just 'another name' for the table WFActionExecutions.
 [WFActionExecutions knowledge base post](https://community.webcon.com/posts/post/wfactionexecutions-table-description/72)
 
 # Displaying error details in browser
-This was pointed out by [Marek Wolosiewicz](https://www.linkedin.com/in/marek-wolosiewicz-a8b4012/):
+Thanks [Marek ](https://www.linkedin.com/in/marek-wolosiewicz-a8b4012/), for providing this information.
 
 While I developed for SharePoint one of the first things was to turn off remote errors on my dev environment. This resulted in displaying the error in the browser instead of showing just an error message.
 
