@@ -160,7 +160,13 @@ ccls.showHideAttachments.execute();
 **Remark:** The above script focuses only on displaying the attachment element on page load. You need an additional script to react on value change of the field.
 
 ## Changing left/right layout from 50%/50% -> 75%/25%
+
+{: .notice--warning}
+**Remark:** This is an old approach and is replaced by an easier and more [flexible](/posts/2023/revised-layout-change).
+
+
 The following script changes the default form layout width distribution from 50% for each to 75% for right and 25 % for the left column. This is also described [here](https://community.webcon.com/forum/thread/882/45)
+
 {% include figure image_path="/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2021-10-14-21-25-47.png" alt="Width distribution changed form 50% to 75%/25% for right and left column." caption="Width distribution changed form 50% to 75%/25% for right and left column." %}.
 
 ```javascript
