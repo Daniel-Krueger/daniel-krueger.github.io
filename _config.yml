@@ -70,7 +70,7 @@ author:
   avatar : "/assets/images/bio_pixelate.png" 
   linkedin: "Krueger-Daniel"
   github: "Daniel-Krueger"   
-  bio    : "<a href='https://webcon.com/news/webcon-mvp' style='color:#db0b2d;'>WEBCON MVP 2022</a>"
+  bio    : "<a href='https://webcon.com/news/webcon-mvp' style='color:#db0b2d;'>WEBCON MVP</a>"
   # links:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
