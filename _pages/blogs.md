@@ -49,7 +49,7 @@ feature_row_2:
 feature_row_3:   
     - image_path: ""
       alt: ""
-      title: "Lumenn"
+      title: "Lúmenn"
       excerpt: "WEBCON: Low code, programming, and fluff. Maksymilian Stachowiak"
       url: "https://blog.lumenn.pl"
       btn_label: "Read More"

@@ -14,10 +14,4 @@
     width: 16px;
 }
 
-.fa-webcon {
-    background-image: url("/assets/images/links/favicon-webcon.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 16px;
-    width: 16px;
-}
+.fa-webcon { background-image: url("/assets/images/links/favicon-webcon.png"); background-size: 80%; background-repeat: no-repeat; height: 16px; top: 1px; position: relative;left: 1px;}
