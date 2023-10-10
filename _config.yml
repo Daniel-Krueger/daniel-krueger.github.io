@@ -68,7 +68,7 @@ plugins:
 author:
   name   : "Daniel Krüger"  
   avatar : "/assets/images/bio_pixelate.png" 
-  bio: "&nbps;"
+  bio: ""
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
