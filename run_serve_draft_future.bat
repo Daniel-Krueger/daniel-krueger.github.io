@@ -1,1 +1,1 @@
-cmd /K bundle exec jekyll serve --future --draft
+cmd /K bundle exec jekyll serve --future --draft  --incremental
