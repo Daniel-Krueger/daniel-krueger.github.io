@@ -7,7 +7,7 @@ tags:
   - User Experience
   - CSS
 excerpt:
-    This is an easier and more flexible approach to change the form layout.
+    Adding a grid to item list / data table can improve readability.
 bpsVersion: 2023.1.2.44, 2022.1.4.155
 ---
 
@@ -23,6 +23,9 @@ Adding a grid to the table will help the users. If it takes the selected theme i
 **Info:**
 My original approach was to move the required indicator. The result wasn't to my liking. Nevertheless, I added it to this post in case someone else can use it as a starting point.
 
+{: .notice--info}
+**Info:**
+Data tables and item list share the same classes. Therefore, both will be subject to these rules. It may be possible to differentiate these, but I haven't looked into it.
 
 # Implementation
 ## Explanation
