@@ -15,7 +15,6 @@ bpsVersion: 2023.1.2.44, 2022.1.4.155
 If you have large item lists with conditional required fields, it may get confusing which required field is empty. 
 Adding a grid to the table will help the users. If it takes the selected theme into account, it's even better.
 
-
 {% include video id="JrriM8BUohc?autoplay=1&loop=1&mute=1&rel=0&playlist=JrriM8BUohc" provider="youtube" %}
 
 
