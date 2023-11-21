@@ -9,7 +9,7 @@ excerpt:
 ---
 
 # Overview  
-I'm currently in the process in moving my [I series](https://www.linkedin.com/feed/update/urn:li:activity:7109409448346955777/) from LinkedIn to my blog. LinkedIn is to short lift for this kind of information.
+I'm currently in the process in moving my [I 💗 WEBCON BPS series](https://www.linkedin.com/feed/update/urn:li:activity:7109409448346955777/) from LinkedIn to my blog. LinkedIn is to short lift for this kind of information.
 
 While I didn't want to rewrite everything, I decided to remove the *Unicode formatting*. But how should I remove the formatting?
 
