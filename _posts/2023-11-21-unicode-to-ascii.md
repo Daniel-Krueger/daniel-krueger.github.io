@@ -13,7 +13,7 @@ I'm currently in the process in moving my [I 💗 WEBCON BPS series](https://www
 
 While I didn't want to rewrite everything, I decided to remove the *Unicode formatting*. But how should I remove the formatting?
 
-{% include figure image_path="/assets/images/posts/2023-11-21-Unicode-to-ascii/2023-11-21-20-25-55.png" alt="Unicode format example" caption="Unicode format example" %}
+{% include figure image_path="/assets/images/posts/2023-11-21-unicode-to-ascii/2023-11-21-21-44-44.png" alt="Unicode format example" caption="Replace Unicode with ASCII characters" %}
 
 # Removing the Unicode *format*
 I had no idea on how to approach this, so I used ChatGPT. After a few false positives, pointing out the mistakes it generated a PowerShell script which was actually working for my cases.
