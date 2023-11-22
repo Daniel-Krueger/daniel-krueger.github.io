@@ -52,6 +52,8 @@ gallery_Part07:
 ---
 
 # Part 5: Greatly reduced testing time
+[LinkedIn Post Part 5](https://www.linkedin.com/posts/krueger-daniel_post-5-testing-changes-activity-7069186669039509505-IkeB/)
+
 
 {% include gallery id="gallery_Part05" caption="Carousel: Greatly reduced testing time" %}
 
@@ -76,10 +78,10 @@ This is possible because WEBCON BPS is transactional. If the transition from one
 This doesn’t mean, that you can test those actions only after saving your changes. In most cases you can actually test these already before saving. You can select the workflow instance, and the Designer Studio will run the action using, with the data of this workflow instance.
 {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part5_4.png" alt="Test logic before saving" caption="Test logic before saving" %}
 
-[LinkedIn Post Part 5](https://www.linkedin.com/posts/krueger-daniel_post-5-testing-changes-activity-7069186669039509505-IkeB/)
-
 
 # Part 6: Time to market
+[LinkedIn Post Part 6](https://www.linkedin.com/posts/krueger-daniel_webconbps-applicationfactory-webcon-activity-7072075705638903810-k4Hj/)
+
 {% include video id="M85SM38vOU0?autoplay=0&loop=1&mute=1&rel=0&playlist=M85SM38vOU0" provider="youtube" %}
 
 All of the previous parts have one thing in common they describe different aspects of WEBCON BPS which reduced the time to market. But don't take my word for it just listen to [Mike Fitzmaurice](https://www.linkedin.com/in/mikefitzmaurice/) who described the different aspects in the [WEBCON BPS 2023 What's new? webinar](https://www.youtube.com/watch?t=79&v=oV3SX3hcXz8&feature=youtu.be)
@@ -111,9 +113,10 @@ Of course, one application alone would be a waste of for the *Application factor
 Edit for the blog post:
 In the mean time, we have four applications live and two are waiting for ERP go live.
 
-[LinkedIn Post Part 6](https://www.linkedin.com/posts/krueger-daniel_webconbps-applicationfactory-webcon-activity-7072075705638903810-k4Hj/)
 
 # Part 7:  Gather debugging information
+[LinkedIn Post Part 7](https://www.linkedin.com/posts/krueger-daniel_debugging-in-webcon-bps-activity-7075352044458389504-8VpS/)
+
 {% include gallery id="gallery_Part07" caption="Carousel: Gather debugging information" %}
 
 In [part 5](#part-5-greatly-reduced-testing-time) I talked about how WEBCON BPS greatly reduced the time spent on testing. What I didn’t cover was how you could actually identify a problem aka debugging.
@@ -136,9 +139,10 @@ An admin can take a look at at what has been executed and even how long it took.
 
 If you still weren’t able to solve the issue, your last resort would probably be to go to the user and see what he was doing, either in person or with some kind of screensharing. Thanks to WEBCON there’s no need for this. The user can grant you the permissions to impersonate him. Which allows you to do everything in the system with the users privileges instead of your own. But this is worth an own post and another reason why I 💗 WEBCON BPS.
 
-[LinkedIn Post Part 7](https://www.linkedin.com/posts/krueger-daniel_debugging-in-webcon-bps-activity-7075352044458389504-8VpS/)
 
 # Part 8: Being CEO for a day (working on behalf)
+[LinkedIn Post Part 8](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-webconbps-activity-7076793794347577344-sL--/)
+
 {% include video id="kS2-vcQA6bI?autoplay=0&loop=1&mute=1&rel=0&playlist=kS2-vcQA6bI" provider="youtube" %}
 
 The working on behalf features was introduced in WEBCON BPS 2022 and for me this one is revolutionary. Assume that you want to go on vacation and you have three different roles.
@@ -170,4 +174,26 @@ This is not only useful in daily business. You can 'misuse' this feature to:
 The last one is what I hinted at in my previous post [Gather debugging information](#part-7-gather-debugging-information). There's only one last part missing in testing/debugging and that is sending mail by the system. This could get annoying for the users, if you use their accounts during testing. It wouldn't be WEBCON BPS if WEBCON wouldn't have you covered. :)
 
 
-[LinkedIn Post Part 8](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-webconbps-activity-7076793794347577344-sL--/)
+
+
+
+# Series
+
+| Part  | Title | Blog  | LinkedIn  |
+|---:|---|---|---|
+| 01 | 99% Low-code/no-code implementation 1% high code |[Blog](/posts/2023/i-love-webcon-bps-01-04#part-1-99-low-codeno-code-implementation-1-high-code)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)|
+| 02 | Leveraging benefits aka early go-live in < 2 month|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-2-leveraging-benefits-aka-early-go-live-in--2-month) | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-digitizinghoaprocesses-ilovewebconbps-activity-7061574007455641600-YINU/)  |
+| 03 | Transporting applications Dev->Test->Prod|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-3-transporting-applications-dev-test-prod)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7064111225625825280-6r3Z/) |
+| 04 | Change request there’s a typo|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-4-change-request-theres-a-typo) |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7066647437456617472-EWKL/)   |
+| 05 | Greatly reduced testing time|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-5-greatly-reduced-testing-time)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_post-5-testing-changes-activity-7069186669039509505-IkeB/)   |
+| 06 | Time to market|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-6-time-to-market)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-applicationfactory-webcon-activity-7072075705638903810-k4Hj/)  |
+| 07 | Gather debugging information|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-7--gather-debugging-information)  |  [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_debugging-in-webcon-bps-activity-7075352044458389504-8VpS/) |
+| 08 | Being CEO for a day (working on behalf)|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-8-being-ceo-for-a-day-working-on-behalf)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-webconbps-activity-7076793794347577344-sL--/)  |
+| 09 | I no longer hear “Who send these test mails?”|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-9--i-no-longer-hear-who-send-these-test-mails)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_how-to-test-mails-in-webcon-bps-activity-7080060821581520896-V68S/)   |
+| 10 | Yes, remove this … AARRRGH (Dependency tracking)|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-10-yes-remove-this--aarrrgh-dependency-tracking)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_dependency-tracking-in-webcon-bps-activity-7082229126320803840-ftOR/)  |
+| 11 | From OnPrem to SaaS and back? Without migration effort? 🤣|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-11-from-onprem-to-saas-and-back-without-migration-effort-)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7085128228486402048--_X-/) |
+| 12 | Same process, multiple subsidiaries but different data sources?|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-12-same-process-multiple-subsidiaries-but-different-data-sources)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-webconbps-webconbps-activity-7090236762165301248-wnBb/)  |
+| 13 | Ever evolving|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-13-ever-evolving)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_evolve-or-revolutionize-activity-7092748926721630208-8b7j/)  |
+| 14 | Multilanguage and evergreen documentation|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-14-multilanguage-and-evergreen-documentation)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-ilovewebconbps-bpm-activity-7095280860286840832-lqUm/)  |
+| 15 | If you repeat yourself, you are doing it wrong|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-15-if-you-repeat-yourself-you-are-doing-it-wrong)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7100064519724376064-AjXq/)  |
+| 16 | In numbers I trust|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-16-in-numbers-i-trust)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_numbers-activity-7105068941240147969-PHn5/)  |

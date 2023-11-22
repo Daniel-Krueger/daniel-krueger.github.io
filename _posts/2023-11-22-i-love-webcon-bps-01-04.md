@@ -54,6 +54,9 @@ This is mostly a copy of my LinkedIn series. The content is the same just some f
 
 # Part 1: 99% Low-code/no-code implementation 1% high code  
 
+[LinkedIn Post Part 1](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)
+
+
 {% include gallery id="gallery_Part01" caption="Carousel: 99% Low-code/no-code implementation 1% high code" %}
 I’m using WEBCON BPS since 2018 to digitize processes which require human interactions. Each platform provided the following things out of the box, so that one can focus more on delivering value instead of doing 'chores':
 
@@ -73,11 +76,9 @@ Link to the [developer portal](https://developer.webcon.com/).
 **Info:** If anyone has hit a wall implementing a process with human interaction using a low-code platform, please get in touch with me. I really want to test those scenarios.
 
 
-[LinkedIn Post Part 1](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)
-
-
 # Part 2: Leveraging benefits aka early go-live in < 2 month
 
+[LinkedIn Post Part 2](https://www.linkedin.com/posts/krueger-daniel_webconbps-digitizinghoaprocesses-ilovewebconbps-activity-7061574007455641600-YINU/)
 {% include video id="2adXNykaM6U?autoplay=0&loop=1&mute=1&rel=0&playlist=2adXNykaM6U" provider="youtube" %}
 
 During a kick-off for a new project, I encourage everyone that we need to aim for a go-live in at most two month. The first version will contain the most relevant processes and features. Everything else can be delivered in the upcoming iterations. If it’s necessary at all.
@@ -87,9 +88,10 @@ This is possible, thanks to the way WEBCON has designed the platform WEBCON BPS.
 The two-month time-frame is based on the limited availability of my counterparts.
 After all it’s my job to support / implement / digitize the new process but this is not true the other way around. It's just something which needs to be done in addition to their daily business. If we could lock us in, decide everything and don’t need any external help, it could be way faster. If you are interested in how fast a complex application can be create, you can take a look at the [Digitizing homeowners association processes](https://www.linkedin.com/feed/update/urn:li:activity:7036576448903569408/).
 
-[LinkedIn Post Part 2](https://www.linkedin.com/posts/krueger-daniel_webconbps-digitizinghoaprocesses-ilovewebconbps-activity-7061574007455641600-YINU/)
 
 # Part 3: Transporting applications Dev->Test->Prod
+
+[LinkedIn Post Part 3](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7064111225625825280-6r3Z/)
 {% include video id="_ktISniMpH8?autoplay=0&loop=1&mute=1&rel=0&playlist=_ktISniMpH8" provider="youtube" %}
 
 WEBCON BPS is all about application life cycle management or better said, it’s part of it's DNA. In this post I will focus on the transport only. The only option to ignore the built-in mechanisms, is when you have a production environment in name only. With this I mean, that you have a single environment, and your users are entering production data in your development environment. :)
@@ -113,8 +115,9 @@ Communications with external systems are handled in a similar manner, so this is
 
 
 
-[LinkedIn Post Part 3](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7064111225625825280-6r3Z/)
 # Part 4: Change request there’s a typo
+[LinkedIn Post Part 4](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7066647437456617472-EWKL/)
+
 {% include video id="1ZaOdbmdGCA?autoplay=0&loop=1&mute=1&rel=0&playlist=1ZaOdbmdGCA" provider="youtube" %}
 
 WEBCON BPS is all about bringing together the strength of the business and the IT department. Up to version 2022 the business could:
@@ -136,5 +139,26 @@ I have never met anyone in IT who liked translating / labeling elements, because
 
 The best thing is that the application life cycle is applied here too. You can, by default, only provide translation in the development environment. If a process is transported to another environment, then you get a warning, that changes cannot be made, because it was transported. :)
 
-[LinkedIn Post Part 4](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7066647437456617472-EWKL/)
 
+
+
+# Series
+
+| Part  | Title | Blog  | LinkedIn  |
+|---:|---|---|---|
+| 01 | 99% Low-code/no-code implementation 1% high code |[Blog](/posts/2023/i-love-webcon-bps-01-04#part-1-99-low-codeno-code-implementation-1-high-code)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)|
+| 02 | Leveraging benefits aka early go-live in < 2 month|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-2-leveraging-benefits-aka-early-go-live-in--2-month) | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-digitizinghoaprocesses-ilovewebconbps-activity-7061574007455641600-YINU/)  |
+| 03 | Transporting applications Dev->Test->Prod|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-3-transporting-applications-dev-test-prod)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7064111225625825280-6r3Z/) |
+| 04 | Change request there’s a typo|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-4-change-request-theres-a-typo) |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7066647437456617472-EWKL/)   |
+| 05 | Greatly reduced testing time|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-5-greatly-reduced-testing-time)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_post-5-testing-changes-activity-7069186669039509505-IkeB/)   |
+| 06 | Time to market|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-6-time-to-market)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-applicationfactory-webcon-activity-7072075705638903810-k4Hj/)  |
+| 07 | Gather debugging information|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-7--gather-debugging-information)  |  [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_debugging-in-webcon-bps-activity-7075352044458389504-8VpS/) |
+| 08 | Being CEO for a day (working on behalf)|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-8-being-ceo-for-a-day-working-on-behalf)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-webconbps-activity-7076793794347577344-sL--/)  |
+| 09 | I no longer hear “Who send these test mails?”|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-9--i-no-longer-hear-who-send-these-test-mails)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_how-to-test-mails-in-webcon-bps-activity-7080060821581520896-V68S/)   |
+| 10 | Yes, remove this … AARRRGH (Dependency tracking)|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-10-yes-remove-this--aarrrgh-dependency-tracking)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_dependency-tracking-in-webcon-bps-activity-7082229126320803840-ftOR/)  |
+| 11 | From OnPrem to SaaS and back? Without migration effort? 🤣|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-11-from-onprem-to-saas-and-back-without-migration-effort-)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7085128228486402048--_X-/) |
+| 12 | Same process, multiple subsidiaries but different data sources?|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-12-same-process-multiple-subsidiaries-but-different-data-sources)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-webconbps-webconbps-activity-7090236762165301248-wnBb/)  |
+| 13 | Ever evolving|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-13-ever-evolving)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_evolve-or-revolutionize-activity-7092748926721630208-8b7j/)  |
+| 14 | Multilanguage and evergreen documentation|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-14-multilanguage-and-evergreen-documentation)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-ilovewebconbps-bpm-activity-7095280860286840832-lqUm/)  |
+| 15 | If you repeat yourself, you are doing it wrong|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-15-if-you-repeat-yourself-you-are-doing-it-wrong)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7100064519724376064-AjXq/)  |
+| 16 | In numbers I trust|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-16-in-numbers-i-trust)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_numbers-activity-7105068941240147969-PHn5/)  |

@@ -11,35 +11,35 @@ excerpt:
     This post contains part 09-12 of my LinkedIn post series I 💗 WEBCON BPS.
 
 gallery_Part09:
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_1.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_1.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_1.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_2.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_2.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_2.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_3.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_3.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_3.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_4.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_4.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_4.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_5.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_5.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_5.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_6.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_6.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_6.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_7.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_7.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_7.png.thumb.jpg
     alt: ""
     title: ""
-  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Par9_8.png
+  - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_8.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_8.png.thumb.jpg
     alt: ""
     title: ""    
@@ -75,6 +75,7 @@ gallery_Part11:
     title: ""                   
 ---
 # Part 9:  I no longer hear "Who send these test mails?"
+[LinkedIn Post Part 9](https://www.linkedin.com/posts/krueger-daniel_how-to-test-mails-in-webcon-bps-activity-7080060821581520896-V68S/)
 {% include gallery id="gallery_Part09" caption="Carousel: I no longer hear 'Who send these test mails?'" %}
 
 I once was lucky to work for a customer who had complete dedicated development and test environments. By complete I mean, that each employee had a development and test user account and mailbox. I never had such a luxury again. I can vividly remember the times when I accidently send a mail to the upper management when implementing and testing an application in the past.
@@ -84,9 +85,14 @@ Even more unprofessional is it when you send mail to external recipients. Luckil
 
 - Preview the mails before using the existing data
 - Even in different languages
+  {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_2.png" alt="Preview mails in different languages" caption="Preview mails in different languages" %}
 - Send a test mail to any account without going through a process
+  {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_3.png" alt="Send a test mail" caption="Send a test mail" %}
+  {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_4.png" alt="Check the send test mail" caption="Check the send test mail" %}
 - Redirecting the outgoing mails for a process to a specific account
 - Redirecting the outgoing mails of all process for the whole environment
+  {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_6.png" alt="Redirect all mails while testing" caption="Redirect all mails while testing" %}
+  {% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part9_7.png" alt="Check recipients of redirected mails" caption="Check recipients of redirected mails" %}
 
 I've already stated it but WEBCON designed WEBCON BPS in a way which delights my developer heart.
 
@@ -94,9 +100,9 @@ At this point in time my series I ­💗 WEBCON BPS consist of nine posts. Four 
 After all testing, debugging, deploying solutions easily and fast will increase the user satisfaction. Not only those of the end users but those who actually develop/implement solutions.
 
 
-[LinkedIn Post Part 9](https://www.linkedin.com/posts/krueger-daniel_how-to-test-mails-in-webcon-bps-activity-7080060821581520896-V68S/)
 
 # Part 10: Yes, remove this ... AARRRGH (Dependency tracking)
+[LinkedIn Post Part 10](https://www.linkedin.com/posts/krueger-daniel_dependency-tracking-in-webcon-bps-activity-7082229126320803840-ftOR/)
 
 {% include gallery id="gallery_Part10" caption="Carousel: Yes, remove this ... AARRRGH (Dependency tracking)" %}
 
@@ -117,17 +123,20 @@ I rely on the dependency tracking of WEBCON BPS. It will show me where something
 - Custom functions
 - UI elements like views
   
-The dependency tracking works not only inside a process but across all applications. For example, the Audit management could create a workflow in the Incident management and set a field. This field would than have a reference to the action in the Audit management.
+The dependency tracking works not only inside a process but across all applications. 
+{% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part10_4.png" alt="In which applications is artifact x?" caption="In which applications is artifact x?" %}
+
+For example, the Audit management could create a workflow in the Incident management and set a field. This field would than have a reference to the action in the Audit management.
 It will also prevent deleting specific artifacts like a workflow step if this step was already used in a workflow instance. This is necessary to ensure data integrity of the workflow history, which is required for the auditability.
+{% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part10_5.png" alt="Deletion is prevented, if a step was used." caption="Deletion is prevented, if a step was used." %}
 
 This works really well and ensures a higher satisfaction. I trust this enough that I removed something central from a process one day before I went on vacation. Also, the customer was going into a test phase.
 
-[LinkedIn Post Part 10](https://www.linkedin.com/posts/krueger-daniel_dependency-tracking-in-webcon-bps-activity-7082229126320803840-ftOR/)
 
 # Part 11: From OnPrem to SaaS and back? Without migration effort? 🤣
-{% include gallery id="gallery_Part11" caption="Carousel: From OnPrem to SaaS and back? Without migration effort? 🤣" %}
+[LinkedIn Post Part 11](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7085128228486402048--_X-/)
 
-I would laugh too, if I wouldn’t know WEBCON.
+{% include figure image_path="/assets/images/posts/2023-11-01-i-love-webcon-bps/Part11_1.png" alt="From OnPrem to SaaS and back? Without migration effort? 🤣" caption="From OnPrem to SaaS and back? Without migration effort? 🤣" %}
 
 What do I mean with 'processes don't care'? Do you have long running processes, with reminders or so? They will just work as normal.
 
@@ -141,11 +150,12 @@ But back to the start. First of all, why would you want this option all?
 I can't tell whether these are unlikely reasons, but I know that this works. You can even have an OnPrem development environment and run the test and production environment in the cloud, as you can simply transport the processes. This shows, that WEBCON is dedicated to ensure your investments in terms of time and effort to digitize your processes, whatever option you may consider.
 
 This is how the process would look like:
-OnPrem -> SaaS
+
+**OnPrem -> SaaS**
 - Backup and provide your SQL databases.
 - Change the DNS so that the URL would point to the correct IP address.
 
-SaaS -> OnPrem
+**SaaS -> OnPrem**
 - Install the server.
 - Request the SQL databases and restore the backups.
 - Change the DNS so that the URL would point to the new server.
@@ -161,9 +171,12 @@ Of course, the above would be more complex if you have:
   
 I will dive into the last issue with the twelfth post in my series I 💗 WEBCON BPS. You will see that this won't be a problem at all. :)
 
-[LinkedIn Post Part 11](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7085128228486402048--_X-/)
 
-# Part 12: Same process, multiple subsidiaries but different data sources? Those requests are a piece of cake for WEBCON.
+# Part 12: Same process, multiple subsidiaries but different data sources? 
+
+Those requests are a piece of cake for WEBCON.
+[LinkedIn Post Part 12](https://www.linkedin.com/posts/krueger-daniel_webcon-webconbps-webconbps-activity-7090236762165301248-wnBb/)
+
 {% include video id="biC8_MEL85I?autoplay=0&loop=1&mute=1&rel=0&playlist=biC8_MEL85I" provider="youtube" %}
 
 After lots of back and forth, the business has finally agreed on a process which can be used across all subsidiaries. After this success has sunken in, the next step is to define the data. At this point you realize you need customer data and:
@@ -187,7 +200,30 @@ You are consuming data from a source which cannot be reached from the target env
 The solution for this is obviously fairly easy. If you migrated the data and the primary keys stayed the same, you only need to change the connection.
 
 In case you think, this is just one building block in "one process to rule them all" and it won't work in a real world example check out:
-[Success story by PWC CEE](https://webcon.com/case-study-pwc/)
-..of the most critical business processes .. to unify it across 27 countries… 
 
-[LinkedIn Post Part 12](https://www.linkedin.com/posts/krueger-daniel_webcon-webconbps-webconbps-activity-7090236762165301248-wnBb/)
+
+> ..of the most critical business processes .. to unify it across 27 countries… 
+> <cite>[Success story by PWC CEE](https://webcon.com/case-study-pwc/)</cite>
+
+
+
+# Series
+
+| Part  | Title | Blog  | LinkedIn  |
+|---:|---|---|---|
+| 01 | 99% Low-code/no-code implementation 1% high code |[Blog](/posts/2023/i-love-webcon-bps-01-04#part-1-99-low-codeno-code-implementation-1-high-code)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)|
+| 02 | Leveraging benefits aka early go-live in < 2 month|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-2-leveraging-benefits-aka-early-go-live-in--2-month) | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-digitizinghoaprocesses-ilovewebconbps-activity-7061574007455641600-YINU/)  |
+| 03 | Transporting applications Dev->Test->Prod|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-3-transporting-applications-dev-test-prod)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7064111225625825280-6r3Z/) |
+| 04 | Change request there’s a typo|[Blog](/posts/2023/i-love-webcon-bps-01-04#part-4-change-request-theres-a-typo) |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-webcon-ilovewebconbps-activity-7066647437456617472-EWKL/)   |
+| 05 | Greatly reduced testing time|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-5-greatly-reduced-testing-time)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_post-5-testing-changes-activity-7069186669039509505-IkeB/)   |
+| 06 | Time to market|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-6-time-to-market)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-applicationfactory-webcon-activity-7072075705638903810-k4Hj/)  |
+| 07 | Gather debugging information|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-7--gather-debugging-information)  |  [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_debugging-in-webcon-bps-activity-7075352044458389504-8VpS/) |
+| 08 | Being CEO for a day (working on behalf)|[Blog](/posts/2023/i-love-webcon-bps-05-08#part-8-being-ceo-for-a-day-working-on-behalf)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-webconbps-activity-7076793794347577344-sL--/)  |
+| 09 | I no longer hear “Who send these test mails?”|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-9--i-no-longer-hear-who-send-these-test-mails)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_how-to-test-mails-in-webcon-bps-activity-7080060821581520896-V68S/)   |
+| 10 | Yes, remove this … AARRRGH (Dependency tracking)|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-10-yes-remove-this--aarrrgh-dependency-tracking)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_dependency-tracking-in-webcon-bps-activity-7082229126320803840-ftOR/)  |
+| 11 | From OnPrem to SaaS and back? Without migration effort? 🤣|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-11-from-onprem-to-saas-and-back-without-migration-effort-)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7085128228486402048--_X-/) |
+| 12 | Same process, multiple subsidiaries but different data sources?|[Blog](/posts/2023/i-love-webcon-bps-09-12#part-12-same-process-multiple-subsidiaries-but-different-data-sources)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-webconbps-webconbps-activity-7090236762165301248-wnBb/)  |
+| 13 | Ever evolving|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-13-ever-evolving)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_evolve-or-revolutionize-activity-7092748926721630208-8b7j/)  |
+| 14 | Multilanguage and evergreen documentation|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-14-multilanguage-and-evergreen-documentation)  |[LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webconbps-ilovewebconbps-bpm-activity-7095280860286840832-lqUm/)  |
+| 15 | If you repeat yourself, you are doing it wrong|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-15-if-you-repeat-yourself-you-are-doing-it-wrong)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_webcon-ilovewebconbps-bpm-activity-7100064519724376064-AjXq/)  |
+| 16 | In numbers I trust|[Blog](/posts/2023/i-love-webcon-bps-13-16#part-16-in-numbers-i-trust)  | [LinkedIn](https://www.linkedin.com/posts/krueger-daniel_numbers-activity-7105068941240147969-PHn5/)  |
