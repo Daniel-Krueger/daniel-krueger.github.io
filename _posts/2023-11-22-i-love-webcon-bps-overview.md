@@ -1,14 +1,15 @@
 ---
 regenerate: true
-title: "I 💗 WEBCON BPS series: Overview"
+title: "I 💗 WEBCON BPS series: Conclusion"
 categories:
   - WEBCON BPS
   - Private   
   - Series
+
 tags:  
   - I 💗 WEBCON BPS
 excerpt:
-    This post contains part 13-16  of my LinkedIn post series I 💗 WEBCON BPS.
+    This post is the conclusion of my LinkedIn post series I 💗 WEBCON BPS.
 
 gallery_Conclusion:
   - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Conclusion_01.png
@@ -86,7 +87,7 @@ gallery_Conclusion:
   - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Conclusion_19.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Conclusion_19_resized.png                  
 ---
-
+<meta name="image" property="og:image" content="https://daniels-notes.de/assets/images/posts/2023-11-01-i-love-webcon-bps/Conclusion_01.png">
 [LinkedIn Post I 💗 WEBCON BPS: Speed is not enough](https://www.linkedin.com/posts/krueger-daniel_speed-is-not-enough-activity-7109409448346955777-ZRit)
 
 # Carousel
