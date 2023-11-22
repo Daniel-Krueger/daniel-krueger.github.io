@@ -1,15 +1,15 @@
 ---
 regenerate: true
-title: "I 💗 WEBCON BPS series: Part 1 - 4 "
+title: "I 💗 WEBCON BPS series: Part 01-04"
 categories:
   - WEBCON BPS
   - Private 
-  - Series
+  - Series 
 tags:  
   - I 💗 WEBCON BPS
 excerpt:
-    This post contains part 1 -4 of my LinkedIn post series I 💗 WEBCON BPS.
-bpsVersion: 2023.1.2.44
+    This post contains part 01-04 of my LinkedIn post series I 💗 WEBCON BPS.
+
 gallery_Part01:
   - url: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part1_1.png
     image_path: /assets/images/posts/2023-11-01-i-love-webcon-bps/Part1_1.png.thumb.jpg
@@ -54,7 +54,7 @@ This is mostly a copy of my LinkedIn series. The content is the same just some f
 
 # Part 1: 99% Low-code/no-code implementation 1% high code  
 
-{% include gallery id="gallery_Part01" caption="99% Low-code/no-code implementation 1% high code" %}
+{% include gallery id="gallery_Part01" caption="Carousel: 99% Low-code/no-code implementation 1% high code" %}
 I’m using WEBCON BPS since 2018 to digitize processes which require human interactions. Each platform provided the following things out of the box, so that one can focus more on delivering value instead of doing 'chores':
 
 - Data layer for storing/retrieving the data
@@ -69,7 +69,8 @@ While Navision[^1] and SharePoint required coding to build the applications, WEB
 For the high-code developers who read this: In five years I have never hit a wall with WEBCON BPS. Of course, I have encountered obstacles or not 100% satisfying user experiences with the out of the box options. But when you really need it, you can use the WEBCON BPS SDK to write plugins adding .Net code or React components to achieve just that. The times I needed to resort to these were rare though.
 Link to the [developer portal](https://developer.webcon.com/).
 
-If anyone has hit a wall implementing a process with human interaction using a low-code platform, please get in touch with me. I really want to test those scenarios.
+{: .notice--info}
+**Info:** If anyone has hit a wall implementing a process with human interaction using a low-code platform, please get in touch with me. I really want to test those scenarios.
 
 
 [LinkedIn Post Part 1](https://www.linkedin.com/posts/krueger-daniel_webcon-bps-no-code-low-code-high-code-activity-7059037292216102912-SFYM/)
@@ -117,10 +118,10 @@ Communications with external systems are handled in a similar manner, so this is
 {% include video id="1ZaOdbmdGCA?autoplay=0&loop=1&mute=1&rel=0&playlist=1ZaOdbmdGCA" provider="youtube" %}
 
 WEBCON BPS is all about bringing together the strength of the business and the IT department. Up to version 2022 the business could:
-- define a process
-- the fields and which is displayed when where
-- describe what’s happening like ‘when I click here, magic stuff happens’
-- test the prototype with actual data
+- Define a process
+- The fields and which is displayed when where
+- Describe what’s happening like ‘when I click here, magic stuff happens’
+- Test the prototype with actual data
 
 This is called the Citizen-Assisted Development in WEBCON BPS. Why assisted and not 'real' citizen development? I have a good example from yesterday. A workflow consists of a parent and sub workflows which make up steps. Each step consists of different required information and optional documents to be filled out. The new change:
 Under specific circumstances we notice in step x that we need to repeat some of the earlier steps. So, we need an option to choose and copy some of the previous steps, but without the entered responses. These copied steps need to be inserted between the current and next step. Of course, we need to renumber the steps and the changes need to be reflected in the generated document.
