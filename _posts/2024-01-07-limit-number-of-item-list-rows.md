@@ -28,7 +28,7 @@ The solution is quite simple:
 ## HTML field
 The HTML field uses CSS to hide the `Add` button for the defined item list. 
 
-{% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-13-38.png" alt="CSS definition of the HTML field." caption="CSS definition of the HTML field." %}
+{% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-13-38.png" alt="CSS definition of the HTML field." caption="CSS definition of the HTML field." %}
 
 ```css
 <style> 
@@ -38,9 +38,9 @@ The HTML field uses CSS to hide the `Add` button for the defined item list.
 ```
 
 The name of the HTML field is hidden and it is displayed in the form field matrix.
-{% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-17-43.png" alt="The name of the HTML field is hidden." caption="The name of the HTML field is hidden." %}
+{% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-17-43.png" alt="The name of the HTML field is hidden." caption="The name of the HTML field is hidden." %}
 
-{% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-19-02.png" alt="Display the field." caption="Display the field." %}
+{% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-19-02.png" alt="Display the field." caption="Display the field." %}
 
 ## Form rule
 Add a process form rule which is used to hide or show the HTML field. The rule consist of:
@@ -48,12 +48,12 @@ Add a process form rule which is used to hide or show the HTML field. The rule c
 2. Show the field, when the button should be hidden. Otherwise it should be hidden. 
 
 The HTML field hides the button, therefore we need to show it, when the button should be hidden.
-{% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-21-38.png" alt="Hide or show the HTML field based on the condition." caption="Hide or show the HTML field based on the condition." %}
+{% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-21-38.png" alt="Hide or show the HTML field based on the condition." caption="Hide or show the HTML field based on the condition." %}
 
 The form rule itself is used in three places:
 1. Behavior / OnPage load of the form. 
-   {% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-28-01.png" alt="" caption="" %}
+   {% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-28-01.png" alt="" caption="" %}
 2. Callback of the item list in the advanced configuration.
-   {% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-29-44.png" alt="" caption="" %}
+   {% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-29-44.png" alt="" caption="" %}
 3. The field responsible for the number of rows. 
-   {% include figure image_path="/assets/images/posts/2024-01-08-limit-number-of-item-list-rows/2024-01-07-20-34-47.png" alt="" caption="" %}
+   {% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-34-47.png" alt="" caption="" %}
