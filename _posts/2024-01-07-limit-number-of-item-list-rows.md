@@ -17,6 +17,9 @@ There was a question in the community on how to [limit the number of item list r
 
 {% include video id="Y2GCQ2E_Emo?autoplay=1&loop=1&mute=1&rel=0&playlist=Y2GCQ2E_Emo" provider="youtube" %}
 
+{: .notice--warning}
+**Remark:**
+In the first version of this post I forgot to hide the cloning button. I updated the HTML code but didn't update the video or screenshots. 
 
 
 # Implementation
@@ -31,7 +34,7 @@ The HTML field uses CSS to hide the `Add` button for the defined item list.
 {% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-13-38.png" alt="CSS definition of the HTML field." caption="CSS definition of the HTML field." %}
 
 
-The below script will hide the `Add` row and the `Clone`button. I was reminded that I forgot the cloning in the first version of the post. I didn't update the screenshots though. 
+The below script will hide the `Add` row and the `Clone` button. You need to update the id of the item list.
 ```css
 <style> 
 #SubElems_#{WFCON:418}# .subelem-addRow 
