@@ -30,9 +30,13 @@ The HTML field uses CSS to hide the `Add` button for the defined item list.
 
 {% include figure image_path="/assets/images/posts/2024-01-07-limit-number-of-item-list-rows/2024-01-07-20-13-38.png" alt="CSS definition of the HTML field." caption="CSS definition of the HTML field." %}
 
+
+The below script will hide the `Add` row and the `Clone`button. I was reminded that I forgot the cloning in the first version of the post. I didn't update the screenshots though. 
 ```css
 <style> 
 #SubElems_#{WFCON:418}# .subelem-addRow 
+{display:none}
+#SubElems_#{WFCON:418}# .subelements-action-button__clone-row
 {display:none}
 </style>
 ```
