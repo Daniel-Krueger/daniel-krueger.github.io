@@ -8,6 +8,9 @@ $usedImages = @{}
 $unusedImages = @{}
 $contentFiles = Get-ChildItem -Path @(".\_drafts",".\_includes","_layouts","_pages","_posts") -Recurse -File
 foreach ($file in $imageFiles | Sort Name){
+    if ($file.FullName.Contains("i-love-webcon-bps")) {
+        continue
+    }
     <# For debugging purposes 
     $file = $imageFiles[0]
     #>        
