@@ -13,7 +13,7 @@ bpsVersion: 2023.1.3.29
 # Overview  
 I'm not a real HTML developer, so it was new to me that [CSS supports custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#declaring_custom_properties). This opens a few options like displaying different HTML elements only in admin mode without form rules. For this use case I decided to display the [Statistics](https://docs.webcon.com/docs/2023R3/Studio/Workflow/Forms/Workflow_AttributeVis1/#4-standard-areas) tab only in admin mode.
 
-{% include video id="nC8yvAtS9Fw?autoplay=1&loop=1&mute=1&rel=0&playlist=nC8yvAtS9Fw" provider="youtube" %}
+{% include video id="nC8yvAtS9Fw?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
 
 
 
