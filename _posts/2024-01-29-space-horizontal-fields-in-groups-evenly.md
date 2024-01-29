@@ -74,7 +74,6 @@ Taking a look how I could target the div group, so that the styling is applied, 
 
 {% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-group-fields-evenly/2024-01-29-21-35-33.png" alt="Overview how the HTML field styling is applied." caption="Overview how the HTML field styling is applied." %}
 
-s
 # Off topic
 During the `Ask Me Anything` event there was this question:
 >
