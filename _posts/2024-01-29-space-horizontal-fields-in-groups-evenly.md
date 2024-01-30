@@ -22,7 +22,7 @@ This post is based on a question `DK` asked in a comment. He or she had two choi
 # Implementation
 ## Group definition
 That's straight forward, just enable the horizontal alignment.
-{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-group-fields-evenly/2024-01-29-21-16-24.png" alt="Activate horizontal alignment." caption="Activate horizontal alignment." %}
+{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-fields-in-groups-evenly/2024-01-29-21-16-24.png" alt="Activate horizontal alignment." caption="Activate horizontal alignment." %}
 
 ## HTML field
 Add an HTML field outside the group, otherwise it will take up a column, too.
@@ -36,11 +36,28 @@ You can copy the below code and replace the variable value `#{903}#`` with the i
 </style>
 ```
 
-{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-group-fields-evenly/2024-01-29-21-19-53.png" alt="HTML field definition" caption="HTML field definition" %}
+{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-fields-in-groups-evenly/2024-01-29-21-19-53.png" alt="HTML field definition" caption="HTML field definition" %}
 
 Don't forget to deactivate `Show field name`
-{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-group-fields-evenly/2024-01-29-21-22-43.png" alt="Don't show the field name" caption="Don't show the field name" %}
+{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-fields-in-groups-evenly/2024-01-29-21-22-43.png" alt="Don't show the field name" caption="Don't show the field name" %}
 
+
+If you have more columns you can change the column number
+```css
+/* two columns */
+/*
+#Group_#{903}#children  > div{
+    grid-template-columns: repeat(2,1fr);
+}
+*/
+/* three  columns */
+#Group_#{903}#children  > div{
+    grid-template-columns: repeat(3,1fr);
+}
+```
+
+
+{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-fields-in-groups-evenly/2024-01-30-07-02-45.png" alt="Spacing three columns evenly." caption="Spacing three columns evenly." %}
 ## Field matrix
 Don't forget to display the HTML field. 
 
@@ -72,7 +89,7 @@ The final answer was:
 ```
 Taking a look how I could target the div group, so that the styling is applied, I noticed the `Group_903children` id. I used this to make sure, that the styling in the HTML field is only applied to this group. In addition I noticed that standard already `display:grid`. I only needed to overwrite the `grid-template-columns` property value. Since I used a more specific css selector, the default value is overwritten.
 
-{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-group-fields-evenly/2024-01-29-21-35-33.png" alt="Overview how the HTML field styling is applied." caption="Overview how the HTML field styling is applied." %}
+{% include figure image_path="/assets/images/posts/2024-01-29-space-horizontal-fields-in-groups-evenly/2024-01-29-21-35-33.png" alt="Overview how the HTML field styling is applied." caption="Overview how the HTML field styling is applied." %}
 
 # Off topic
 During the `Ask Me Anything` event there was this question:
