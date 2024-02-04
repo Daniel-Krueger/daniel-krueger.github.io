@@ -81,12 +81,12 @@ This will allow you to display an existing attachment in the modal dialog. You c
 
 Example with fixed title label and default dimensions:
 ```js
-  dkr.helpPage.useDisplayAttachment('Help page',#{DBID}#,#{BRD:851}#)
+  dkr.helpPage.useDisplayAttachment('Help page',#{DBID}#,'#{BRD:851}#')
 ```
 
 Example with dynamic label and custom dimensions:
 ```js
-  dkr.helpPage.useDisplayAttachment('#{BRD:855}#',#{DBID}#,#{BRD:851}#,"height:95%; min-width:800px;")
+  dkr.helpPage.useDisplayAttachment('#{BRD:855}#',#{DBID}#,'#{BRD:851}#',"height:95%; min-width:800px;")
 ```
 
 # Implementation
@@ -263,7 +263,7 @@ Depending on your use case you need use one of these options by removing the com
 
 <script>
   dkr.helpPage.noHelpDefinedLabel = 'BRD_ID with Text function or fixed text'
-  //dkr.helpPage.useDisplayAttachment("Help title",#{DBID}#,#{BRD:851}#)
+  //dkr.helpPage.useDisplayAttachment("Help title",#{DBID}#,'#{BRD:851}#')
   //dkr.helpPage.useDisplayURLInDialog("An external page","https://community.webcon.com/forum","height:95%; width:95%")
   //dkr.helpPage.useDisplayURLInNewTab("https://community.webcon.com/forum")
   dkr.helpPage.prepareHelpPage();
