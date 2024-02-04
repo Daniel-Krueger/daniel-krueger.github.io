@@ -9,9 +9,34 @@ tags:
   - User Experience
 excerpt:
     Third approach to for a modal dialog to start workflows, use wizard steps and creating new picker field entries.
-bpsVersion: 2022.1.3.65
-last_modified_at: 2023-07-08
+bpsVersion: 2023.1.3.29
+last_modified_at: 2023-02-04
 ---
+
+
+# Update 2024-02-04
+
+{: .notice--warning}
+**Warning:**
+I've updated the modal dialog JavaScript with the following changes in the context of the post [Adding a help page ](/posts/2024/adding-a-help-page) which I implemented using WEBCON BPS 2023.1.3.29. I haven't tested it with other versions. I have added the link to the previous version to the [#Download](#download) chapter.
+
+
+Changes:
+- Added option to open a provided URL in a modal
+  ```js
+  //ccls.modal.dialog.displayAttachment('dialog title', 'https://example.com');
+  ccls.modal.dialog.displayUrl = function (title, url, dimensions) {
+  ```
+- Added option to show an attachment by providing database id and attachment id
+  ```js
+  //ccls.modal.dialog.displayAttachment('dialog title', {"dbId":1,"attachmentId":456});
+  ccls.modal.dialog.displayAttachment = function (title, parameters, dimensions)
+  ```
+- Modal can be moved around
+- Change: The "new tab" icon now really opens a new tab and doesn't replace the existing one.<br/>
+    ![](/assets/images/posts/2022-12-11-modal-dialog/2024-02-04-09-21-13.png)
+
+I didn't describe the dimensions parameter, as there is no difference to the other functions.
 
 # Update 2023-09-13
 
@@ -245,7 +270,10 @@ In the child dialog you will find lines on how to check which theme the user has
 Visual Studio code has been used to generate the JavaScript files. If you have it to you can make use of the defined #regions, which will improve the reading a little. There's a lot of documentation in the JavaScript files, so if you are missing something here, you may find more details there.
 
 # Download
-The archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/ModalDialog).
-
 The minified version for the BPS 2023 R2 version can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/ModalDialog).
 while the usage is described [here](/posts/2023/ux-form-rules-revised).
+
+Older versions
+- The original, archived form rule code for this post can be found [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/Before_2023_R2/ModalDialog).
+- Before update 2024-02-04: https://github.com/Daniel-Krueger/webcon_snippets/commit/7d60f774d82f807e5c4fac82b327967b353de196
+

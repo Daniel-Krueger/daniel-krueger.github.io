@@ -103,4 +103,6 @@ This is just one of these examples, where a question lead to something useful fo
 I intend to answer the question with a post too:
 >
 > [Are you using wikis to describe problems?](https://www.youtube.com/watch?v=bcR7GRaVRbs&t=4698s) 
-> 
+>
+
+Updated 2024-02-04: I answered this question with the post [Adding a help page ](/posts/2024/adding-a-help-page).
