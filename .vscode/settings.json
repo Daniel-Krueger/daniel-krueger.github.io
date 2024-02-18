@@ -2,11 +2,12 @@
     "cSpell.ignoreWords": [
         
     ],
-    "pasteImage.path": "..\\assets\\images\\posts\\${currentFileNameWithoutExt}",
+    "pasteImage.path": "..\\..\\assets\\images\\posts\\${currentFileNameWithoutExt}",
     "pasteImage.basePath": "${projectRoot}///",
     "spellright.ignoreRegExps": [
         "/(\\.?)(gif|png)/g",
         "/\/[0-9A-Fa-f]{8}[0-9A-Fa-f]{4}[0-9A-Fa-f]{4}[0-9A-Fa-f]{4}[0-9A-Fa-f]{12}/g",
         "/=\"[^\"]*\"/g"
-    ]
+    ],
+    "pasteImage.prefix": "/"
 }
