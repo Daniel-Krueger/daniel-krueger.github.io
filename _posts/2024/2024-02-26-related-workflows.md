@@ -155,10 +155,10 @@ IF
   begin 
     select {PH:279}
 end;
-/* This is only triggered when a subworkflow moves into a final path and not every time a subworkflow is changed or moves to a different step. */
+/* This is only triggered when a subworkflow moves into a final step and not every time a subworkflow is changed or moves to a different step. */
 ```
 
-{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-26-20-40-07.png" alt="Continue only, if all workflows have been completed." caption="Continue only, if all workflows have been completed." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-26-20-55-03.png" alt="Continue only, if all workflows have been completed." caption="Continue only, if all workflows have been completed." %}
 
 {: .notice--warning}
 **Remark:** The first line of this statement should not be a comment. At least I had problems.
