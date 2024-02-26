@@ -19,8 +19,8 @@ There's basically no application I know of, which doesn't use some kind of workf
 - execute actions
 
 For this example, I will use a claim workflow, with claim task and a customer dictionary.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-09-55.png" alt="Claim workflow with tasks and referenced customer." caption="Claim workflow with tasks and referenced customer." %}
 
+{% include video id="xrFwYjs3HxU?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
 
 # Display related data
 
@@ -31,12 +31,12 @@ Displaying data of related workflows in a data table is pretty straight forward:
 
 But did you know that you can define the target of the hyperlink?
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-17-16.png" alt="The links lead to different workflow instances." caption="The links lead to different workflow instances." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-17-16.png" alt="The links lead to different workflow instances." caption="The links lead to different workflow instances." %}
 
 You are not limited to the default behavior of the `Instance hyperlink', but instead you can define how the link should be generated
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-21-44.png" alt="Three dots button open the hyperlink configuration." caption="Three dots button open the hyperlink configuration." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-21-44.png" alt="Three dots button open the hyperlink configuration." caption="Three dots button open the hyperlink configuration." %}
 
-You can use this also to generate the URL to start new workflows. Veterans may remember the link syntax. I have to admin, the 'new' option which seems to be the more user friendly one. :)
+You can use this also to generate the URL to start new workflows. Veterans may remember the link syntax. I have to admit, the 'new' option is way more user friendly. :)
 
 ```
 link:http://www.webcon.com;displayname:WEBCON
@@ -48,29 +48,31 @@ link:http://www.webcon.com;displayname:WEBCON
 
 In case you are displaying tasks you can also opt for using tabs to display different information. For example, one for open and another one for closed tasks.
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-16-43.png" alt="Use tabs so that open and closed workflow instances are not mixed." caption="Use tabs so that open and closed workflow instances are not mixed." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-16-43.png" alt="Use tabs so that open and closed workflow instances are not mixed." caption="Use tabs so that open and closed workflow instances are not mixed." %}
 
 The column 'Is finished' is a calculated column which utilizes the WFD_IsFinish column. Since is a standard field, you could add it to every BPS internal view.
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-19-59.png" alt="Adding 'Is finished' column to a BPS internal view." caption="Adding 'Is finished' column to a BPS internal view." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-19-59.png" alt="Adding 'Is finished' column to a BPS internal view." caption="Adding 'Is finished' column to a BPS internal view." %}
 
 {: .notice--warning}
 **Remark:** I have in mind, that the value of this field is set the first time, when a workflow instance reached any final step. If it's moved later to another step, this doesn't get updated.
 
+Of course you are not limited to just display the value, you can use some more elaborate SQL command:
+[Creating multilingual icon html tags](/posts/2021/little-excel-helpers#creating-multilingual-icon-html-tags)
 
 ## Linking workflows and data rows
-The default option to link workflows is the use of the parent workflow id column. Even so this is sufficient, I tend to add a choose field in which this id is stored too. Since I typically need more information than just one value from the related workflow (1) I move this information to an own tab (2). Which could again be used to display a preview (3).
+The default option to link workflows is the use of the parent workflow id column. Even so this is sufficient, I tend to add a choose field in which this id is stored too. Since I typically need more information than just one value from the related workflow (1) I move this information to an own tab and display more information using a data row field (2). The data itself could again be used to display a preview (3).
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-37-31.png" alt="Showing parent workflow information and related data" caption="Showing parent workflow information and related data" %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-37-31.png" alt="Showing parent workflow information and related data" caption="Showing parent workflow information and related data" %}
 
 This has two benefits:
 - You can setup the field to display a hyperlink for navigation
-  {% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-14-39.png" alt="Enable hyperlink for choose fields." caption="Enable hyperlink for choose fields." %}
-- It prevents potential errors since the field has only one purpose. The parent workflow could contain any workflow id.
+  {% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-14-39.png" alt="Enable hyperlink for choose fields." caption="Enable hyperlink for choose fields." %}
+- It prevents potential errors since the field has only one purpose. The parent workflow id column could contain any workflow id.
 
 If you want to display more information from the parent workflow and *don't* need it on a report, you can make use of a data row. 
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-48-29.png" alt="Use data rows to display more information." caption="Use data rows to display more information." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-48-29.png" alt="Use data rows to display more information." caption="Use a data row to display more information." %}
 
 
 {: .notice--warning}
@@ -80,18 +82,18 @@ If you want to display more information from the parent workflow and *don't* nee
 ## Dictionaries and hyperlinks
 You may have wondered, why I have a hyperlink for the customer dictionary. The reason for this is simple, the hyperlink option of a choose field, is only available if the source returns the instance id for the WFD_ID.
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-51-35.png" alt="Hyperlink restriction explanation" caption="Hyperlink restriction explanation" %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-51-35.png" alt="Hyperlink restriction explanation" caption="Hyperlink restriction explanation" %}
 
 Therefore, I create an own BPS internal view, for the dictionary if necessary, which returns the instance id by default and not the GUID of the workflow instance.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-21-53-03.png" alt="BPS internal view for a dictionary." caption="BPS internal view for a dictionary." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-21-53-03.png" alt="BPS internal view for a dictionary." caption="BPS internal view for a dictionary." %}
 
 ## Reports and links to other workflow instances
 In most cases a report only has a link to the current workflow instance. Nevertheless, it is possible to have links which point to different workflow instances.
 In this example, the 'Claim tasks' report has the default link to the workflow instance but also to the parent claim workflow and the referenced customer.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-04-21.png" alt="Three different link targets" caption="Three different link targets" %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-04-21.png" alt="Three different link targets" caption="Three different link targets" %}
 
 A prerequisite is, that you activated the `Show link to selected workflow instance` option in the choose field advanced configuration. I've mentioned this in  [Dictionaries and hyperlinks](#dictionaries-and-hyperlinks). If this is the case, you can enable the Link option for these fields and decide, whether you want that link to use the customer (Form field value) or just navigate to the own the workflow instance.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-08-37.png" alt="Link option is only available for configured choose fields." caption="Link option is only available for configured choose fields." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-08-37.png" alt="Link option is only available for configured choose fields." caption="Link option is only available for configured choose fields." %}
 
 
 # Actions
@@ -107,16 +109,17 @@ The documentation is fine and I have nothing to add regarding the starting of th
 2. The item list row has a field to store the id of the started subworkflow.
 
 For this I'm also using the `For each` operator which is applied to the item list.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-14-20-50-46.png" alt="Subworkflows are created from an item list." caption="Subworkflows are created from an item list." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-14-20-50-46.png" alt="Subworkflows are created from an item list." caption="Subworkflows are created from an item list." %}
+
 
 In the foreach loop the `Start a subworkflow' action is executed which saves the current row id.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-14-20-51-16.png" alt="The id of the current item list row is saved in a technical field. " caption="The id of the current item list row is saved in a technical field. " %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-26-20-33-11.png" alt="The id of the current item list row is saved in a technical field. " caption="The id of the current item list row is saved in a technical field. " %}
 
 Furthermore, the subworkflow id is stored in a local parameter of the automation. I'm using a local parameter as we can't select columns from the item list here.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-14-20-53-31.png" alt="Storing the id of the started subworkflow in a local parameter" caption="Storing the id of the started subworkflow in a local parameter" %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-26-20-36-31.png" alt="Storing the id of the started subworkflow in a local parameter" caption="Storing the id of the started subworkflow in a local parameter" %}
 
 The second action in the loop is 'Change value of a single field', which saves the value of the local parameter in a column of the item list.
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-14-20-55-26.png" alt="Saving the subworkflow id in a column of the item list for the current row." caption="Saving the subworkflow id in a column of the item list for the current row." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-14-20-55-26.png" alt="Saving the subworkflow id in a column of the item list for the current row." caption="Saving the subworkflow id in a column of the item list for the current row." %}
 
 
 This creates a relation in both directions. Possible use cases are:
@@ -131,32 +134,35 @@ Additional information regarding the `Start a subworkflow (sql)` action can be f
 - [Official example](https://community.webcon.com/posts/post/pre-paid-electronic-transactions-in-webcon-bps/12)
 - [Expert series example](/posts/2021/series-expert-guide-part-7#linking-parent-and-sub-workflow)
 
+{: .notice--info}
+**Info:** Instead of defining the tasks in an item list, you can create each one separately using the [hyperlink action](https://community.webcon.com/posts/post/starting-subworkflows-from-a-button-with-a-hyperlink/198).
+
 ## Wait for the completion of sub workflows.
 The default configuration options allow you to wait until all subworkflows finish positively or until one workflow finished negatively. Unfortunately, there's no option to wait for the completion of all, regardless of the outcome.
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-24-16.png" alt="The first negative finished workflow will stop the waiting" caption="The first negative finished workflow will stop the waiting" %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-13-22-24-16.png" alt="The first negative finished workflow will stop the waiting" caption="The first negative finished workflow will stop the waiting" %}
 
 This can be achieved by using the advanced settings. The most noteworthy part here is, that you must not return anything, not even null, which is achieved by using an if.
 The below template will continue if all workflows with the same workflow instance id and the same form type are finished.
 
 ```sql
-/* This is only triggered when a subworkflow moves into a final path and not everytime a subworkflow is changed or moves to a different step. */
-if 
-(
-  /* Number of all child workflows */
-  (select Count (*) from WFELements where {WFD_ID} = WFD_WFDID and WFD_DTYPEID in ({DT:80}) 
+IF 
+  /* Number of all measure child workflows */
+    (select Count (*) from WFELements where {WFD_ID} = WFD_WFDID and WFD_DTYPEID in ({DT:80}))
   = 
- /* Number of finished workflows */
-  (select Count (*) from WFELements where {WFD_ID} = WFD_WFDID and WFD_DTYPEID in ({DT:80}) 
-    and WFD_IsFinish = 1 )
-)
-begin
-select {PH:279}
-
-end
+  /* Number of finished workflows */
+    (select Count (*) from WFELements where {WFD_ID} = WFD_WFDID and WFD_DTYPEID in ({DT:80}) and WFD_IsFinish = 1 )
+  begin 
+    select {PH:279}
+end;
+/* This is only triggered when a subworkflow moves into a final path and not every time a subworkflow is changed or moves to a different step. */
 ```
 
-{% include figure image_path="/assets/images/posts/2024-02-20-related-workflows/2024-02-13-22-31-48.png" alt="Continue only, if all workflows have been completed." caption="Continue only, if all workflows have been completed." %}
+{% include figure image_path="/assets/images/posts/2024-02-27-related-workflows/2024-02-26-20-40-07.png" alt="Continue only, if all workflows have been completed." caption="Continue only, if all workflows have been completed." %}
+
+{: .notice--warning}
+**Remark:** The first line of this statement should not be a comment. At least I had problems.
+
 
 This would also allow you to define some complex scenarios like:
 -  Moving the parent workflow when a threshold has been reached
