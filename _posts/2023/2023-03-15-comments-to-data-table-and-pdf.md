@@ -62,7 +62,7 @@ select
   , convert(datetime, SUBSTRING(dbo.ClearWFElemId(item),1,19)) as [Date]
   , dbo.ClearWFElemId(dbo.ClearWFElem(item)) as Account
   , dbo.ClearWFElemId(dbo.ClearWFElem(dbo.ClearWFElem(item))) as Displayname
-  , dbo.ClearWFElemId(dbo.ClearWFElem(dbo.ClearWFElem(dbo.ClearWFElem(item)))) as Comment
+  , dbo.ClearWFElem(dbo.ClearWFElem(dbo.ClearWFElem(dbo.ClearWFElem(item)))) as Comment
 from WFElements instances
     cross apply
       dbo.SplitToTable(
