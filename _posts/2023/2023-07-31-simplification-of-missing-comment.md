@@ -8,15 +8,28 @@ tags:
   - JavaScript
 excerpt:
     You forgot a comment? There's no longer a need to leave the error dialog. Enter it and continue.
-bpsVersion: 2023.1.1.89, 2022.1.4.155
+bpsVersion: 2023.1.3.79
+
+last_modified_at: 2024-03-12
 ---
+
+# Update 2024-03-12
+
+{: .notice--warning}
+**Warning:**
+I noticed in WEBCON BPS 2023.1.3.79 that the script did no longer work. The DOM of the error dialog was changed. I updated the script to support the new version and it should, also work with previous versions but I can't test it.
+If the new version doesn't work with your environment, you can download the old version [full](https://github.com/Daniel-Krueger/webcon_snippets/blob/7d60f774d82f807e5c4fac82b327967b353de196/missingCommentHandler/missingCommentHandler.js) or [minified](https://github.com/Daniel-Krueger/webcon_snippets/blob/7d60f774d82f807e5c4fac82b327967b353de196/missingCommentHandler/missingCommentHandler.min.js) version.
+
+
 # Update 2023-09-13
 
 {: .notice--warning}
 **Warning:**
 With the advent of WEBCON BPS 2023 R2 I decided to not only introduced a minimized version of my JavaScript but to add a breaking change. The basic explanations still apply and only the configuration/implementation has changed. You can find out more about how to implement it in [UX form rules revised / 2023 R2 compatible](/posts/2023/ux-form-rules-revised) and the reasons in [Bandwidth usage](/posts/2023/bandwidth-usage). 
 
+Due to this change the  HTML field should look like this /the form rule should be added to the HTML field which is already used for the "Global Rules": 
 
+  {% include figure image_path="/assets/images/posts/2023-07-31-simplification-of-missing-comment/2024-03-12-21-33-24.png" alt="New approach to save bandwidth." caption="New approach to save bandwidth." %}
 # Overview  
 WEBCON BPS has this little flag, that will require the user to provide a comment, when a path is executed. I typically use this for negative/destructive paths - and every time I forget to enter the comment. Obviously, the error dialog pops up, I need to close it, enter the comment, and execute the path again. Those days are gone. :)
 
