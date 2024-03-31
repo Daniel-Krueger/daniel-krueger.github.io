@@ -78,7 +78,7 @@ The [readme](https://github.com/Daniel-Krueger/webcon_playwright) contains a few
 ### Authentication
 The test file `simpleApproval.spec.ts` contains a few imports. One of those refers to a file which is not part of the repository. 
 
-``` JavaScript
+```JavaScript
 import environment from "../.auth/simpleApprovalEnvironment";
 ``` 
 
@@ -86,7 +86,7 @@ This `environment` defines some global parameters like the hostname and user inf
 
 In my case I defined that the environment should have two user properties and created the object.
 
-``` JavaScript
+```JavaScript
 import {  IEnvironment,  AuthenticationType,  IUser,
 } from "../types/authentication";
 
@@ -129,7 +129,7 @@ Currently, the `Form data` has a `fieldValues` properties which defines which fi
 In addition, you can define the id of the path which should be used for the path transition.
 
 Defining the data for submitting a new workflow instance.
-``` JavaScript
+```TypeScript
 
 const submitData: IFormData = {
   fieldValues: [
@@ -146,7 +146,7 @@ const submitData: IFormData = {
 ```
 
 Defining the data for approving the submitted workflow instance.
-``` JavaScript
+``` TypeScript
 const approvalData: IFormData = {
   fieldValues: [
     new MultiLineTextField("Decision", "AttLong2", "Yes, it's approved."),
