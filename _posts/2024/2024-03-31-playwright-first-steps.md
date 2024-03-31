@@ -78,7 +78,7 @@ The [readme](https://github.com/Daniel-Krueger/webcon_playwright) contains a few
 ### Authentication
 The test file `simpleApproval.spec.ts` contains a few imports. One of those refers to a file which is not part of the repository. 
 
-```JavaScript
+```js
 import environment from "../.auth/simpleApprovalEnvironment";
 ``` 
 
@@ -86,7 +86,7 @@ This `environment` defines some global parameters like the hostname and user inf
 
 In my case I defined that the environment should have two user properties and created the object.
 
-```JavaScript
+``` js
 import {  IEnvironment,  AuthenticationType,  IUser,
 } from "../types/authentication";
 
@@ -146,7 +146,7 @@ const submitData: IFormData = {
 ```
 
 Defining the data for approving the submitted workflow instance.
-``` TypeScript
+```TS
 const approvalData: IFormData = {
   fieldValues: [
     new MultiLineTextField("Decision", "AttLong2", "Yes, it's approved."),
@@ -162,7 +162,7 @@ It's a bad practice to do too much in a single test case. It's better to split t
 At the moment I'm using a serial test execution so that I can pass information from one test to another. In this example the test case `Submit workflow as user 1` will get the workflow instance id of the submitted workflow and save it to `wfElementId`. The other test will then use this information to directly open the element id.
 I'm initializing the variable with an id, so that I could start/debug the second or third test case without running the first one. If all three tests are executed the initialized value will be overwritten anyway.
 
-``` JavaScript
+```JS
 test.describe.serial("Submit and approve", () => {
   let signature: string;
   // Element id to us, in case a specific test should be used/debugged.
@@ -201,7 +201,7 @@ My current approach is:
 - Successful path transition<br/>
   I haven't tested whether this would create a false positive in case the path transition was not successful. For example, because of an error (red notification), or someone else needs to complete a task (orange notification).
 
-``` JavaScript
+```js
  test("Submit workflow as user 1", async ({ browser }) => {
     // Target url
     let url =
