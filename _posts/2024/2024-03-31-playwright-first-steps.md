@@ -69,7 +69,7 @@ For this repository I've chosen the license [GNU General Public License v3.0](ht
 
 # Playwright and WEBCON 
 
-## Requirements /
+## Requirements
 I'm using VS Code for developing and executing the tests.
 The [readme](https://github.com/Daniel-Krueger/webcon_playwright) contains a few notes on my installation steps. These are not meant to be a replacement for the official documentation.
 
