@@ -28,9 +28,6 @@ Off topic:<br/>
 Hannes Leitner not only brought Playwright to my attention but also introduced me to WEBCON BPS. After playing a bit with Playwright I got reminded of the time when I first started to play with WEBCON BPS. Let's see whether this feeling will last in the upcoming weeks. At the moment I'm really hyped and full of ideas.
 
 # Important information
-## Target audience
-Even so I'm going for an easy-to-use test creation, I assume that you already have experience with VS Code, JavaScript/TypeScript or are willing to learn it on your own.
-
 ## General
 Before you continue with the post or heading over to the GitHub repository you should take the following into account:
 1. No previous experience<br/>
@@ -51,7 +48,10 @@ Before you continue with the post or heading over to the GitHub repository you s
    My posts will focus on using the custom logic and not on Playwright or TypeScript in general. At the moment, it's also not my focus to provide tests which can be in unattended environment. For example, the browser will be open at the end of the tests.
 6. Recording tests<br/>
    At first I started with [generating test](https://playwright.dev/docs/codegen#recording-a-test), but I quickly moved to coded tests. For these, I created some classes / functions which simplify the actual test definition. 
-   
+
+## Target audience
+Even so I'm going for an easy-to-use test creation, I assume that you already have experience with VS Code, JavaScript/TypeScript or are willing to learn it on your own.
+
 
 ## License
 For this repository I've chosen the license [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/). This is an excerpt from the referenced page from 2024-03-31.
