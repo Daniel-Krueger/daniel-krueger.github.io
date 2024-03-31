@@ -129,7 +129,7 @@ Currently, the `Form data` has a `fieldValues` properties which defines which fi
 In addition, you can define the id of the path which should be used for the path transition.
 
 Defining the data for submitting a new workflow instance.
-```TypeScript
+```js
 
 const submitData: IFormData = {
   fieldValues: [
@@ -146,7 +146,7 @@ const submitData: IFormData = {
 ```
 
 Defining the data for approving the submitted workflow instance.
-```TS
+```js
 const approvalData: IFormData = {
   fieldValues: [
     new MultiLineTextField("Decision", "AttLong2", "Yes, it's approved."),
@@ -162,7 +162,7 @@ It's a bad practice to do too much in a single test case. It's better to split t
 At the moment I'm using a serial test execution so that I can pass information from one test to another. In this example the test case `Submit workflow as user 1` will get the workflow instance id of the submitted workflow and save it to `wfElementId`. The other test will then use this information to directly open the element id.
 I'm initializing the variable with an id, so that I could start/debug the second or third test case without running the first one. If all three tests are executed the initialized value will be overwritten anyway.
 
-```JS
+```js
 test.describe.serial("Submit and approve", () => {
   let signature: string;
   // Element id to us, in case a specific test should be used/debugged.
@@ -237,7 +237,7 @@ This is basically the same as above. The only differences are:
 - Verification of the current step
   I pass the name of the step. I don't like this at all and it will be improved in a future version. If the info panel is not visible for some reason, it should automatically be displayed so that the step can be verified using the info panel.
 
-``` JavaScript
+``` js
   test("Approve as user two", async ({ browser }) => {
     // Target url
     let url = environment.hostname + `/db/14/app/50/element/${wfElementId}`;
