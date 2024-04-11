@@ -45,7 +45,7 @@ Before you continue with the post or heading over to the GitHub repository you s
 4. Multilingual support / changing labels<br/>
    While this is a strength of WEBCON BPS, this makes it quite hard for automated testing. I don't like the idea, that a test fails just because someone changed the language of the test user or changed the label. On the other hand, this is what UI tests are about, to a degree at least. I've not yet decided on a concept on how to approach this. 
 5. Blog post focus<br/>
-   My posts will focus on using the custom logic and not on Playwright or TypeScript in general. At the moment, it's also not my focus to provide tests which can be in unattended environment. For example, the browser will be open at the end of the tests.
+   My posts will focus on using the custom logic and not on Playwright or TypeScript in general. At the moment, it's also not my focus to provide tests which can be in attended environment. For example, the browser will be open at the end of the tests.
 6. Recording tests<br/>
    At first I started with [generating test](https://playwright.dev/docs/codegen#recording-a-test), but I quickly moved to coded tests. For these, I created some classes / functions which simplify the actual test definition. 
 
