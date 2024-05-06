@@ -9,6 +9,7 @@ excerpt:
     The second post of my series of using Playwright from Microsoft for WEBCON BPS.
 bpsVersion: 2023.1.3.118
 ---
+
 # Overview
 This is the second post of my series 'Automated UI Tests for WEBCON BPS'. 
 My goal of this series to make it easy to create tests with Playwright for WEBCON BPS. Since there's still a lot of work, I will only cover the changes to the last post.
@@ -161,6 +162,6 @@ There's no order, no roadmap and of course no timeline.
 {: .notice--warning}
 **Remark:** Before you head over to GitHub please read the [Important information](/posts/2024/playwright-first-steps#important-information).
 
-At the moment I'm using an own branch in GitHub for each post. I'm to lazy to come up with a better name, so I will be calling them iteration x, where the x relates to the number of the post in this series.
+I'm using an own branch in GitHub for each post. These are called iteration x, where the x corresponds to the number of the post in this series.
 
 [Iteration 2](https://github.com/Daniel-Krueger/webcon_playwright/tree/iteration2).
