@@ -76,9 +76,9 @@ If you are already familiar with it, these are the steps you need to take:
 1. Create a a new application from the admin panel https://hostname/adminpanel/apiApplications <br/>
 2. Create a secret for the application and note it down.
 3. Grant the application permission (scope) `App.Metadata.Read`.
-    ![Application definition](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-06-15.png)
+    {% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-06-15.png" alt="Application definition" caption="Application definition" %}
 4. Assign the application to the `Metadata access` privilege of the applications using Designer Studio
-    ![Metadata access privileges for the application](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-06-35.png)
+    {% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-06-35.png" alt="Metadata access privileges for the application" caption="Metadata access privileges for the application" %}
 
 Afterwards you can head over to the Playwright folder. There's an `.auth` folder in which you can add a `webconconfig.json` file and add the following content to it. 
 ```js
@@ -89,7 +89,7 @@ Afterwards you can head over to the Playwright folder. There's an `.auth` folder
   "ApiVersion": "v5.0"
 }
 ```
-![Example of an webconconfig.json.](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-29-22-02-47.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-29-22-02-47.png" alt="Example of an webconconfig.json." caption="Example of an webconconfig.json." %}
 
 
 {: .notice--warning}
@@ -119,7 +119,7 @@ This script utilizes the great PowerShell module [ImportExcel](https://github.co
 If you run the script the first time the module will (should) be installed automatically.
 
 At the moment the file will consist of a single worksheet `FieldInformation`. There will be one column for each field and one row for each step.
-![Example of a generated input file.](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-22-05-49.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-22-05-49.png" alt="Example of a generated input file." caption="Example of a generated input file." %}
 
 {: .notice--info}
 **Info:** The values are masked, to focus on the important information, not because the data is secret.
@@ -188,7 +188,7 @@ If you just want to use the provided scripts, you can ignore:
 2. Folder  `Swagger` 
 3. File  `MergedClasses.psm1` 
 
-![Folder structure](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-12-05.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-12-05.png" alt="Folder structure" caption="Folder structure" %}
 
 Regardless of what you want to do, whenever you create a new PowerShell session, change the current directory to PowerShell before you do anything else. This can done by executing these lines from one of the Generate* files:
 ```powershell
@@ -215,7 +215,7 @@ Even so I still hold on to my subfolder I created a script which merges the clas
 ## Generating classes from swagger
 I went down the rabbit hole to use PowerShell classes, so I also wanted to use classes for the REST API. At the same time, I didn't want to create these classes myself. Especially if there's a swagger file available.
 
-![You can download the swagger.json here](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-35-16.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-35-16.png" alt="You can download the swagger.json here" caption="You can download the swagger.json here" %}
 
 The classes are generated using the  `GenerateWebconClasses.ps1` script in the `Swagger` folder.
 
@@ -232,7 +232,7 @@ New-WebconPowerShellClass -StartingDefinition "3.0.AssociatedFormTypesCollection
 ```
 You can call the function `New-WebconPowerShellClass` for each top level class in which you are interested. The function will the iterate through all the referenced classes. You can repeat this multiple times before writing the classes to a file.
 
-![Generated classes ](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-40-39.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-40-39.png" alt="Generated classes " caption="Generated classes " %}
 
 This is an example of such a generated class:
 ```powershell
@@ -268,7 +268,7 @@ The classes have two constructors, the simple one will accept the json response 
 
 In this example I initialize the correct configuration class for the field type.
 
-![Passing a script block to handle more complex scenarios.](/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-53-28.png)
+{% include figure image_path="/assets/images/posts/2024-05-05-playwright-part-three/2024-04-30-21-53-28.png" alt="Passing a script block to handle more complex scenarios." caption="Passing a script block to handle more complex scenarios." %}
 
 I haven't tested this in another scenario, but it could work out fine.
 

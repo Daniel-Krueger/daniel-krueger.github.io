@@ -224,6 +224,69 @@ ccls.showAllAttachments.execute = function (){
 ccls.showAllAttachments.execute();
 ```
 
+## Show mail attachments and display first after page load
+
+{: .notice--warning}
+**Remark:** This was added in 2024 using WEBCON BPS 2023.1.3.118. In case there have been any changes in the DOM this won't work in an earlier version.
+
+The provided JS first clicks first on the mail attachments tab. Afterwards it checks a few times whether a mail exists.
+In case it doesn't work, you should first check whether the classes are still valid. 
+
+![](/assets/images/posts/2021-11-05-javascript-form-rule-execution-on-page-load/2024-05-09-22-14-57.png)
+
+
+
+```js
+window.ccls = window.dkr || {};
+ccls.showMails = {};
+ccls.showMails.Timeout = 0;
+ccls.showMails.TimeoutMax  = 4;
+ccls.showFirstAttachment= {};
+ccls.showFirstAttachment.Timeout = 0;
+ccls.showFirstAttachment.TimeoutMax  = 10;
+
+ccls.showMails.execute = function (){
+    // Start debugger, if debug parameter is set and dev tools are started.
+    if (new URLSearchParams(document.location.search).get("debug") == 1) {
+        debugger;
+    }
+
+    var items = document.getElementsByClassName("mail-attachments-link");
+    // verify that attachments are avialable
+    if (items == null || items.length != 1 ){
+        if (ccls.showMails.Timeout<= ccls.showMails.TimeoutMax){
+            ccls.showMails.Timeout ++;
+            setTimeout(function (){ccls.showMails.execute();},333)
+        }
+        return;
+    }
+    items[0].click();
+	ccls.showFirstAttachment.execute();
+}
+
+
+ccls.showFirstAttachment.execute = function (){
+    // Start debugger, if debug parameter is set and dev tools are started.
+    if (new URLSearchParams(document.location.search).get("debug") == 1) {
+        debugger;
+    }
+
+	var items = document.querySelectorAll("#mail-attachments .attachment-name");
+    if (items == null || items.length != 1 ){
+        if (ccls.showFirstAttachment.Timeout<= ccls.showFirstAttachment.TimeoutMax){
+            ccls.showFirstAttachment.Timeout ++;
+            setTimeout(function (){ccls.showFirstAttachment.execute();},333)
+        }
+        return;
+    }
+	var mousedownEvent = new MouseEvent('mousedown', { bubbles: true });
+	items[0].dispatchEvent(mousedownEvent);
+}
+
+ccls.showMails.execute();
+console.log("Show mails and display first one loaded");
+```
+
 ## Adding a save draft button in the toolbar
 This is described [here](/posts/2021/unified-save-experience#save-draft-path-as-a-menu-button).
 
