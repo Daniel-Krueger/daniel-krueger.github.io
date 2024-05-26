@@ -96,7 +96,7 @@ Of course, you can translate columns, and views in reports too. You just need to
 #### BPS Portal 
 WEBCON BPS 2023 added an additional collaboration option with the business users. They can view the form, field matrix and workflow as well as provide translations via BPS Portal. Search for the term `Using the application and Edit mode` in the linked post, to see how it is done.
 
-> [From prototype to production-deployed application: Edit mode in WEBCON BPS Portal](https://community.webcon.com/posts/post/from-prototype-to-production-deployed-application-edit-mode-in-webcon-bps-portal/381/3)
+> [From prototype to production-deployed application: Edit mode in WEBCON BPS Portal](https://community.webcon.com/posts/post/from-prototype-to-production-deployed-application-edit-mode-in-webcon-bps-portal/381/3)\
 > Applies to version: 2023.1.x and above; author: Krystyna Gawryał
 >
 > Persons authorized to edit a process in Portal:
