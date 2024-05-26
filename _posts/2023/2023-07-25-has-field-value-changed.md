@@ -4,7 +4,7 @@ categories:
   - WEBCON BPS  
   - CC LS
 tags:
-  - Business Rules
+  - Business rules
 excerpt:
     Do something, if the value of a field has actually been changed.
 bpsVersion: 2022.1.4.127

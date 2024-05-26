@@ -4,7 +4,7 @@ categories:
   - WEBCON BPS   
   - Private  
 tags: 
-  - Business Rule
+  - Business rules
 excerpt:
     How to get the current comment, and not only the latest comment.
 bpsVersion: 2023.1.3.76

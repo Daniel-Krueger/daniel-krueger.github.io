@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - User Experience
   - CSS
-  - Business Rules
+  - Business rules
 excerpt:
     This is a revised, simplified version to create a unified path styling across all applications.
 bpsVersion: 2022.1.3.65

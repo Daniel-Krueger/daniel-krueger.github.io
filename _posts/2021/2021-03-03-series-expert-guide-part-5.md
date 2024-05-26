@@ -5,7 +5,7 @@ categories:
   - WEBCON BPS
   - Series
 tags:
-  - Business Rules
+  - Business rules
   - Item list
   - Translations  
   - Governance

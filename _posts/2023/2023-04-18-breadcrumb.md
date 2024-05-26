@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - User Experience
   - CSS
-  - Business Rules
+  - Business rules
 excerpt:
     An alternative navigation between a workflow hierarchy using a breadcrumb
 bpsVersion: 2022.1.4.155
