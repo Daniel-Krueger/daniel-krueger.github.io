@@ -336,7 +336,6 @@ While this option is useful for new users, you can also define the language of a
 # SDK
 Last but not least, we can define, that a configuration value can be translated. This could be used if we want to display an error message which should be configurable as well as translatable.
 
-https://community.webcon.com/forum/thread/1810?messageid=1810
 
 Class definition
 ``` csharp
