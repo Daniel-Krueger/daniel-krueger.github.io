@@ -306,3 +306,6 @@ The official way to transfer the substitutions would be to use the REST API.
 There are only a few themes at most which need to be transferred, using the BPS Portal interface is sufficient for this.
 This is the documentation on how to create themes and at the end of the post the export/import options are described: \
 [Color themes](https://community.webcon.com/posts/post/color-themes/321/4)
+
+# Global parameters
+While I would never copy the information of the global parameters, I compare the data in the source and target environment to verify everything was setup.
