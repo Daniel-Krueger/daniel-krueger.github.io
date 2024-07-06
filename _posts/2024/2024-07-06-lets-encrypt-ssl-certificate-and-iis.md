@@ -18,7 +18,13 @@ In todays world it should be obvious that no website should be run without secur
 > I don't want to go through the hassle with the IT.<br/>
 
 
-I used  `Let's Encrypt` service to get SSL certificates for my private web server. I'm not sure whether I have documented all initial steps to get it up and running. So, I will just provide a few information and links to the original site and go into more detail to use it with IIS.
+I used  `Let's Encrypt` service to get SSL certificates for my private web server. 
+
+![](/assets/images/posts/2024-07-06-lets-encrypt-ssl-certificate-and-iis/2024-07-06-09-43-41.png)
+
+I'm not sure whether I have documented all initial steps to get it up and running. So, I will just provide a few information and links to the original site and go into more detail to use it with IIS.
+
+
 
 {: .notice--warning}
 **Remark:** I don't have qualified experience in this area. There may be better ways out there, but this is how I got it working and I'm providing the information `as is`.
