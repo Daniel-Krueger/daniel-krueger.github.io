@@ -9,11 +9,19 @@ excerpt:
 bpsVersion: 2021.1.3.205
 ---
 
+# Update 2024-07-06
+Even so this post is from 2021, this content is still valid, but I want to make a two additions:
+
+1. Instead of using the provided way for the [multilingual icons](#creating-multilingual-icon-html-tags), you could use the [function business rule](/posts/2024/translations#business-rule-function-text).
+2. Over the years the advanced configuration of the choose field changed a bit. If pasting the value doesn't work, configure the field manually, and copy the advanced configuration to the excel file. Then you can use it in the future. 
+
+
 # Overview  
 This post will explain two excel worksheets I created for speeding up the creation of SQL commands while preventing errors.
 The other one is just a collection of template SQL commands for the most common cases.
 
 {% include figure image_path="/assets/images/posts/2021-12-05-little-excel-helpers/2021-12-05-22-03-32.png" alt="Generated multilingual picker options" caption="Generated multilingual picker options" %}
+
 
 # SQL command for fixed values used in a picker field
 At some point in time WEBCON BPS introduced the fixed value list, I'm not a fan of it, as you can read [here](https://daniels-notes.de/posts/2021/series-expert-guide-part-6#decision-fields). I prefer a simple SQL command using constants as Ids (1). In addition, I always use multilingual labels (2) and provide a value for `Empty element display name` (3).
@@ -97,7 +105,7 @@ font-size:large;
 font-weight:bold;
 color:green;
 }
-````
+```
 
 If you want to uses these classes in a report, you should take a look [here](https://community.webcon.com/forum/thread/45?messageid=45) and scroll down.
 
