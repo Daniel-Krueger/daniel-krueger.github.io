@@ -26,6 +26,7 @@ Then again, I noticed quite a few changes/bug fixes which I submitted. :)
 
 
 Even if you don't want to read through the whole change log, I would recommend the following:
+- A brief overview of [what's there and what's to come](https://webcon.com/webcon-bps-2024-explore-the-key-features-and-enhancements/)
 - Read [2024.1 – [Whitepaper – Business overview]](https://community.webcon.com/community/public/uploads/editor/WEBCON_BPS_2024_Release_Notes_EN.pdf)
 - Read the `Before upgrading WEBCON BPS` and other `Important information` from the change logs.
   - [2024.1.1.48 EN Change log](https://community.webcon.com/download/changelog/273?q=1d8b42f)
@@ -136,6 +137,9 @@ That's something I need to check whether I understood it correctly, but I think 
 
 # System
 ## Miscellaneous
+> The second important update is Migration to .NET 8.0., which leverages the latest standards and libraries, and is continuously checked for compliance with current security standards. This update has also brought significant performance benefits. For example, the time required to transition between process steps has been reduced by 25%.
+
+
 > How the system loads the current SQL server time to save the data in the database has been modified. This change does not impact the system's current  functions – it makes it possible to move databases between servers operating in different time zones.
 
 That caused me a few troubles in the past which had been hard to detect. :)
