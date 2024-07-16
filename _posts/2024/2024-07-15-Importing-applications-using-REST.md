@@ -3,9 +3,9 @@ regenerate: true
 title: "Import application using PowerShell and REST API"
 categories:
   - WEBCON BPS 
+tags:    
   - Installation
   - Governance
-tags:    
 excerpt:
     WEBCON BPS 2024 added public APIs to import application packages. Here you find the documentation of my PowerShell based solution.
 bpsVersion: 2024.1.1.48
