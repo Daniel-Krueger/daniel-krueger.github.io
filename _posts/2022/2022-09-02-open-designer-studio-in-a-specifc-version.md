@@ -8,8 +8,15 @@ tags:
 excerpt:
     An easy option to create version specific Designer Studio shortcuts to target different environments.
 bpsVersion: 2022.1.3.65
-last_modified_at: 2022-09-10
+last_modified_at: 2024-07-16
 ---
+
+# Update 2024-07-16
+Running WEBCON BPS Designer Studio 2024 simultaneously with lower versions works, but sometimes an exception is thrown `Unable to cast to Microsoft.Web.WebView2.Core.Raw.ICoreWebView2_14.` when starting the 2024 version. 
+
+When this happens, close all Designer Studios and start the 2024 version first an. Another side effect is, that all credentials are lost and you need to sign-in for each environment again. 
+
+![](/assets/images/posts/2022-09-02-open-designer-studio-in-a-specifc-version/2024-07-16-19-46-40.png)
 
 # Overview  
 This is a short post on how to create shortcuts using different versions of the `Designer Studio` to connect to BPS Portals.
