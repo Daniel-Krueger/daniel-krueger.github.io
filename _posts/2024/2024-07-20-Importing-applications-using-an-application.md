@@ -24,6 +24,7 @@ My reasons are:
 
 If you find yourself in one of these points you should continue to read.
 
+{% include video id="kRNXQ7kGrBs?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
 
 
 
