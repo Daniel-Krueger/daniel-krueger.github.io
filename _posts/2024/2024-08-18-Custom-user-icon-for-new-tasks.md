@@ -151,3 +151,5 @@ If this has to be limited to specific users, you could either update the busines
 
 # Download
 You can find the full and a minified JS version [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/changeUserIconForNewTasks).
+
+If you are interested in the fact, that there's a minified version at all, you can take a look at the post [Bandwidth usage](/posts/2023/bandwidth-usage).
