@@ -13,7 +13,9 @@ bpsVersion: 2023.1.3.202
 ---
 
 # Overview
-One of the new features of [WEBCON BPS 2024 R1](https://community.webcon.com/community/public/uploads/editor/WEBCON_BPS_2024_Release_Notes_EN.pdf) is the `Last Comment` field which we can add to the reports. Besides displaying the comment in a report, it can also be shown in the task panel. While we cannot achieve the last one, we can use a calculated column to display achieve something similar in earlier versions.
+One of the new features of [WEBCON BPS 2024 R1](https://community.webcon.com/community/public/uploads/editor/WEBCON_BPS_2024_Release_Notes_EN.pdf) is the `Last Comment` field which we can add to the reports. Besides displaying the comment in a report, it can also be shown in the task panel. 
+
+While we cannot achieve the last one, we can use a calculated column to display achieve something similar in earlier versions.
 The left column shows the last three comments returned by a calculated column while the right uses the new system field.
 
 {% include figure image_path="/assets/images/posts/2024-08-26-show-comment-in-reports/2024-08-26-22-02-04.png" alt="The rendering of the last comment vs calculated column." caption="The rendering of the last comment vs calculated column." %}
