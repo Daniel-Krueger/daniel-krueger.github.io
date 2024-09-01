@@ -38,7 +38,7 @@ Depending on your preferences you can choose from three different options to dis
 ## Basic implementation with fixed display option
 The implementation is simple.
 1. Create a form rule in JavaScript mode.
-2. Copy the content of the ShowAllAttachments.js or  ShowAllAttachments.min.js
+2. Copy the content of the ShowAllAttachments.js or  ShowAllAttachments.min.js from the [repository](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/showAllAttachments).
 3. Modify the last line of the code to match your need.
    - Collapse to folder names<br/>
    `dkr.showAllAttachments.execute(0, 4, 0)`
