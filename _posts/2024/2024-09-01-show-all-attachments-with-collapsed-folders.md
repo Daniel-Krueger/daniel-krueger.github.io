@@ -97,3 +97,4 @@ The [official documentation](https://docs.webcon.com/docs/2024R1/Studio/Process/
 Unfortunately, there seems to be a mix up between the column names and their actual usage. The `ElementName` column is used for subfolder/category labels and  `Category` for the file name. 
 {% include figure image_path="/assets/images/posts/2024-09-01-show-all-attachments-with-collapsed-folders/2024-09-01-14-56-28.png" alt="ElementName and Category usage " caption="ElementName and Category usage " %}
 
+Maybe someone can upvote my user voice: [Related attachments: Column names are confusing}(https://community.webcon.com/forum/thread/5720).
