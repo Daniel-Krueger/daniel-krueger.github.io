@@ -164,7 +164,7 @@ on the dev server. Otherwise, you may find yourself in an unwanted situation. :)
 
 The custom action solution can be download from:
 
-<https://github.com/cosmoconsult/webconbps/tree/main/SDK_Actions/CC_XmlToItemList>
+<https://github.com/Daniel-Krueger/webcon_xmlToItemList>
 
 ## Fun facts
 
