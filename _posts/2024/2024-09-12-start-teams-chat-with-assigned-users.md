@@ -111,8 +111,6 @@ While looking for the reason why the message is not passed to the Teams desktop 
 
 I'm guessing that there may be issues, if you have external users in your tenant, but this is not something I was able to test in mine.
 
-## Only Microsoft Entra ID (Azure AD) supported
-If you are running Microsoft Teams I'm assuming that you are also using Microsoft Entra ID. If you are using additional authentication providers, this solution will very likely create links which Teams cannot resolve.
 
 
 ## Changing the task which should get a link
@@ -153,17 +151,41 @@ dkr.addTeamsChatToTasks.addTaskArrayToTaskList = function (tasksArray) {    /* A
 ```
 
 This way I have a list of all those tasks and the UPN of the task owner. Teams expects the UPN while this can be same as the email, it can also be different.
-In case you want or need to use the email you can replace `task.userLogin`  with `task.userEmail` in this line:
+
+
+In case you want or need to use the email you can replace `task.userLogin`  with `task.userEmail` in this line:<br/>
+
 `<a href="${dkr.addTeamsChatToTasks.useWebApp ? "https://teams.microsoft.com" : "msteams:"}/l/chat/0/0?users=${task.userLogin}&message=${encodeURIComponent(message)}" ${dkr.addTeamsChatToTasks.useWebApp ? 'target="_blank"' :null}>`
 
-Depending on your use case and the available information, you can either modify this line 
-`if (task.taskId != null && task.toGroup == false && task.userLogin.indexOf("@") > -1))` or change the whole implementation. Instead of using the available information you could: 
+
+
+Depending on your use case and the available information, you can either modify this line <br/>
+`if (task.taskId != null && task.toGroup == false && task.userLogin.indexOf("@") > -1))` 
+<br/>
+or change the whole implementation. Instead of using the available information you could: 
 - retrieve the existing tasks
 - map those tasks to the CacheOrganizationStructure
 - filter the relevant tasks
 - use this information to build the `dkr.addTeamsChatToTasks.taskList` object.
 
 I used a similar approach in my post [Custom user icon for new tasks](/posts/2024/custom-user-icon-for-new-tasks#global-business-rule).
+
+
+If you are using Active 
+## Active Directory Authentication
+If you are using Active Directory for authentication you will need to change two things.
+You need to
+1. replace `task.userLogin`  with `task.userEmail` in this line:<br/>
+  `<a href="${dkr.addTeamsChatToTasks.useWebApp ? "https://teams.microsoft.com" : "msteams:"}/l/chat/0/0?users=${task.userLogin}&message=${encodeURIComponent(message)}" ${dkr.addTeamsChatToTasks.useWebApp ? 'target="_blank"' :null}>`
+<br/>
+
+2. and change this line  <br/> 
+  `if (task.taskId != null && task.toGroup == false && task.userLogin.indexOf("@") > -1))`<br/>
+  to <br/>
+  `if (task.taskId != null && task.toGroup == false))`
+<br/>
+
+This way the Teams icon and link should be created for all users using their email. As long as the UPN matches the email it should work out.
 
 # Outlook
 Originally, I wanted to provide a link for each user field, but when I tried to come up with ideas to solve:
