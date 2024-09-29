@@ -7,11 +7,17 @@ tags:
   - JavaScript
   - Form rules
   - User Experience
-  - 
+  - Microsoft Teams
 excerpt:
   Do you need to chat or call a task owner via Teams? Just click on it.
 bpsVersion: 2023.1.3.202
 ---
+
+
+# Update 2023-09-29
+As far as I can tell starting chat's with messages are working now in the Desktop App too.
+
+
 
 # Overview
 Did you ever wanted to chat or call a person via Microsoft Teams to whom a task is assigned? At least I found myself in this situation a few times. Most of the time I had a look at the task first in WEBCON BPS. Now that I know, whether the user has at least [displayed the task](/posts/2024/custom-user-icon-for-new-tasks), I want to get in contact with the person. Adding this option directly to the form will save me a few seconds. This is not much, but the question is how many users will use this option? 
@@ -102,6 +108,8 @@ I've use [this documentation](https://learn.microsoft.com/en-us/microsoftteams/p
 This was working fine until I wanted to add a message. The new Teams version [does not support the message parameter](https://answers.microsoft.com/en-us/msteams/forum/all/new-ms-teams-doesnt-consider-parameter-message/5e883e26-dedf-4de3-98e2-40a6d1b1c98d). Maybe it will be added in the future. 
 As of today, 2024-09-01, the message parameter is working in the web app and the mobile app. But of course, they are treating the message differently. While the web application 'displays' the `<br/>` as a line break the mobile app treats it as plain text.
 
+{: .notice--info}
+**Info:** The issue seems to be resolved.
 
 ## External users
 While looking for the reason why the message is not passed to the Teams desktop app, I came across this limitation:
@@ -170,8 +178,6 @@ or change the whole implementation. Instead of using the available information y
 
 I used a similar approach in my post [Custom user icon for new tasks](/posts/2024/custom-user-icon-for-new-tasks#global-business-rule).
 
-
-If you are using Active 
 ## Active Directory Authentication
 If you are using Active Directory for authentication you will need to change two things.
 You need to
