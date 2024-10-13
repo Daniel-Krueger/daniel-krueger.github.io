@@ -27,7 +27,7 @@ I think this solution will have a highly individual component how the support te
 - Is this a fixed support team?
 - Should it be the process supervisor?
 - Should it be the application supervisor?
-- What should be done, if a customer application supervisor without a mail is defined?
+- What should be done, if a custom application supervisor without a mail is defined?
 - How should the case be handled, if this mail cannot be used to start a chat?
 - Should there be a different support team per language?
 - Do we have to take care of different countries?
