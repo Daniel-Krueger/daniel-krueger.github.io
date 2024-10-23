@@ -116,7 +116,11 @@ These are the text values I used.
 '}
 ```
 I have no idea why, but for some reason I had to add an extra `'` at one place, so make sure, that every property name on the left is enclosed with single quotes as well as the value on the right in your environment.
-{% include figure image_path="/assets/images/posts/2023-07-13-copy-attachment-to-other-workflow/2023-07-13-22-24-44.png" alt="Although there's are two single quotes only will be in the result." caption="Although there's are two single quotes only will be in the result." %}
+{% include figure image_path="/assets/images/posts/2023-07-13-copy-attachment-to-other-workflow/2023-07-13-22-24-44.png" alt="Although there are two single quotes, but only one will be in the result." caption="Although there are two single quotes, but only one will be in the result." %}
+
+{: .notice--info}
+**Info:**
+Please take a look at Pawełs comment. For some reason the place where we need to add two `'` changes depending on the number of variables. 
 
 
 ### Define the Inokve REST Web service action
