@@ -18,6 +18,7 @@ Since WEBCON BPS 2025 the supported database compatibility level is 160. Upgradi
 
 # SQL statement
 Review the current compatibility level
+
 ```sql
 select name, compatibility_level
 from sys.databases
@@ -25,6 +26,9 @@ where name LIKE '%BPS%'
 order by name
 
 ```
+
+
+
 
 The base version of the SQL script has been generated with ChatGPT. I added some the `dryrun` option and I couldn't test the script with different SQL Server versions but the case does look good.
 
@@ -72,6 +76,11 @@ CLOSE db_cursor
 DEALLOCATE db_cursor
 
 ```
+
+
+{% include figure image_path="/assets/images/posts/2024-11-10-update-database-compatibility-level/2024-11-10-10-30-13.png" alt="Dry run of the modification script" caption="Dry run of the modification script" %}
+
+{% include figure image_path="/assets/images/posts/2024-11-10-update-database-compatibility-level/2024-11-10-10-30-51.png" alt="Without dry run" caption="Without dry run" %}
 
 # Reference
 [ALTER DATABASE (Transact-SQL) compatibility level](https://learn.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)
