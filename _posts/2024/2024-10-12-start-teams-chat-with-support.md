@@ -9,7 +9,7 @@ tags:
   - User Experience
   - Microsoft Teams
 excerpt:
-  Start a chat with the support team from a form.. :)
+  Start a chat with the support team from a form. :)
 bpsVersion: 2023.1.3.202
 ---
 

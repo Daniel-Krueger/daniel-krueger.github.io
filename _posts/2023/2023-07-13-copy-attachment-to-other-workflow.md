@@ -10,6 +10,9 @@ excerpt:
 bpsVersion: 2023.1.1.89
 ---
 
+{: .notice--info}
+**Info:** In WEBCON BPS 2025 a [dedicated action](https://docs.webcon.com/docs/2025R1/Studio/Action/Attachments/Action_AddAttachmentToOtherElement) has been created for this.
+
 # Overview  
 The default actions of WEBCON BPS allow us to:
 1. Create attachment for the current workflow instance.
