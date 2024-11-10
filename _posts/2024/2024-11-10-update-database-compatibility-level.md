@@ -12,8 +12,25 @@ bpsVersion: 2025.1.1.23
 # Overview
 Since WEBCON BPS 2025 the supported database compatibility level is 160. Upgrading to the latest version won't update the level for existing database:
 
-> Changed the default compatibility level for new SQL databases created during the installation of the WEBCON BPS platform. As a result, the previous compatibility level set to 120 (SQL Server 2014) has been replaced with the highest possible level, which, however, cannot exceed 160 (SQL Server 2022). This modification does not affect existing databases, which will retain their compatibility level of 120
+> Changed the default compatibility level for new SQL databases created during the installation of the WEBCON BPS platform. As a result, the previous compatibility level set to 120 (SQL Server 2014) has been replaced with the highest possible level, which, however, cannot exceed 160 (SQL Server 2022). This modification does not affect existing databases, which will retain their compatibility level of 120.
 
+
+If WEBCON doesn't update the compatibility level during the migration, which should we do such an update? Are there any drawbacks?
+I'm not a DB administrator but as far as I know, you could actually be degrade the performance. Therefore, Microsoft has a suggestion on how to proceed if you want to upgrade the compatibility level:
+1. Create a base line against which you can compare the the performance
+2. Upgrade the compatibility level
+3. Verify the changes
+[Change the database compatibility level and use the Query Store](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store?view=sql-server-ver16)
+
+
+I somehow doubt, that this will be necessary for small databases, but I'm neither an expert here nor do I have the experience. 
+This is my reasoning/my assumptions:
+- WEBCON did test the compatibility level and not only on small databases
+- The database structure is the same for old and new created databases
+- Importing the processes from an old database to a new one and recreating the data would be the sames as just upgrading the database level
+
+
+I don't want to persuade anyone to do this upgrade blindly and it's up to you to decide, which approach you want to take.
 
 
 # SQL statement
