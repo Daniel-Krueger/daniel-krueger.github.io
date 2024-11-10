@@ -1,6 +1,6 @@
 ---
 regenerate: true
-title: "WEBCON BPS 2024 Change log excerpt and thoughts"
+title: "WEBCON BPS 2025 Change log excerpt and thoughts"
 categories:
   - WEBCON BPS 
 tags:    
