@@ -45,6 +45,7 @@ Even so the names should be self-explaining, here's an example for the modal dia
 I added two features which are immediately available when you update the form rule
 - Links are finally rendered as links
 - Ctrl+left click on the breadcrumb element will open it in a new tab without releasing the checkout of the current one. Left click on the element will display it in the current tab and release the checkout.
+- The leave element also displays the signature and instance id on mouse over.
 
 
 ## Colorize paths
