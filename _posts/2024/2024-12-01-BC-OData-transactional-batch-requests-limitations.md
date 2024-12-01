@@ -76,9 +76,9 @@ If there's another request in the `$batch` then we get the error from the previo
 ![Result of the $batch transaction with three requests ](/assets/images/posts/2024-12-01-BC-OData-transactional-batch-requests-limitations/2024-12-01-21-44-16.png)
 
 
-# Resolution / work around
+# Resolution / workaround
 ## Invalid JSON
-There's no work around for this. Let's just hope, that your dynamic generated JSON Body fails already on the first request.
+There's no workaround for this. Let's just hope, that your dynamic generated JSON Body fails already on the first request.
 
 ## Duplicate key
 Add a get request after each post/patch request. This is surely not the way I would like to implement it, but in a dynamic generated JSON Body there's no other way.
