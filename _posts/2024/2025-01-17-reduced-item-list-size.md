@@ -23,7 +23,7 @@ While implementing my idea I added one additional requirement:
 While the example may not be meaningful, I'm quite satisfied with the solution.
 
 
-{% include video id="yNQJBzzaeNQ?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
+{% include video id="o5HX8l-muSo?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
 
 
 # Implementation
