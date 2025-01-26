@@ -26,6 +26,9 @@ In addition, I’m providing an example how we can get the access token ourselve
 {: .notice--info}
 **Info:** I copied values from WEBCON BPS in which variables are used. I replaced them with {VariableName}. You will need to replace the whole value, including the {} with the actual WEBCON BPS variable.
 
+{: .notice--info}
+**Info:** Update 2025-01-26: I added a post about the new REST custom authentication SDK type: [SharePoint Online certificate authentication ](/posts/2025/sharepoint-certificat-authentication-sdk)
+
 # Registering the application
 ## Authentication via certificate
 
@@ -60,7 +63,7 @@ Disconnect-PnPOnline
 ````
 
 {: .notice--info}
-**Info:** This is not supported by WEBCON BPS 2025 with the standard data source connection options. There's are new [SDK type](https://community.webcon.com/community/public/uploads/editor/SDK_Migration_2025_1.pdf) `CustomAuthentication` and I’m playing around with it.
+**Info:** This is not supported by WEBCON BPS 2025 with the standard data source connection options. There's are new [SDK type](https://community.webcon.com/community/public/uploads/editor/SDK_Migration_2025_1.pdf) `CustomAuthentication` and I’m playing around with it. 
 
 
 ## Authentication via client secret
