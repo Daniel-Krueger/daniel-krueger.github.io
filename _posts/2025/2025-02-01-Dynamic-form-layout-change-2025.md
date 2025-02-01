@@ -11,7 +11,7 @@ excerpt:
 bpsVersion: 2025.1.1.44
 ---
 
-# Overview 1
+# Overview
 While WEBCON BPS offers different options to define how much space the left and right column of a form should [take up](https://docs.webcon.com/docs/2025R1/Studio/Workflow/Forms/GlobalFormTemplate#2-form-template), this is a static option. I already described an alternative in the post [Revised changing left/right layout](/posts/2023/revised-layout-change). This option can be used for example to make the left column bigger, if a tab with an item list is selected.
 
 With the new UI of WEBCON BPS 2025 it was necessary to review this topic.
