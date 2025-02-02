@@ -39,8 +39,8 @@ Below you find the values of each constant. I hope I won't make any copy&paste e
 **Info:** I will provide a screenshot for the last example only. In this one you can see the constant and the whole value.
 
 ## 1/3 left/right no status panel
-Name: LayoutChange_1_3_LeftRight_NoStatusPanel
-Description: 1:3 ration of the left panel and right panel. Status panel is hidden.
+Name: LayoutChange_1_3_LeftRight_NoStatusPanel<br/>
+Description: 1:3 ration of the left panel and right panel. Status panel is hidden.<br/>
 
 Value:
 ```html
@@ -58,8 +58,8 @@ Value:
 ```
 
 ## 1/3 left/right optional status panel
-Name: LayoutChange_1_3_LeftRight_OptionalStatusPanel
-Description: 1:3 ration of the left panel and right panel. Status panel can be displayed by the user.
+Name: LayoutChange_1_3_LeftRight_OptionalStatusPanel<br/>
+Description: 1:3 ration of the left panel and right panel. Status panel can be displayed by the user.<br/>
 
 Value:
 ```html
@@ -75,8 +75,8 @@ Value:
 ```
 
 ## 3/1 left/right no status panel
-Name: LayoutChange_3_1_LeftRight_NoStatusPanel
-Description: 3:1 ration of the left panel and right panel. Status panel is hidden.
+Name: LayoutChange_3_1_LeftRight_NoStatusPanel<br/>
+Description: 3:1 ration of the left panel and right panel. Status panel is hidden.<br/>
 
 Value:
 ```html
@@ -94,8 +94,8 @@ Value:
 ```
 
 ## 3/1 left/right optional status panel
-Name:  LayoutChange_3_1_LeftRight_OptionalStatusPanel
-Description: 3:1 ration of the left panel and right panel. Status panel can be displayed by the user.
+Name:  LayoutChange_3_1_LeftRight_OptionalStatusPanel<br/>
+Description: 3:1 ration of the left panel and right panel. Status panel can be displayed by the user.<br/>
 
 Value:
 ```html
@@ -111,8 +111,8 @@ Value:
 ```
 
 ## Full width left panel no status panel
-Name: LayoutChange_FullWidthLeftPanel_NoStatusPanel
-Description: Full width of the left panel, right panel and status panel are hidden.
+Name: LayoutChange_FullWidthLeftPanel_NoStatusPanel<br/>
+Description: Full width of the left panel, right panel and status panel are hidden.<br/>
 
 Value:
 ```html
@@ -128,8 +128,8 @@ Value:
 ```
 
 ## Full width left panel optional status panel
-Name: LayoutChange_FullWidthLeftPanel_OptionalStatusPanel
-Description: Full width of the left panel, right panel is hidden. Status panel can be displayed by the user.
+Name: LayoutChange_FullWidthLeftPanel_OptionalStatusPanel<br/>
+Description: Full width of the left panel, right panel is hidden. Status panel can be displayed by the user.<br/>
 
 Value:
 ```html
@@ -143,8 +143,8 @@ Value:
 ```
 
 ## Full width right panel no status panel
-Name: LayoutChange_FullWidthRightPanel_NoStatusPanel
-Description: Full width of the right panel, left panel and status panel are hidden.
+Name: LayoutChange_FullWidthRightPanel_NoStatusPanel<br/>
+Description: Full width of the right panel, left panel and status panel are hidden.<br/>
 
 Value:
 ```html
@@ -160,8 +160,8 @@ Value:
 ```
 
 ## Full width right panel optional status panel
-Name: LayoutChange_FullWidthRightPanel_OptionalStatusPanel
-Description: Full width of the right panel, left panel is hidden. Status panel can be displayed by the user.
+Name: LayoutChange_FullWidthRightPanel_OptionalStatusPanel<br/>
+Description: Full width of the right panel, left panel is hidden. Status panel can be displayed by the user.<br/>
 
 Value:
 ```html
