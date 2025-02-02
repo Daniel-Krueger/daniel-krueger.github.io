@@ -7,6 +7,7 @@ tags:
  - Data sources
  - REST
  - SDK
+ - SharePoint
 excerpt:
     "Extending WEBCON BPS 2025 with certificate authentication."
 bpsVersion: 2025.1.1.44

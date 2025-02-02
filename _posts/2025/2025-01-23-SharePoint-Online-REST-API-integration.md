@@ -6,6 +6,7 @@ categories:
 tags:
  - Data sources
  - REST
+ - SharePoint
 excerpt:
     "Setup an App Registration and accessing SharePoint REST API"
 bpsVersion: 2025.1.1.44
