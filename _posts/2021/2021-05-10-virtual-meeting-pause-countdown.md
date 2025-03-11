@@ -1,7 +1,7 @@
 ---
 title: "Virtual meeting pause countdown"
 categories:
-  - GitHub Project
+  - GitHub project
   - Private  
 tags:
  

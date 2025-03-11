@@ -2,7 +2,7 @@
 title: "Data migration and deactivated users"
 categories:
   - WEBCON BPS
-  - CC LS
+  - COSMO CONSULT
 tags:
  - Best practices
 excerpt:

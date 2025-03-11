@@ -2,7 +2,7 @@
 title: "A breadcrumb for navigating workflow hierarchy"
 categories:
   - WEBCON BPS  
-  - CC LS
+  - COSMO CONSULT
 tags:
   - JavaScript
   - User Experience

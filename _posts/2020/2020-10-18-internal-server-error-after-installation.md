@@ -2,7 +2,7 @@
 title: "Internal server error after installation"
 categories:
   - WEBCON BPS
-  - Cosmo Consult
+  - COSMO CONSULT
 tags:
   - Installation
 excerpt:

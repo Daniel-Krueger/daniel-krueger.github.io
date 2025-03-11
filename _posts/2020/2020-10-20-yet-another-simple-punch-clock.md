@@ -1,7 +1,7 @@
 ---
 title: "Yet another simple punch clock"
 categories:
-  - GitHub Project
+  - GitHub project
   - Private
 tags:
   - Time tracking

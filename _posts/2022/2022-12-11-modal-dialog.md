@@ -2,7 +2,7 @@
 title: "Modal dialog v3"
 categories:
   - WEBCON BPS
-  - CC LS
+  - COSMO CONSULT
   
 tags:
   - JavaScript

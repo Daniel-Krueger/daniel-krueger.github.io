@@ -1,7 +1,7 @@
 ---
 title: "BC OData transactional $batch requests limitation"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - Business Central
 tags:
   - Business Central

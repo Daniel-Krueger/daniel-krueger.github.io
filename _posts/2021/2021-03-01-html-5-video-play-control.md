@@ -2,7 +2,7 @@
 title: "Html 5 Video play control without extension"
 categories:
   - Private
-  - GitHub
+  - GitHub project
 tags:
   - JavaScript
 excerpt:

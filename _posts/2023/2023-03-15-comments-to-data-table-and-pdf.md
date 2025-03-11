@@ -2,7 +2,7 @@
 title: "Comments to data table and PDF"
 categories:
   - WEBCON BPS
-  - CC LS  
+  - COSMO CONSULT
 tags:
   - Snippet  
 excerpt:

@@ -2,7 +2,7 @@
 title: "Mapping path button colour to line colour"
 categories: 
   - Webcon BPS
-  - Cosmo Consult LS GmbH
+  - COSMO CONSULT
 tags:
   - User experience
 excerpt:

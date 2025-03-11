@@ -2,7 +2,8 @@
 title: "SharePoint Online certificate authentication"
 categories:
   - WEBCON BPS
-  - Private 
+  - Private
+  - GitHub project
 tags:
  - Data sources
  - REST

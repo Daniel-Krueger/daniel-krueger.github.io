@@ -3,6 +3,7 @@ title: "Automated UI Tests for WEBCON BPS - First steps"
 categories:
   - WEBCON BPS   
   - Private  
+  - GitHub project
 tags: 
   - Automated UI Tests
 excerpt:

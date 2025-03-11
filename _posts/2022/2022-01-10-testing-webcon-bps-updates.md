@@ -1,7 +1,7 @@
 ---
 title: "Testing WEBCON BPS updates"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - WEBCON BPS  
 tags:
   - Template

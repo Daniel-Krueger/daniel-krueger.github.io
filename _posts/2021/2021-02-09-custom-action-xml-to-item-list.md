@@ -1,7 +1,7 @@
 ---
 title: "How to populate an item list from an XML file"
 categories:
-  - GitHub Project
+  - GitHub project
   - Private
   - WEBCON BPS  
 tags:

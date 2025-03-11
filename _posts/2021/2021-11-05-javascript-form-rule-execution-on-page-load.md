@@ -1,7 +1,7 @@
 ---
 title: "JavaScript form rule execution on page load"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - WEBCON BPS  
 tags:
   - Form rules

@@ -1,7 +1,7 @@
 ---
 title: "Custom template for generated process documentation"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - WEBCON BPS  
 tags:
   - Documentation

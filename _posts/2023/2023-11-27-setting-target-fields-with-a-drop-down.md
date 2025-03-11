@@ -2,7 +2,7 @@
 title: "Setting target fields with a drop down"
 categories:
   - WEBCON BPS   
-  - CC LS  
+  - COSMO CONSULT
 tags:    
   - Item list
   - Form rules

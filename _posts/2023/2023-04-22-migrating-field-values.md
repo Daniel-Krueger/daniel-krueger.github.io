@@ -2,7 +2,7 @@
 title: "Migrating field values"
 categories:
   - WEBCON BPS  
-  - CC LS
+  - COSMO CONSULT
 tags:
   - Fields
   - Snippet

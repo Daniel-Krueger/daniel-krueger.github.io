@@ -2,7 +2,7 @@
 title: "Quickly search a website using a search engine"
 categories:
   - Private
-  - GitHub
+  - GitHub project
 tags:
   - JavaScript
 excerpt:

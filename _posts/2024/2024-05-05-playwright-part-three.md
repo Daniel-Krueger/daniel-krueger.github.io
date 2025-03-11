@@ -2,7 +2,8 @@
 title: "Automated UI Tests for WEBCON BPS - Part three data generation"
 categories:
   - WEBCON BPS   
-  - Private  
+  - Private 
+  - GitHub project
 tags: 
   - Automated UI Tests
 excerpt:

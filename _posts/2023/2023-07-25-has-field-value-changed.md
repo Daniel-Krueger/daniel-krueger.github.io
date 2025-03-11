@@ -2,7 +2,7 @@
 title: "Has field value changed rule"
 categories:
   - WEBCON BPS  
-  - CC LS
+  - COSMO CONSULT
 tags:
   - Business rules
 excerpt:

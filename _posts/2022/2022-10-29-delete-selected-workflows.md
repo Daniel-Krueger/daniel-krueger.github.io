@@ -1,7 +1,7 @@
 ---
 title: "Delete selected workflows"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - WEBCON BPS  
 tags:
   - Template

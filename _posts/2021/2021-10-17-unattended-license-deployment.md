@@ -1,7 +1,7 @@
 ---
 title: "Unattended OnPrem license deployment to multiple server instances"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - Business Central
 tags:
   - Business Central

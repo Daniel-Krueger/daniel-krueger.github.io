@@ -1,7 +1,7 @@
 ---
 title: "Adding a new choice field value without leaving the page"
 categories:
-  - CC LS
+  - COSMO CONSULT
   - WEBCON BPS  
 tags:
   - JavaScript
