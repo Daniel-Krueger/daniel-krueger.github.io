@@ -6,6 +6,7 @@ categories:
 tags:
  - User Experience
  - JavaScript
+ - Dashboard
 excerpt:
     "A variation of the modal dialog for the dashboard"
 bpsVersion: 2025.1.1.105
