@@ -26,7 +26,7 @@ All in all, we need for this:
 - A HTML code widget to configure the Gantt chart
 - A HTML code widget for the Gantt logic
 - A HTML code widget for the modal dashboard
-- The client must be able to access https://cdn.jsdelivr.net/npm/frappe-gantt/dist
+- The client must be able to access `https://cdn.jsdelivr.net/npm/frappe-gantt/dist`
 
 
 ## Report 
@@ -38,7 +38,7 @@ The report needs to return the data for the Gantt chart in the correct order and
 
 It can optionally provide the following information
 - Parent element<br/>
-  This can be the default parent workflow id, but it could also be any other column/calculated field with a workflow instance id.
+  This can be the default parent workflow id, but it could also be any other column/calculated field with a workflow instance id. I saved the parent element in a choose field.<br/>
   ![](/assets/images/posts/2025-04-02-Custom-Gantt-chart/2025-04-01-20-49-28.png)
 - Progress<br/>
   An integer value between 0 and 100
@@ -54,7 +54,7 @@ You can copy the base configuration from the `frappe-gantt-configuration.html` f
 
 ### Endpoint definition
 The endpoint property allows you to define different values for the dev/test/prod environment. 
-When fetching the data for the Gantt chart, the current hostname `xyz.cosmocloud.eu` will be used to get the values of the current environment.
+When fetching the data for the Gantt chart, the current hostname `xyz.cosmocloud.eu` will be used to get the values of the current environment. 
 {% include figure image_path="/assets/images/posts/2025-04-02-Custom-Gantt-chart/2025-03-30-21-43-13.png" alt="Define the report for different environments" caption="Define the report for different environments" %}
 
 
@@ -100,6 +100,7 @@ If you want to open an element in the dashboard in a modal dialog and don't know
 
 In short it is:
 - Add the modal dashboard logic as another `HTML code` widget
+- Set the configuration value `showInModal`: true
 - Add the child logic form rule to the workflow instance. This in turn requires the common functions/ccls.utils.
 
 
