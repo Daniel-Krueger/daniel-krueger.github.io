@@ -100,55 +100,10 @@ Once the library has been loaded you can create a new Gantt object:
         appendTo: ...
 ```
 
-## The events are overhead in WEBCON BPS
-As a developer my first approach was to make use of the events. This way I could easily check whether my code worked, and the modifications are written back to the item list. 
-While this worked fine in the beginning, it soon turned out to be a problem, when I extended the functionality to not only plan existing tasks but to create new tasks and remove existing ones.
-
-This made me rethink my decision, and I realized that the events are just an overhead, in our context:
-- Only a single user can edit the plan.
-- We can't and don't need to automatically save the changes in the database.
-
-If we take this into account, we can simplify this by adding a button which will then iterate the tasks of the Gantt project object and then update the item list.
-
-This left one little issue. I wanted to see the result, without actually saving the workflow instance. Therefore, I added a 'debug' mode which would display the otherwise hidden item list and would allow me to write the current values back to it without saving the workflow instance.
-```js
-    if (document.location.search.includes('debug')) {
-        toolbar.unshift({
-            type: 'button',
-            text: 'Write to item list',
-            icon: 'b-fa-save',
-            onClick: () => {
-                resalta.bryntum.Gantt.SaveWorkflowInstance(false);
-            }
-        });
-    }
-``` 
-
-
-{: .notice--info}
-**Remark:** Ok, this is not 100% true. I used the "paste" event of the copy functionality, to remove some information from the new tasks like the original workflow id.
-
-## Saving the data
-If I don't use the events, how do I make sure that the modified data is written back to the item list?
-
-One option is to hide the save button and any path buttons with JavaScript and trigger the save action/ path transition by a custom toolbar button.
-
-If you don't want to hide the path buttons, you could add an `Additional path validation form rule`. 
-
-![](/assets/images/posts/2025-06-20-Bryntum-Gantt-and-WEBCON-BPS/2025-06-11-22-34-43.png)
-
-## WBS number is outdated
-This was the one option I found quite late:
-``` 
-project.taskStore.wbsMode = 'auto';
-```
-
-This will automatically recalculate the WBS number, which was really necessary when I activated the copy & paste functionality.
-
 ## Data JSON model
-Another thing I found quite late was a good data example from which I could derive what I need to do.
+Another thing I found quite late was a [good data example](https://bryntum.com/products/gantt/examples/_datasets/launch-saas-advanced.json) from which I could derive what I need to do.
 This is the one which turned out to be really helpful for understanding how the WBS numbers and dependencies are calculated. The WBS numbers are inferred from the children while the dependencies are an own object.
-[https://bryntum.com/products/gantt/examples/_datasets/launch-saas-advanced.json]
+
 Snippet:
 ```js
 "tasks" : {
@@ -210,3 +165,47 @@ Snippet:
     ]
   }
 ```
+
+## The events are overhead in WEBCON BPS
+As a developer my first approach was to make use of the events. This way I could easily check whether my code worked, and the modifications are written back to the item list. 
+While this worked fine in the beginning, it soon turned out to be a problem, when I extended the functionality to not only plan existing tasks but to create new tasks and remove existing ones.
+
+This made me rethink my decision, and I realized that the events are just an overhead, in our context:
+- Only a single user can edit the plan.
+- We can't and don't need to automatically save the changes in the database.
+
+If we take this into account, we can simplify this by adding a button which will then iterate the tasks of the Gantt project object and then update the item list.
+
+This left one little issue. I wanted to see the result, without actually saving the workflow instance. Therefore, I added a 'debug' mode which would display the otherwise hidden item list and would allow me to write the current values back to it without saving the workflow instance.
+```js
+    if (document.location.search.includes('debug')) {
+        toolbar.unshift({
+            type: 'button',
+            text: 'Write to item list',
+            icon: 'b-fa-save',
+            onClick: () => {
+                resalta.bryntum.Gantt.SaveWorkflowInstance(false);
+            }
+        });
+    }
+``` 
+
+
+{: .notice--info}
+**Remark:** Ok, this is not 100% true. I used the "paste" event of the copy functionality, to remove some information from the new tasks like the original workflow id.
+
+## Saving the data
+If I don't use the events, how do I make sure that the modified data is written back to the item list?
+
+One option is to hide the save button and any path buttons with JavaScript and trigger the save action/ path transition by a custom toolbar button.
+
+If you don't want to hide the path buttons, you could add an `Additional path validation form rule`. 
+
+![](/assets/images/posts/2025-06-20-Bryntum-Gantt-and-WEBCON-BPS/2025-06-11-22-38-05.png)
+## WBS number is outdated
+This was the one option I found quite late:
+``` 
+project.taskStore.wbsMode = 'auto';
+```
+
+This will automatically recalculate the WBS number, which was really necessary when I activated the copy & paste functionality.
