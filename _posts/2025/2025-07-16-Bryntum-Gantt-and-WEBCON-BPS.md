@@ -7,7 +7,7 @@ tags:
  - REST
 excerpt:
     "Learnings from hooking up an item list with Bryntum Gantt"
-bpsVersion: 2025.1.1.44
+bpsVersion: 2025.1.1.105
 ---
 
 
@@ -204,8 +204,66 @@ If you don't want to hide the path buttons, you could add an `Additional path va
 ![](/assets/images/posts/2025-06-20-Bryntum-Gantt-and-WEBCON-BPS/2025-06-11-22-38-05.png)
 ## WBS number is outdated
 This was the one option I found quite late:
-``` 
+``` js
 project.taskStore.wbsMode = 'auto';
 ```
 
 This will automatically recalculate the WBS number, which was really necessary when I activated the copy & paste functionality.
+
+## Add new task with edit dialog
+Everything is easy, once you know how to do it. These few lines will add a new task and display the edit dialog for the newly added row.
+
+``` js
+toolbar = [
+        {
+            style: 'color: var(--colorNeutralForegroundOnBrand); background-color: var(--colorBrandBackground1);',
+            icon: 'b-fa b-fa-plus',
+            text: resalta.bryntum.GanttConfig.toolbarButtons.addButton.text,
+            tooltip: resalta.bryntum.GanttConfig.toolbarButtons.addButton.tooltip,
+            hidden: !resalta.bryntum.GanttConfig.toolbarButtons.addButton.visible,
+            onAction: async function () {
+                const added = currentGantt.taskStore.rootNode.appendChild({ name: this.L('New task'), duration: 1 });
+
+                await currentGantt.project.commitAsync();
+                await currentGantt.scrollRowIntoView(added);
+                currentGantt.features.taskEdit.editTask(added);
+            }
+        },
+```
+
+## Filtering
+The library offers complex filtering options, if you want to filter only a single field you could clear all filters and apply the new ones:
+```js
+ onChange: ({ value }) => {
+                const filterValue = value ? value.toLowerCase() : '';
+                // Remove any existing filters before applying a new one
+                currentGantt.taskStore.clearFilters();
+                if (filterValue) {
+                    currentGantt.taskStore.filter(task => {
+
+                        const responsibleName = (task.responsibleName || '').toLowerCase();
+                        return responsibleName.includes(filterValue);
+                    });
+                }
+            }
+```
+
+If you are going for more complex filters, you can add a filter with an id and remove the filter when necessary.
+```js
+const enabledPhases = resalta.bryntum.Gantt._enabledPhaseIdsCache = new Set(
+        resalta.bryntum.GanttConfig.dataMapping.phases
+            .filter(p => p.checked)
+            .map(p => p.id)
+    );
+    currentGantt.taskStore.removeFilter('phase');
+    currentGantt.taskStore.filter({
+        id: 'phase',
+        filterBy: function (record) {
+            if (enabledPhases.size === resalta.bryntum.GanttConfig.dataMapping.phases.length) {
+                return true;
+            }
+            return enabledPhases.has(record.phase);
+        }
+
+    });
+```
