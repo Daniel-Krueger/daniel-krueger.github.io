@@ -13,6 +13,10 @@ bpsVersion: 2025.1.1.105
 This will be a very subjective post, but I will provide my reasons why the topics mentioned. 
 Feel free to comment to add another view or additional points. Also, I would prefer if you got in touch with me for additional No-Go’s /recommendation to help new WEBCON BPS users, so that I can include them in the blog.
 
+
+If you are starting with WEBCON BPS, you may also look at my [Expert series](/posts/2021/series-expert-guide-part-1). While this is from 2021 and a few elements would be implemented differently today, it will provide you with a deep dive into the inner working of WEBCON BPS. 
+
+
 # Fixed item lists and logic
 While I can understand the use case of fixed item list, I very rarely use them. The reason is quite simple, if there's even a slight chance that logic must be executed based on the selected values, they are a bad idea. Instead of a fixed item list it's better to use a SQL query with constants as ids. 
 
