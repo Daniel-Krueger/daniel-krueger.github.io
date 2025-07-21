@@ -110,3 +110,10 @@ FROM [dbo].[CacheOrganizationStructure] as users
 While the author field is there by default, I don't recommend to use it. You can read up on my reasoning [here](/posts/2025/author-vs-dedicated-field).
 
 
+# Path colors and buttons
+When you start with WEBCON BPS, take a look at the available path colors and make a list in which situations you want to use each color. This will help you and your users to create a consistent feeling.
+
+{% include video id="Qb7SBvrdSaY?autoplay=0&loop=1&mute=1&rel=0" provider="youtube" %}
+
+Unfortunately, there's no standard option to apply the color of the paths to the buttons. 
+If you want, you can take a look at my other blog post regarding this [Revised uniform path button styling](https://daniels-notes.de/posts/2023/path-button-styling-revisited)
