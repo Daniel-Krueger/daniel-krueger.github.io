@@ -30,6 +30,13 @@ In addition, I’m providing an example how we can get the access token ourselve
 {: .notice--info}
 **Info:** Update 2025-01-26: I added a post about the new REST custom authentication SDK type: [SharePoint Online certificate authentication ](/posts/2025/sharepoint-certificat-authentication-sdk)
 
+{: .notice--info}
+**Info:** Update 2025-09-19: I've misinterpreted some information and I need to correct something: While it's true:
+- that the best /easiest, and maybe the only way, for granting permissions to SharePoint is the PNP framework
+- and that you can only register apps using certificates
+You can either add a secret to the created one or use an existing registration to grant it the privileges. 
+
+
 # Registering the application
 ## Authentication via certificate
 

@@ -15,7 +15,7 @@ bpsVersion: 2025.1.1.44
 ---
 
 # Overview
-My previous post was about creating an app which can be used to access the [SharePoint Online REST API](/posts/2025/sharepoint-online-rest-api-integration-copy). I mentioned that neither WEBCON BPS 2025 nor any previous versions offer a functionality to connect with SharePoint Online using a certificate. While this is true, the 2025 R1 release extended the SDK. We can now create our own REST authentication!
+My previous post was about creating an app which can be used to access the [SharePoint Online REST API](/posts/2025/sharepoint-online-rest-api-integration). I mentioned that neither WEBCON BPS 2025 nor any previous versions offer a functionality to connect with SharePoint Online using a certificate. While this is true, the 2025 R1 release extended the SDK. We can now create our own REST authentication!
 
 This post will cover my approach to it. While I think that the usage should be self-explaining, I will provide additional information here.
 

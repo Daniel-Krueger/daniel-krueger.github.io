@@ -5,7 +5,7 @@ categories:
   - Private 
 tags:
   - Fields
-  - Data Sources
+  - Data sources
   - REST
   - Business Central
   - Debugging
