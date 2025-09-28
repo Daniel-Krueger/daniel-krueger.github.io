@@ -16,7 +16,7 @@ A [question](https://community.webcon.com/forum/thread/7777) was raised in the c
 
 {% include figure image_path="/assets/images/posts/2025-09-28-Execute-form-rule-with-parameter/2025-09-28-11-41-48.png" alt="This form rule has parameters, and the values are passed via JavaScript" caption="This form rule has parameters, and the values are passed via JavaScript" %}
 # Implementation
-## Overview
+## General
 It's the same as always, we need:
 - One global form rule
 - Two global business rules
