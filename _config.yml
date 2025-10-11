@@ -89,7 +89,9 @@ author:
     - label: "WEBCON MVP 2023/2024"
       icon: "fab fa-fw fa-webcon"
       url: "https://webcon.com/news/webcon-mvp-2023-recognizing-the-most-active-members-of-the-webcon-community/"
-          
+    - label: "WEBCON MVP 2024/2025"
+      icon: "fab fa-fw fa-webcon"
+      url: "https://webcon.com/news/webcon-mvp-2024/"
     #- label: "Twitter"
     #  icon: "fab fa-fw fa-twitter-square"
     #  url: "https://twitter.com/"
