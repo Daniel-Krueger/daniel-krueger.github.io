@@ -142,7 +142,7 @@ I tried to display the group summary in the same row as the group information, b
 If someone comes up with a feasible solution, feel free to contact me.
 
 # Download
-You can find two different versions for WEBCON BPS 2025 and WEBCON BPS 2026 [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/singleRowEditApplyAndAddNew). 
+You can find two different versions for WEBCON BPS 2025 and WEBCON BPS 2026 [here](https://github.com/Daniel-Krueger/webcon_snippets/tree/main/itemListCollapseGroups). 
 
 
 I've decided to split these as it turned out, that I don't have the time to test them for different versions and make them compatible.
