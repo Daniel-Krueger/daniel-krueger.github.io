@@ -4,10 +4,10 @@ categories:
   - WEBCON BPS
   - Private 
 tags:
- - Data sources
- - REST
+  - Item list
+  - Form rules
 excerpt:
-    "Setup an App Registration to use the SharePoint REST API"
+    "Adds an action to the single edit dialog to create a new row directly from the dialog."
 bpsVersion: 2025.1.1.44,2026.1.1.45
 ---
 
@@ -45,7 +45,7 @@ dkr.singleRowEditApplyAndAddNew.itemLists = [
 
 {% include figure image_path="/assets/images/posts/2025-10-03-Single-row-edit-add-new/2025-09-28-20-05-07.png" alt="The global form rule." caption="The global form rule." %}
 ## HTML field
-This is also simple, we need to add load the form rule within an HTML field and set the properties to define, for which item lists the logic should be applied.
+This is also simple, we need to  load the form rule within an HTML field and set the properties to define, for which item lists the logic should be applied.
 
 1. Execute global form rule\
   The `InvokeRule` will load the global form rule and will monitor the form whether a modal dialog is displayed.
