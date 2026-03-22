@@ -8,7 +8,7 @@ tags:
   - Form rules
 excerpt:
     "Adds the option to collapse all item list groups, set the initial state and hide the grand total summary"
-bpsVersion: 2025.1.1.44,2026.1.1.45
+bpsVersion: 2025.1.2.179,2026.1.1.45
 ---
 
 # Overview
@@ -31,7 +31,7 @@ I'm not sure how often I've written this already, but it's the same approach as 
 
 We need:
 1. A global form rule.
-2. An HTML field to pass some configuration
+2. A HTML field to pass some configuration
 3. Activate the grouping
 
 ## Global form rule
