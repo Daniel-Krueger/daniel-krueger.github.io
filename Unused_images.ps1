@@ -1,6 +1,6 @@
 ﻿Add-Type -AssemblyName Microsoft.VisualBasic
 
-$rootFolder = "C:\Workspace\_Privat\daniel-krueger.github.io\"
+$rootFolder = "C:\Workspace\daniel-krueger.github.io\"
 cd $rootFolder
 $imageFiles = get-childitem -Path ".\assets\images\posts" -Recurse -File
 # A dictionary of all images, with a value defining it if it's used or not
