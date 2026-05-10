@@ -11,12 +11,12 @@ excerpt:
 bpsVersion: 2026.1.1.45
 ---
 
-<!-- TODO: Add a short screen recording of the maintenance page in the browser showing the language switcher, estimated completion time, and contact info -->
-{% include video id="PLACEHOLDER?autoplay=1&loop=1&mute=1&rel=0" provider="youtube" %}
 
 # Overview
 
 Whenever I update a WEBCON BPS environment, users who try to open the BPS Portal run into a generic IIS error. That’s not a great experience. A dedicated maintenance page is a simple way to communicate what is happening, when the system will be back, and who to contact for urgent matters, without touching BPS at all.
+
+![Display a maintenance page during a WEBCON update.](/assets/images/posts/2026-05-10-maintenance-page/2026-05-10-20-20-24.png)
 
 # Implementation
 ## General
@@ -79,7 +79,7 @@ You can also verify the settings in the IIS.
 
 ## Maintenance page (HTML)
 
-After running the script, copy `index.html` (or `index.min.html`) into `MaintenancePath`. This isn't done automatically as you have to modify the content anyway.
+After running the script, copy `index.html` into `MaintenancePath`. This isn't done automatically as you have to modify the content anyway.
 {% include figure image_path="/assets/images/posts/2026-05-10-maintenance-page/2026-05-10-17-52-10.png" alt="Copy the index.html to the directory of the maintenance page" caption="Copy the index.html to the directory of the maintenance page" %}
 
 At the bottom of the file you can configure:
