@@ -5,7 +5,7 @@ categories:
   - WEBCON BPS  
 tags:
   - Business Entity
-  - Privileges
+  - Governance
   - Data sources
 excerpt:
     How the same workflow can be used by multiple Business Entities (Companies/Subsidiaries) in WEBCON BPS.

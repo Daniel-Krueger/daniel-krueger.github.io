@@ -5,7 +5,6 @@ categories:
   - WEBCON BPS
 tags:
   - Power Platform
-  - Definitions
 excerpt:
     A table of contents 
 last_modified_at: 2021-04-15

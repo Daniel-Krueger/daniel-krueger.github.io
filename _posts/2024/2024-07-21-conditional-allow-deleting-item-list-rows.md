@@ -4,7 +4,7 @@ title: "Conditional editing/deleting of item list rows"
 categories:
   - WEBCON BPS 
 tags:  
-  - Item lists
+  - Item list
 excerpt:
     If you have an item list in which some rows shouldn't be deleted, this post is for you.
 bpsVersion: 2023.1.3.118

@@ -4,7 +4,7 @@ categories:
   - WEBCON BPS
   - COSMO CONSULT
 tags:
- - Best practices
+ - Best practice
 excerpt:
     "Three options to handle removed and/or deactivated users when migrating data to WEBCON BPS."
 bpsVersion: 2025.1.1.44
