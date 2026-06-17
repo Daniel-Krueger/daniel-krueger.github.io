@@ -38,7 +38,7 @@ In this post I will provide a quick overview and will on topics which are common
 # Series
 Here are the other parts of this series:
 1. [Overview](/posts/2026/user-defined-api-overview-part-1)
-2. [User Defined API - Get data from data sources](/posts/2026/user-defined-API-part-2-get-data-from-data-sources)
+2. [User Defined API - Get data from data sources](/posts/2026/user-defined-api-part-2-get-data-from-data-sources)
 3. [User Defined API - Actions on a workflow instance](/posts/2026/user-defined-api-part-3-actions-on-a-workflow-instance)
 4. [User Defined API - Execute automation](/posts/2026/user-defined-api-part-4-execute-automation)
 

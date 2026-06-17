@@ -22,7 +22,7 @@ This is the second part of my blog post about User Defined APIs. This one is ded
 
 If you have no idea what User Defined APIs are and why you should change this, you should start with the first part of this series:
 1. [Overview](/posts/2026/user-defined-api-overview-part-1)
-2. [User Defined API - Get data from data sources](/posts/2026/user-defined-API-part-2-get-data-from-data-sources)
+2. [User Defined API - Get data from data sources](/posts/2026/user-defined-api-part-2-get-data-from-data-sources)
 3. [User Defined API - Actions on a workflow instance](/posts/2026/user-defined-api-part-3-actions-on-a-workflow-instance)
 4. [User Defined API - Execute automation](/posts/2026/user-defined-api-part-4-execute-automation)
 
