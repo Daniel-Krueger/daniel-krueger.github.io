@@ -35,6 +35,13 @@ In this post I will provide a quick overview and will on topics which are common
 {: .notice--info}
 **Info:** The documentation and Designer Stuido use the name `API Definitions` in the community the term `User Defined API` was used. I will stick with the latter one and may also use the abbreviation UDA, which is used in the database.
 
+# Series
+Here are the other parts of this series:
+1. [Overview](/posts/2026/user-defined-api-overview-part-1)
+2. [User Defined API - Get data from data sources](/posts/2026/user-defined-API-part-2-get-data-from-data-sources)
+3. [User Defined API - Actions on a workflow instance](/posts/2026/user-defined-api-part-3-actions-on-a-workflow-instance)
+4. [User Defined API - Execute automation](/posts/2026/user-defined-api-part-4-execute-automation)
+
 # Differences between Public API and User Defined APIs
 There are three big differences between the Public API and User Defined API. These are:
 - Different authentication options
@@ -129,7 +136,8 @@ When you want to move an UDA from one process you will need to update the DEFID 
 
 Ensure that the updated automation / business rules themselves aren’t a parent element. Otherwise, you should update the dependent rows too. 
 
-## Time and timezones are a never-ending issue in IT
+## Time and time zones are a never-ending issue in IT
+
 {: .notice--warning}
 **Remark:** This applies to version 20261.1.6.198 and before. It may have been fixed in later versions.
 
@@ -158,6 +166,6 @@ In this case you need to head over to the table `AdminWFEventLogs`in the *config
 
 {% include figure image_path="/assets/images/posts/2026-05-17-user-defined-API-part-1/2026-05-30-11-48-43.png" alt="The AdminWFEventLogs table in the *configuration* database may contain additional information." caption="The AdminWFEventLogs table in the *configuration* database may contain additional information." %}
 
-Sometimes the error messages themselves will provide useful information, and the administration tools will do so, too. If you don't get any information, it's likely that you will find those in the configuration database. I've also encountered one case where there haven't been any information, but this will be a topic in the `Get data from the data source` post.
+Sometimes the error messages themselves will provide useful information, and the administration tools will do so, too. If you don't get any information, it's likely that you will find those in the configuration database. I've also encountered one case where there haven't been any information, but this will be a topic in the [Get data from the data source](/posts/2026/user-defined-api-part-2-get-data-from-data-sources) post.
 
 
