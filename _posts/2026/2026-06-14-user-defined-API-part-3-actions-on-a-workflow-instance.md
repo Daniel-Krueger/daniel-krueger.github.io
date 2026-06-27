@@ -17,6 +17,11 @@ This is the third part of my blog post about User Defined APIs. This one is dedi
 
 {% include figure image_path="/assets/images/posts/2026-06-14-user-defined-API-part-3-actions-on-a-workflow-instance/2026-06-14-16-06-11.png" alt="Features of the `Actions on a workflow instance` running mode" caption="Features of the `Actions on a workflow instance` running mode" %}
 
+
+{: .notice--info}
+**Info:**
+In the first version I stated, that it's not possible to work with attachments. This is wrong.
+
 # Series
 
 If you have no idea what User Defined APIs are and why you should change this, you should start with the first part of this series:
@@ -46,6 +51,13 @@ When reading / writing data you can not only retrieve and update fields but also
 
 Fun fact: Seconds are returned, too. In case you don’t know why I’m mentioning this: [BPS internal views ignore seconds](/posts/2026/user-defined-api-part-2-get-data-from-data-sources#bps-internal-views-ignore-seconds)
 
+
+### Support for attachments
+You can also access / upload attachment. All you need to do is define a collection and you will be able to select the attachments as a source.
+
+![You can return/send attachments.](/assets/images/posts/2026-06-14-user-defined-API-part-3-actions-on-a-workflow-instance/2026-06-27-08-31-32.png)
+
+
 ### Using business rules
 The best is, you are not even limited to actual fields, but you can use business rules which opens a whole bunch of possibilities.
 
@@ -53,11 +65,12 @@ The best is, you are not even limited to actual fields, but you can use business
 
 You can use these for reading data and updating data. The latter one is like the usage of business rules to process REST action responses.
 
-## Predefined paths
+### Predefined paths
 In contrast to the public API, you can limit the available paths. This adds an additional security level.
 
 
 ![You need to define each available path and can use a meaningful name.](/assets/images/posts/2026-06-14-user-defined-API-part-3-actions-on-a-workflow-instance/2026-06-14-17-09-26.png)
+
 # Inconveniences, pitfalls and workarounds
 
 ## Common to all running modes
@@ -78,11 +91,6 @@ This is the one running mode which causes the most headaches in regard to settin
 
 The most annoying thing here is not the 403 forbidden error, but I didn't find a more helpful error message on the server itself. It's state of the art, that the underlying reason is not send to the client, but some more information would be helpful on the server. 
 
-
-## Attachments are not supported
-Unfortunately, there's no support for handling attachments. If you need this, you will have to fall back to the public API or the internal APIs in the browser.
-
-You may be able to return the base64 string of a single attachment with a business rule, but when you just want to provide a list of attachments, you are out of luck.
 
 ### Fixed start a workflow instance parameter
 While I can understand that the workflow and form type are fixed. I really don't get it that the business entity is also hard coded. Ok, I can it serves as an additional security layer and the client application doesn’t need to be aware of the id/GUID, but this also means, that you must create a separate endpoint for each business entity. I hope you don't need to configure this for a two-digit number of entities.
