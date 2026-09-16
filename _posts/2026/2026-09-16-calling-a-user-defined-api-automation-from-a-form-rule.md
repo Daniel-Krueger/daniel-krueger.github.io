@@ -17,7 +17,7 @@ Let's assume that you want to set information on a form based on the provided us
 - Define form rules which set other fields
 - More complex, retrieve the data of these fields via business rules
 
-While these work, it's somewhat annoying, that business rules can't return multiple values in terms of fields/columns from the same data. It's not only a hazel to define these, but it's also an unnecessary burden on the server and delay for the user. Using a User Defined API (UDA) can change this.
+While these work, it's somewhat annoying, that business rules can't return multiple values in terms of fields/columns from the same data. It's not only a hassle to define these, but it's also an unnecessary burden on the server and delay for the user. Using a User Defined API (UDA) can change this.
 
 ![Getting values for four fields is 2.5 times slower than getting values for 18 fields.](/assets/images/posts/2026-09-16-calling-a-user-defined-api-automation-from-a-form-rule/2026-09-16-19-28-14.png)
 
