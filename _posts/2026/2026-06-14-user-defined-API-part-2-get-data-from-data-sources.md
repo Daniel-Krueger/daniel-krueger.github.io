@@ -5,8 +5,6 @@ categories:
   - Series
 tags:
   - User Defined API
-  - API Definition
-  - UDA
 excerpt:
   "Benefits, inconveniences, pitfalls and workarounds of the UDA running mode: Get data from data source"
 bpsVersion: 2026.1.6.198

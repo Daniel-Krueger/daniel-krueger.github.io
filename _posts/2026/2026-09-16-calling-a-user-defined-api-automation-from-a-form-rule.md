@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Form rules
   - REST
+  - User Defined API
 excerpt:
   "Retrieving different values via a business rule in a form isn't possible. You will have to execute the business rule multiple times or need to create different rules. This isn't necessary with UDAs."
 bpsVersion: 2026.1.6.198, 2026.2.2.121
