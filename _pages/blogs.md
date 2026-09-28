@@ -2,21 +2,7 @@
 title: "Other blogs"
 layout: single
 permalink: /blogs/
-feature_row_1:
-    - image_path: ""
-      alt: ""
-      title: "AlterPaths [Dead]"
-      excerpt: "Examples about basic and advanced scenarios related to WEBCON BPS."
-      url: "https://alterpaths.com/"
-      btn_label: "Read More"
-      btn_class: "btn--inverse"
-    - image_path: ""
-      alt: ""
-      title: "Encorsa - Raluca Lupu"
-      excerpt: "Discover the power of Webcon BPS and join me on a journey of digital transformation. Together, we can streamline processes and unlock endless possibilities."
-      url: "https://raluca.encorsa.ro/"
-      btn_label: "Read More"
-      btn_class: "btn--inverse"     
+feature_row_1:    
     - image_path: ""
       alt: ""
       title: "Lúmenn"
@@ -24,6 +10,14 @@ feature_row_1:
       url: "https://blog.lumenn.pl"
       btn_label: "Read More"
       btn_class: "btn--inverse"
+    - image_path: ""
+      alt: ""
+      title: "Making Complexity Invisible"
+      excerpt: "Practical insights into enterprise architecture, automation, integration, data, and WEBCON. Sébastien Anselment"
+      url: "https://sebastien-anselment.github.io/blog/"
+      btn_label: "Read More"
+      btn_class: "btn--inverse"
+     
 feature_row_2:   
     - image_path: ""
       alt: ""
